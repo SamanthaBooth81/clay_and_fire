@@ -8,7 +8,6 @@ body {
     background: url('/media/landing.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -25,13 +24,87 @@ body {
 
 .logo {
     text-transform: uppercase;
+    color: #730C02;
 }
 
 .logo-link {
     width: fit-content;
 }
 
+.logo-header {
+    color: black;
+    padding: 40px 40px 0 40px;
+}
+
+.icon {
+    color: #730C02;
+}
+
+.icon:hover {
+    color: #D9895B;
+}
+
+.nav-text {
+    color: black;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------ homepage main heading */
+.landing-msg {
+    background-color: #beb5b17a;;
+    border-radius: 2px;
+}
+
+/* ------------------------------------ footer */
+footer {
+    background-color: #D9A689;
+}
+
+.copyright{
+    float: left;
+    width: 90%;
+    padding: 5x;
+}
+
+.copyright p {
+    display: inline-block;
+}
+
+.socials {
+    float: right;
+    width: 10%;
+}
+
+/* ------------------------------------ Sticky Footer - Code from https://css-tricks.com/couple-takes-sticky-footer/ */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .content {
+    flex: 1 0 auto;
+} */
+
+.footer {
+    flex-shrink: 0;
+}
+
+.header {
+    font-family: 'Ribeye Marrow', cursive, 'Roboto', sans-serif;;
+    font-size: xx-large;
+    color: #A7490D;
+}
+
 /* ------------------------------------ Buttons */
+
+.shop-now {
+    padding-left: 40px;
+}
 
 .shop-now-btn {
     background-color: #A63F03;

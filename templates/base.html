@@ -5,42 +5,42 @@
 
 <head>
   {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Above Meta allows support of older Internet Explorer versions and eliminate validation errors when
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Above Meta allows support of older Internet Explorer versions and eliminate validation errors when
               validating our HTML-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {% endblock %}
 
   {% block corecss %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
   {% block corejs %}
   <!-- Font Awesome, jQuery minifield, then Popper.js, then Bootstrap JS ADD TO TECHNOLOGIES USED IN README-->
-    <script src="https://kit.fontawesome.com/5f5081d5be.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+  <script src="https://kit.fontawesome.com/5f5081d5be.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
   {% endblock %}
 
   <title>C&F Jewellery {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body class="content">
   <!-- form from Code Institute Boutique Ado follow along project -->
   <header class="container-fluid fixed-top">
     <div class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -56,7 +56,7 @@
             <div class="input-group-append">
               <button class="form-control btn border rounded-0" type="submit">
                 <span class="icon">
-                  <i class="fas fa-search"></i>
+                  <i class="fas fa-search icon"></i>
                 </span>
               </button>
             </div>
@@ -69,8 +69,8 @@
             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                <div><i class="fas fa-user fa-lg icon"></i></div>
+                <p class="my-0 nav-text">My Account</p>
               </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -87,12 +87,12 @@
             </div>
           </li>
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %}" href="">
               <div class="text-center">
                 <div>
-                  <i class="fas fa-shopping-bag fa-lg"></i>
+                  <i class="fas fa-shopping-bag fa-lg icon"></i>
                 </div>
-                <p class="my-0">
+                <p class="my-0 nav-text">
                   <!-- Displays the total cost of items in the basket with 2 decimal points -->
                   {% if grand_total %}
                   £{{ grand_total|floatformat:2 }}
@@ -119,6 +119,21 @@
 
   {% block content %}
   {% endblock %}
+
+  <footer>
+    <div class="">
+      <div class=" copyright">
+        <i class="fa-solid fa-copyright"></i>
+        <p>2022, C&F Jewellery</p>
+      </div>
+    </div>
+    <div class="">
+      <div class=" socials">
+        <i class="fa-brands fa-instagram icon"></i>
+        <i class="fa-brands fa-facebook-f icon"></i>
+      </div>
+    </div>
+  </footer>
 
   <!-- for javascript to load at end of body, remove if not used! -->
   {% block postloadjs %}
