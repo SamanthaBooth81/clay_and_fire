@@ -62,17 +62,22 @@ footer {
 
 .copyright{
     float: left;
-    width: 90%;
+    width: 95%;
     padding: 5x;
 }
 
 .copyright p {
     display: inline-block;
+    margin: 0;
 }
 
 .socials {
     float: right;
-    width: 10%;
+    width: 5%;
+}
+
+.footer {
+    padding: 5px;
 }
 
 /* ------------------------------------ Sticky Footer - Code from https://css-tricks.com/couple-takes-sticky-footer/ */
