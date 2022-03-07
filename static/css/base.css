@@ -71,6 +71,10 @@ footer {
     margin: 0;
 }
 
+.copyright i {
+    color: #2020207a;
+}
+
 .socials {
     float: right;
     width: 5%;
