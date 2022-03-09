@@ -338,6 +338,18 @@ I used the following websites to help with different areas of my project:
 
 ### Product Images
 - [Pexels - Carpe Jugulum](https://www.pexels.com/photo/orange-and-black-ladybug-on-green-leaf-5035921/)
+-[Pexels - Lisa Fotios](https://www.pexels.com/photo/a-woman-with-a-face-shaped-earring-7016917/)
+- [Pexels - cottonbro](https://www.pexels.com/photo/close-up-shot-of-a-woman-wearing-a-blue-earring-8541542/)
+- [Unsplash - Svitlana](https://unsplash.com/photos/J7ydFF1WyGQ)
+- [Unsplash - Kate Hliznitsova](https://unsplash.com/photos/P6NiFTyI294)
+- [Unsplash - Sincerely Media](https://unsplash.com/photos/8WebmlRgMp0)
+- [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/YGIPzuiD1jc)
+- [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/YbA4hHxkSrg)
+- [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/O7l3PmbGxF0)
+- [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/fR3PIa-WtBg)
+
+### Website Images
+- [Pexels - Delivery Image](https://www.pexels.com/photo/person-holding-green-and-white-floral-book-5486791/) CHECK IF USED, REMOVE IF NOT
 
 
 # Acknowledgments
