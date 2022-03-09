@@ -336,6 +336,9 @@ I used the following websites to help with different areas of my project:
 - [Font Awesome Icons](https://fontawesome.com/)
 - [CSS-Tricks - Flexbox Sticky Footer](https://css-tricks.com/couple-takes-sticky-footer/), for the sticky footer code.
 
+### Product Images
+- [Pexels - Carpe Jugulum](https://www.pexels.com/photo/orange-and-black-ladybug-on-green-leaf-5035921/)
+
 
 # Acknowledgments
 Thank you to all who encouraged and supported me as I created my first full stack E-Commerce website, especially to my mentor at Code Institute, Antonio, for his guidance, patience, encouragement and constant support. Also a massive thank you to Tutor Support at the Code Institute for never giving up on the difficult issues I found myself stuck on.  
