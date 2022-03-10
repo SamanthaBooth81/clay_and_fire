@@ -337,8 +337,9 @@ I used the following websites to help with different areas of my project:
 - [CSS-Tricks - Flexbox Sticky Footer](https://css-tricks.com/couple-takes-sticky-footer/), for the sticky footer code.
 
 ### Product Images
+- 'noimage.png' taken from Code Institutes Boutique Ado Follow Along Project
 - [Pexels - Carpe Jugulum](https://www.pexels.com/photo/orange-and-black-ladybug-on-green-leaf-5035921/)
--[Pexels - Lisa Fotios](https://www.pexels.com/photo/a-woman-with-a-face-shaped-earring-7016917/)
+- [Pexels - Lisa Fotios](https://www.pexels.com/photo/a-woman-with-a-face-shaped-earring-7016917/)
 - [Pexels - cottonbro](https://www.pexels.com/photo/close-up-shot-of-a-woman-wearing-a-blue-earring-8541542/)
 - [Unsplash - Svitlana](https://unsplash.com/photos/J7ydFF1WyGQ)
 - [Unsplash - Kate Hliznitsova](https://unsplash.com/photos/P6NiFTyI294)
