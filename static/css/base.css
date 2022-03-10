@@ -153,6 +153,10 @@ body {
     display: inline-block;
 }
 
+.rating-icon {
+    color: #D9895B;
+}
+
 .details-img {
     padding-top: 3%;
 }
