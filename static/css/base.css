@@ -142,6 +142,21 @@ body {
     padding-top: 2%;
 }
 
+/* ------------------------------------ Product Details Pages */
+
+.price {
+    float: left;
+    width: 10%;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.details-img {
+    padding-top: 3%;
+}
+
 
 /* ------------------------------------ Media Queries */
 @media (min-width: 1200px) {
