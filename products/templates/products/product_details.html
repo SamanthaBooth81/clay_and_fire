@@ -17,13 +17,9 @@
             <div class="row offset-1">
                 <div class="col-4 details-img">
                     {% if product.image %}
-                    <a href="" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
+                        <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
+                        <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     {% endif %}
                 </div>
                 <div class="col-8">
