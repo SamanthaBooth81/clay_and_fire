@@ -173,8 +173,18 @@ body {
 }
 
 .details-img {
-    padding-top: 3%;
+    padding-top: 4%;
 }
+
+.details-img img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.title {
+    padding-top: 7%;
+}
+
 
 .description {
     margin-right: 100px;
