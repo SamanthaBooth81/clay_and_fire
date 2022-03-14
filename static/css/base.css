@@ -38,6 +38,7 @@ i {
 
 .icon {
     color: #730C02;
+    cursor: pointer;
 }
 
 .icon:hover {
@@ -126,6 +127,15 @@ body {
     columns: #A63F03;
 }
 
+.categories {
+    color: rgba(0,0,0,.5);
+    font-size: larger;
+}
+
+.categories:hover {
+    color: #212529;
+}
+
 /* ------------------------------------ Products Page */
 .overlay {
     background-color: white;
@@ -135,6 +145,11 @@ body {
     left: 0;
     position: fixed;
     z-index: -1;
+}
+
+.item-img {
+    height: 350px;
+    object-fit: cover;
 }
 
 /* ------------------------------------ All Pages */
@@ -159,6 +174,10 @@ body {
 
 .details-img {
     padding-top: 3%;
+}
+
+.description {
+    margin-right: 100px;
 }
 
 
