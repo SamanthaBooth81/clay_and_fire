@@ -8,7 +8,7 @@ from .models import Products, Category
 
 def all_products(request):
     """View to show all products for  sale and sort/filter items"""
-    # Code Institutes Boutique Ado project code used to create search function
+    # Code Institutes Boutique Ado project code used to create search and sort functions
     products = Products.objects.all()
 
     query = None

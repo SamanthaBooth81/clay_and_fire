@@ -31,6 +31,7 @@
                 <div class="row mt-1 mb-2">
                     <div
                         class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <!-- Code Institute Boutique ADo project used to help with sort functionality -->
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector"
                                 class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -128,6 +129,7 @@
 </script>
 
 <script type="text/javascript">
+    // Code Institute Boutique ADo project used to help with sort functionality
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
