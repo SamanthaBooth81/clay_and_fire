@@ -136,6 +136,17 @@ body {
     color: #212529;
 }
 
+.shop-btn {
+    color: #730C02;
+    border: 1px solid #730C02;
+}
+
+.shop-btn:hover,
+.shop-text:hover {
+    background-color: #730C02;
+    color: white;
+}
+
 /* ------------------------------------ Products Page */
 .overlay {
     background-color: white;
@@ -191,6 +202,15 @@ body {
     margin-right: 100px;
 }
 
+/* ------------------------------------ Shopping Bag */
+.bag-title {
+    margin-top: 5%;
+}
+
+.shop-text {
+    color: #730C02;
+    text-transform: uppercase;
+}
 
 /* ------------------------------------ Media Queries */
 @media (min-width: 1200px) {
