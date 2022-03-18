@@ -147,6 +147,15 @@ body {
     color: white;
 }
 
+.bag-add {
+    padding: 2%;
+    color: #730C02;
+}
+
+.bag-add-btn:hover {
+    color: #A63F03;
+}
+
 /* ------------------------------------ Products Page */
 .overlay {
     background-color: white;
