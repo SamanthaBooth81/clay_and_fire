@@ -28,6 +28,7 @@
       "Bulma",
       "corecss",
       "corejs",
+      "csrfmiddlewaretoken",
       "Jewellery",
       "minifield",
       "postloadjs",

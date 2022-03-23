@@ -166,6 +166,10 @@ body {
     color: #A63F03;
 }
 
+.bag-btn {
+    cursor: pointer;
+}
+
 /* ------------------------------------ Products Page */
 .overlay {
     background-color: white;
