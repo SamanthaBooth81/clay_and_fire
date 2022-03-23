@@ -241,6 +241,14 @@ body {
     object-fit: cover;
 }
 
+.checkout {
+    color: #212529;
+}
+
+.checkout:hover {
+    color: #D9895B;
+}
+
 /* ------------------------------------ Media Queries */
 @media (min-width: 1200px) {
     /* Larger container for xl screen sizes */

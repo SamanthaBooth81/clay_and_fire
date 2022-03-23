@@ -43,6 +43,7 @@
                     <i class="fa-solid fa-trash-can my-0 logo"></i>
                 </td>
             </tr>
+            {% endfor %}
             <tr>
                 <td colspan="5" class="pt-5 text-right">
                     <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
@@ -63,24 +64,23 @@
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                    <a href="" class="btn btn-black rounded-0 btn-lg">
-                        <span class="text-uppercase">Secure Checkout</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
+                    <a href="" class="btn btn-black rounded-0 btn-lg icon">
+                        <span class="text-uppercase checkout">Secure Checkout</span>
+                        <span class="">
+                            <i class="fa-solid fa-unlock"></i>
                         </span>
                     </a>
                 </td>
             </tr>
-            {% endfor %}
-            {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn rounded-0 btn-lg shop-btn logo">
-                <span>
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                Keep Shopping
-            </a>
-            {% endif %}
+    {% else %}
+        <p class="lead mb-5">Your bag is empty.</p>
+        <a href="{% url 'products' %}" class="btn rounded-0 btn-lg shop-btn logo">
+            <span>
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            Keep Shopping
+        </a>
+        {% endif %}
         </table>
     </div>
 </div>
