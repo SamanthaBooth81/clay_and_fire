@@ -328,7 +328,7 @@ Web tells Heroku to allow web traffic, whilst gunicorn is the server installed e
 # Credit
 ## Content 
 
-I used the following websites to help with different areas of my project:
+I used the Code Institutes Boutique Ado Follow Along project to help with building this project along with the following websites:
 
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
@@ -354,4 +354,4 @@ I used the following websites to help with different areas of my project:
 
 
 # Acknowledgments
-Thank you to all who encouraged and supported me as I created my first full stack E-Commerce website, especially to my mentor at Code Institute, Antonio, for his guidance, patience, encouragement and constant support. Also a massive thank you to Tutor Support at the Code Institute for never giving up on the difficult issues I found myself stuck on.  
+Thank you to all who encouraged and supported me as I created my first full stack E-Commerce website, especially to my mentor at Code Institute, Antonio, for his guidance, patience, encouragement and constant support. Also a massive thank you to Tutor Support at the Code Institute for never giving up on the difficult issues I found myself facing.  
