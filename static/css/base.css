@@ -187,6 +187,16 @@ body {
     height: 2px;
 }
 
+.bag-notification {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.free-del {
+    background-color: #D9A689;
+}
+
 /* ------------------------------------ Products Page */
 .overlay {
     background-color: white;
