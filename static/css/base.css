@@ -273,10 +273,6 @@ footer {
     color: #D9895B;
 }
 
-.qty-input {
-    width: 20px;
-}
-
 /* ------------------------------------ Media Queries */
 @media (min-width: 1200px) {
     /* Larger container for xl screen sizes */
