@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mb-2 h-100">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center bag-title">Thank you for ordering from Clay & Fire!</h2>
+            <hr class="w-50 mb-1">
+            <p class="text-muted">Please see order details below. You will receive a confirmation email at
+                {{ order.email }}.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6 text-right">
+            <a href="{% url 'products' %}" class="btn rounded-0 my-2 icon">
+                <span class="mr-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+                <span>Forgotten something? Click here to browse more products!</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
