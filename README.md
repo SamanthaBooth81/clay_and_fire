@@ -166,7 +166,7 @@ All fields are required apart from Author - which is based on the user who is cu
 [Django](https://www.djangoproject.com/) - This framework was used to build the foundations of this project, reducing time spent getting the project setup and prevent re-writing existing code.
 
 
-[Bootstrap](https://getbootstrap.com/) - Used to quickly add design to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices ans screen sizes.
+[Bootstrap](https://getbootstrap.com/) - Used to quickly add design and responsiveness to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices ans screen sizes.
 
 # Testing
 ## Manual Testing by User Story
@@ -335,6 +335,7 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
 - [Font Awesome Icons](https://fontawesome.com/)
 - [CSS-Tricks - Flexbox Sticky Footer](https://css-tricks.com/couple-takes-sticky-footer/), for the sticky footer code.
+- [Bootstrap](https://getbootstrap.com/docs/4.2/components/spinners/) - Overlay Spinner on checkout page.
 
 ### Product Images
 - 'noimage.png' taken from Code Institutes Boutique Ado Follow Along Project
