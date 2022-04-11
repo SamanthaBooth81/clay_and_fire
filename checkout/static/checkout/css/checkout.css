@@ -37,3 +37,27 @@ Boutique Ado Project */
   color: #000;
   border: 0.5px solid rgb(171, 165, 165);
 }
+
+/* --------------------------------------------- Order Success Page */
+.order-confirmation {
+  width: 50%;
+}
+
+.delivery-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  float: left;
+}
+
+.order-conf-headers {
+  font-size: large;
+}
+
+.shop-more-div {
+  margin-top: 20px;
+}
+
+.shop-more {
+  font-size: x-large;
+}
