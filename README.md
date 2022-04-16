@@ -171,58 +171,48 @@ All fields are required apart from Author - which is based on the user who is cu
 # Testing
 ## Manual Testing by User Story
 ### **Superuser / Admin**
-
-
-### **Buyer**
-
-
-## General Manual Testing 
 **Add Product**
-- Adding multiple recipes of various sizes to ensure:
-    - Entire Recipe saved in the database, including all ingredients and instructions to be later displayed correctly in the recipe detail page.
-- Image Upload testing:
-    - Uploaded multiple recipes with and without an image to ensure any images uploaded were stored to Cloudinary, otherwise, the placeholder image was displayed. 
-- Duplicate Recipe Titles:
-    -   Checking an error message alerts the user of a duplicate title.
-    - Added the author name to the recipe detail slug to allow for slightly more flexibility with recipe titles.
-- Required Form Fields:
-    - Submitting empty recipe form to ensure all required fields are notifying the user if left empty.
-- Adding Ingredients and Instructions:
-    - Using Google Chromes Inspect to check all entries are given a unique ID for editing later.
-    - Clicking the add and delete buttons to make sure they add and remove the widgets. Double checking they are removed via the Recipe Detail page. 
-
-**Edit Product**
-- Retrieving the chosen recipe for editing:
-    - Match the recipe details from the details view with the edit view across multiple recipes.
-- Able to change and save changes to recipe:
-    - Making changes and raising error messages if inputs are invalid, fields are blank or title is not unique.
-    - Check changes are saved to the correct recipe by viewing the details after making changes. 
+- 
 
 **Delete Product**
-- Retrieving the chosen recipe to be deleted:
-    - Checking the list of recipes to ensure the correct recipe was deleted
-- Delete Confirmation:
-    - Ensuring there is a confirmation page for the user so the recipe isn't automatically deleted.
-    - Checked that although the delete button click, if not confirmed, the recipe is still on the recipe list (both the users list and homepage).
+- 
 
+### **Buyer**
 **View List of Products**
-- Visual check to see if only recipes that have been approved on the homepage. Checked against the Django Admin page. 
-- Checked to see if approved recipes by all users are displayed on the home page. Checked against the Django Admin page. 
-- Displays only the users posted recipes on the Posted Recipes Page. Checked the author of all recipes is the same on every recipe.
-- Displays only the pending approval recipes on the Recipes Pending Approval Page. Checked the author of all recipes is the same on every recipe.
-- Checked the placement of the recipe cards works on all screen sizes.
-- Checked total recipe cards per page is 12 and that the pagination appears if there are multiple pages by adding over 12 recipes both by 1 user and multiple users. These were deleted later when testing the delete recipe functionality.  
-- Checked the recipes are ordered by updated date by editing a recipe and checking it became the first recipe on the page. Also checked the order of the recipes in the admin to ensure it matched. 
+- 
 
 **View Product Details**
-- Adding multiple recipes of various sizes to ensure:
-    - The layout works as expected, especially on mobile devices where the page layout is as a list. On larger devices Ingredients and Method list side by side.  
-    - The images displayed correctly, whether uploaded by the user or using the placeholder image instead.
-    - The recipe details were displaying the correct recipe chosen to be viewed.
+- 
 
+**Add Items to Shopping Bag**
+The following scenarios were tested by checking the items added to the Shopping Bag:
+- Add an item to the bag and check it is in there with the correct quantity.
+- Increase the quantity before adding to the shopping bag and checking whether the quantity in the bag matches was was added.
+All items were added as they should be to the shopping bag and tested through to order completion to ensure it the items added to the shopping bag matched in the completed order. 
 
+**Amend Shopping Bag**
+The following scenarios were attempted and tested by completing the order and checking what was submitted in the Admin.
+- Increasing the Quantity of an item in the shopping bag.
+- Decreasing the Quantity of an item in the shopping bag.
+- Removing an item out of the shopping bag.
+
+All of the above actions are reflected correctly in the Order database along with the correct total delivery and grand total prices. 
+
+**Checkout**
+
+The checkout function was tested using Stripes test card numbers. 
+
+The following scenarios were tested to ensure the checkout went through securely:
+- Submitting an order, completing only the required fields on the checkout form. The order went through both on Stripe and stored in the Database with a success Webhook message.
+- Attempting to submit an order with incorrect card details. An error message appears underneath the card details form confirming the details are incorrect. 
+- Attempting to submit an order with an expired card. An error message appears underneath the card details form confirming the card has expired.
+- Submitting an order, completing only the required fields on the checkout form, with the form.submit() within the stripe_elements.js file commented out to simulate a user closing the page before the checkout success confirmation page has loaded. The order went through both on Stripe and stored in the Database with a success Webhook message.
+- Attempting to submit an order with an incomplete order form. All empty required fields alert the user they must be filled to be completed and the form isn't submitted. 
+
+The Order total was also compared on the checkout page, the successful checkout page, on Stripe and within the Order database to ensure all totals matched.
+
+## General Manual Testing 
 **User Registration**
-
 
 
 
