@@ -64,6 +64,18 @@ Boutique Ado Project */
   height: 100%;
 }
 
+/* --------------------------------------------- Country Select Box Styling */
+/* Boutique Ado CSS */
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* --------------------------------------------- Order Success Page */
 .order-confirmation {
   width: 50%;

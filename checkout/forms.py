@@ -26,7 +26,6 @@ class OrderForm(forms.ModelForm):
             'town_or_city': 'Town or City',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
-            'country': 'Country',
             'county': 'County, State or Locality',
         }
 
@@ -37,10 +36,13 @@ class OrderForm(forms.ModelForm):
         # iterate through the fields to add required *, placeholders,
         # remove labels and add a css class - REMOVE CLASS IF NOT USED!!!!!!
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            # If statement to prevent an error as placeholder is
+            # not required for 'country' dropdown box
+            if field != 'country':
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
