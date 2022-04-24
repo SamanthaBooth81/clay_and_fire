@@ -52,6 +52,12 @@ i {
     text-transform: uppercase;
 }
 
+/* ------------------------------------ search box */
+
+input[name='q']::placeholder {
+    color: #730C02;
+}
+
 /* ------------------------------------ delivery banner */
 
 #delivery-banner {
@@ -271,6 +277,42 @@ footer {
 
 .checkout:hover {
     color: #D9895B;
+}
+
+/* ------------------------------------ allauth pages */
+.allauth-form-inner-content input {
+    border-radius: 0;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+/* From Boutique Ado/Bootstrap */
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    color: #730C02;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #730C02;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover {
+    background-color: #730C02;
+    color: white;
 }
 
 /* ------------------------------------ Media Queries */
