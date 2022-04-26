@@ -5,8 +5,9 @@ import time
 
 from django.http import HttpResponse
 
-from .models import Order, OrderLineItem
+from profiles.models import UserProfile
 from products.models import Products
+from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
@@ -37,6 +38,21 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
+
+        # Save the user's information if box checked when order completed
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone_number = shipping_details.phone
+                profile.default_country = shipping_details.address.country
+                profile.default_postcode = shipping_details.address.postal_code
+                profile.default_town_or_city = shipping_details.address.city
+                profile.default_street_address1 = shipping_details.address.line1
+                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_county = shipping_details.address.state
+                profile.save()
 
         # Check if an order exists, if not create it in webhook
         order_exists = False

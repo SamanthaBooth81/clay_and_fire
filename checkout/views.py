@@ -150,7 +150,7 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # Save the user's info if box checked when order completed
+        # Save the user's information if box checked when order completed
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
