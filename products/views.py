@@ -4,11 +4,13 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Products, Category
+from .forms import AddProductForm
 
 
 def all_products(request):
     """View to show all products for  sale and sort/filter items"""
-    # Code Institutes Boutique Ado project code used to create search and sort functions
+    # Code Institutes Boutique Ado project code
+    # used to create search and sort functions
     products = Products.objects.all()
 
     query = None
@@ -69,3 +71,24 @@ def product_details(request, product_id):
     }
 
     return render(request, 'products/product_details.html', context)
+
+
+def add_product(request):
+    """Add a product to the store - Super User Only"""
+    if request.method == 'POST':
+        form = AddProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product Successfully Added!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Opps! Please ensure the form is valid.')
+    else:
+        form = AddProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
