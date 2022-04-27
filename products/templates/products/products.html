@@ -109,6 +109,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-footer bg-white border-0">
+                                <div class="row">
+                                    {% if request.user.is_superuser %}
+                                        <div class="col">
+                                            <a href="{% url 'edit_product' product.id %}" class="text-dark"><i class="fa-solid fa-pencil"></i>
+                                                Edit</a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
