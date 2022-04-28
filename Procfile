@@ -1,0 +1,1 @@
+web: gunicorn clay_and_fire.wsgi:application
