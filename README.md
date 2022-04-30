@@ -320,6 +320,8 @@ Web tells Heroku to allow web traffic, whilst gunicorn is the server installed e
 
 I used the Code Institutes Boutique Ado Follow Along project to help with building this project along with the following websites:
 
+- [Mini Web Tool](https://miniwebtool.com/django-secret-key-generator/) to generate a new Django Secret Key.
+
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
@@ -341,7 +343,7 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 - [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/fR3PIa-WtBg)
 
 ### Website Images
-- [Pexels - Delivery Image](https://www.pexels.com/photo/person-holding-green-and-white-floral-book-5486791/) CHECK IF USED, REMOVE IF NOT
+- [Pexels - Delivery Image](https://www.pexels.com/photo/person-holding-green-and-white-floral-book-5486791/)
 
 
 # Acknowledgments
