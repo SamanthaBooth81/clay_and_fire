@@ -10,6 +10,10 @@
               validating our HTML-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="Beautiful handmade jewellery, perfect as gifts for woman or as a treat for yourself.">
+  <meta name="keywords"
+    content="Handmade jewellery, Handmade Jewellery Gifts, Handmade Clay Jewellery, Clay Jewellery, Polymer Clay Jewellery, Clay and Fire Jewellery, Handmade jewellery uk">
   {% endblock %}
 
   {% block corecss %}
@@ -52,6 +56,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-left text-md-center">
         <a href="{% url 'home' %}" class="nav-link logo-link ">
           <h2 class="logo my-0">Clay &#38; Fire</h2>
+          <h6 class="logo my-0 text-left">Jewellery</h6>
         </a>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -135,21 +140,21 @@
 
   {% if messages %}
   <div class="message-container">
-      {% for message in messages %}
-          {% with message.level as level %}
-              {% if level == 40 %}
-                  {% include 'includes/toasts/toast_error.html' %}
-              {% elif level == 30 %}
-                  {% include 'includes/toasts/toast_warning.html' %}
-              {% elif level == 25 %}
-                  {% include 'includes/toasts/toast_success.html' %}
-              {% else %}
-                  {% include 'includes/toasts/toast_info.html' %}
-              {% endif %}
-          {% endwith %}
-      {% endfor %}
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
   </div>
-{% endif %}
+  {% endif %}
 
   <!-- Secondary header block to go under main header -->
   {% block page_header %}
@@ -164,7 +169,7 @@
     <div class="footer-div">
       <div class="copyright">
         <i class="fa-regular fa-copyright"></i>
-        <p>C&F Jewellery, 2022</p>
+        <p>Clay & Fire Jewellery, 2022</p>
       </div>
       <div class=" socials">
         <i class="fa-brands fa-instagram icon"></i>
