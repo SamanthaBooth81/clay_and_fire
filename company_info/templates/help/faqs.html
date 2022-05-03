@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container h-100 faq-container">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font mb-4 text-center page-title">FAQ's</h2>
+            <hr class="w-50">
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-12 text-muted text-center">
+            <h5>Polymer Clay</h5>
+        </div>
+    </div> -->
+
+    <div class="accordion" id="accordionOne">
+        <div class="card">
+            <div class="col-12 text-muted text-center">
+                <h5>Polymer Clay</h5>
+            </div>
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        What is Polymer Clay?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionOne">
+                <div class="card-body">
+                    Polymer clay is a synthetic type of modeling clay. The primary ingredient is a polyvinyl chloride
+                    (PVC) base. Other ingredients like fillers, pigments and bendable plasticizers are added to create
+                    the finished product.
+                    These components work together to give polymer clay its flexibility, texture, softness and vibrant
+                    color. Polymer clay remains pliable until it's baked in the oven.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Is Polymer Clay safe?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
+                <div class="card-body">
+                    Polymer clay is non-toxic, so it is completely safe to use around children and pets.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-muted text-center">
+            <h5>Shipping</h5>
+        </div>
+    </div>
+    <div class="accordion" id="accordionTwo">
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How long does it take to ship?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionTwo">
+                <div class="card-body">
+                    Shipping takes between 3-5 working days.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Do you ship internationally?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionTwo">
+                <div class="card-body">
+                    Unfortunately at this time we can only delivery to the UK.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Do you accept returns?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionTwo">
+                <div class="card-body">
+                    We will happily refund all goods received in their original packaging in re-saleable condition.
+                    However, for hygiene reasons we are unable to refund pierced goods (earrings).
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-muted text-center">
+            <h5>Returns</h5>
+        </div>
+    </div>
+    <div class="accordion" id="accordionThree">
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Do you accept returns?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionThree">
+                <div class="card-body">
+                    We will happily refund all goods received in their original packaging in re-saleable condition.
+                    However, for hygiene reasons we are unable to refund pierced goods (earrings) unless the item is
+                    deemed to be faulty.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        What if I have a faulty item?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionThree">
+                <div class="card-body">
+                    Unfortunately, as all of our items are handmade, we are unable to send out replacements.
+                    However, you are welcomed to return your order for a full refund.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEight">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        How long until I receive my refund?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionThree">
+                <div class="card-body">
+                    When returning online purchases we would kindly ask that you allow 14 days, from the date posted, 
+                    for your return to be processed. Please ensure you retain a copy of your return tracking information 
+                    until your refund has been confirmed.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+{% endblock %}

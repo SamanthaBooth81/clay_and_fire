@@ -269,6 +269,11 @@ footer {
     color: #D9895B;
 }
 
+/* ------------------------------------ FAQ's Accordion */
+.faq-container {
+    margin-bottom: 20px;
+}
+
 /* ------------------------------------ allauth pages */
 .allauth-form-inner-content input {
     border-radius: 0;
