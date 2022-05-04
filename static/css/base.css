@@ -137,6 +137,7 @@ footer {
 .shop-btn {
     color: #730C02;
     border: 1px solid #730C02;
+    margin-bottom: 20px;
 }
 
 .shop-btn:hover,
