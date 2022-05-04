@@ -15,3 +15,8 @@ def shipping_returns(request):
 def about_us(request):
     """View to return shipping and returns info page"""
     return render(request, 'company/about-us.html')
+
+
+def privacy_policy(request):
+    """View to return shipping and returns info page"""
+    return render(request, 'company/privacy-policy.html')
