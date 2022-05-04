@@ -322,6 +322,10 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 
 - [Mini Web Tool](https://miniwebtool.com/django-secret-key-generator/) to generate a new Django Secret Key.
 
+- [Sculpey Blog Post](https://www.sculpey.com/create/blog/10-surprising-facts-about-polymer-clay#:~:text=Polymer%20clay%20is%20non%2Dtoxic,use%20around%20children%20and%20pets.) was used to gather information about polymer clay for the FAQ's page.
+
+- I used [H&M](https://hmgroup.com/about-us/our-values/), [Oysho](https://www.oysho.com/gb/company.html) and [Accessorize](https://www.accessorize.com/uk/our-brand.html) to see how they shared their Policies and Frequently Asked Questions with their customers for content ideas.
+
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
