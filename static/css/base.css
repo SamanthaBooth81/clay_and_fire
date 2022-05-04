@@ -100,6 +100,15 @@ footer {
     padding: 5px;
 }
 
+.footer-header {
+    padding: 8px;
+}
+
+#mc_embed_signup {
+    /* background: #fff; */
+    clear: left;
+}
+
 /* ------------------------------------ Buttons */
 
 .shop-now {
