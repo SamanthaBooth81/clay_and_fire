@@ -32,7 +32,11 @@
 
 [Bugs Found](#bugs-found)
 
+[Search Engine Optimisation (SEO)](#search-engine-optimisation-seo)
+
 [Deployment](#deployment)
+
+[Marketing Strategies](#marketing-strategies)
 
 [Credit](#credit)
 
@@ -41,8 +45,29 @@
 # User Experience
 ## User Stories
 ### Superuser / Admin
+1.	As a Site Owner I want to be able to add a product so that I can add more items to my store.
+2.	As a Site Owner I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
+3.	As a Site Owner I want to be able to delete a product so that I can remove items that are no longer available.
+4.	As a Site Owner I want to be able to send email to customers with a. subscription, notifying customers of any deals, sale and new arrivals.
 
 ### Shopper
+1.	As a Shopper I want to be able to view a list of items so that I can add to me basket.
+2.	As a shopper I want to be able to click into an item so that I can view a product description and add to the basket.
+3.	As a shopper I want to be able to add items to my basket so that I can keep track of what I am spending.
+4.	As a shopper I want to be able to be able to adjust the quantity of products in my basket so that I can make changes to my purchases before checkout.
+5.	As a shopper I want to be able to be able to enter payment information so that I can check out quickly and hassle free.
+6.	As a shopper I want to be able to be able to feel that my personal and payment details are safe and secure so that I can confidently carry out my purchase.
+7.	As a shopper I want to be able to be able to view an order confirmation so that I can verify my order is correct.
+8.	As a shopper I want to be able to receive an email confirmation of my order so that |I have proof of my order for my records.
+9.	As a shopper I want to be able to be able to order without creating an account so that I can make one off orders.
+10.	As a shopper I want to be able to be able to sort a specific category of a products so that I can find the best price quickly for the product I am looking for.
+11.	As a shopper I want to be able to be able to sort multiple categories and products simultaneously so that I can find the best priced product over a broader range of categories
+12.	As a shopper I want to be able to be able to easily see what I’ve searched for and the number of results so that I can quickly see whether the product is available.
+13.	As a shopper I want to be able to be able to easily register for an account so that I can have a personal account and view my profile and purchase history.
+14.	As a shopper I want to be able to be able to recover my password so that I can recover my account access.
+15.	As a shopper I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
+16.	As a shopper I want to be able to be able to sign up for email so that I can be notified of new releases, deals and upcoming sales.
+
 
 # Features
 - Landing Image
@@ -123,12 +148,17 @@ All wireframes were created used [Balsamiq](https://balsamiq.com/)
 Clay & Fire Wireframes for Mobiles, Tablets and Desktop devices can be viewed [here](assets/documents/Wireframes.pdf).
 
 # Structure
-I have kept the structure simple to not crowd the user with information. The homepage contains all of the recipes that are approved by the superuser/admin, which is also paginated therefore limits the recipe cards to 12 per page. 
+This project is structured with a homepage that greets the user with a clear navigation at the top of the page to search for the item required or to browse all products. There is the ability to sort items by price, alphabetically and by category as well as the ability to search for a product by typing in keywords into the search bar.
+
+Furthermore, users have the option to checkout as guests or create a profile for themselves which can contain their delivery address and does contain their order history.
 
 The website is made of the following apps:
 1. Home
 2. Products
-3. 
+3. Profile
+4. Bag
+5. Checkout
+6. Company Info
 
 ## Databases
 
@@ -136,13 +166,6 @@ The website is made of the following apps:
 
 For this I project I used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
 
-### Recipes
-
-For the user to be able to upload their own recipes I have created the below Recipe Model:
-
-<img src="assets/readme_images/recipe-model.png" width="500px">
-
-All fields are required apart from Author - which is based on the user who is currently logged in, Featured Image - which uses a placeholder if no image is uploaded and Excerpt - which is for the user to add any additional notes if required. 
 # Technologies Used
 
 ## Languages Used
@@ -231,6 +254,34 @@ The Order total was also compared on the checkout page, the successful checkout 
 
 I encountered the following issues whilst building this project:
 
+# Search Engine Optimisation (SEO)
+In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
+
+-	Clay Jewellery
+-	Polymer Clay Jewellery
+-	Baked Clay Jewellery
+-	Handmade jewellery
+-	Handmade clay jewellery
+-	Handmade gifts
+-	Ladies handmade gifts
+-	Gift ideas for woman
+
+Of the above, the top combination of searches  I found were:
+
+-	Handmade Polymer Clay Jewellery
+-	Handmade Jewellery Gifts 
+-	Handmade Women’s Jewellery
+-	Handmade Jewellery UK
+-	Handmade Jewellery
+
+Of the above searches, Handmade Polymer Clay Jewellery best suited what my project is selling and had the highest search rate of all keywords attempted. With that in mind, I have selected the following to be included in my projects metadata:
+
+-	Handmade Jewellery Gifts
+-	Handmade Polymer Clay Jewellery
+-	Handmade Jewellery
+-	Polymer Clay Jewellery
+
+Also, I included ‘Handmade Jewellery’ within the homepage message’ along with a subheading of ‘Find the perfect gift today!’ 
 
 # Deployment 
 
@@ -276,7 +327,7 @@ DATABASES = {
 
 13. Back onto GitPod, the cloudinary libraries installed now need to be added to the list of installed apps within the settings.py file - 'cloudinary_storage' and 'cloudinary'
 
-14. Next we need to tell Django to use Cloudinary to store our media and static files. Toward the end of our settings.py  file we can add:
+14. Next we need to tell Django to use Amazon Web Services to store our media and static files. Toward the end of our settings.py  file we can add:
 
 - STATIC_URL = '/static/'
 - STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
@@ -314,6 +365,58 @@ Web tells Heroku to allow web traffic, whilst gunicorn is the server installed e
     - Set DEBUG to development with: *development = os.environ.get('DEVELOPMENT', False)* above it.
 
 23. To deploy re-do steps 19 - 21, minus reconnecting your GitHub account as it should still be connected to your App. 
+
+# Marketing Strategies
+
+1.	Who are your users?
+
+- Woman who enjoy fashion and accessorising
+- Loved ones looking for gifts
+- Woman ages between 15 and 45 roughly
+
+2.	Which online platforms would you find lots of your users?
+
+- Facebook
+- Instagram
+- Tiktok
+- Etsy
+
+3.	Would your users use social media? If yes, which platforms do you think you would find them on?
+
+- Facebook
+- Instagram
+- Tiktok
+
+4.	What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?
+
+- Style Inspiration: 
+    - Instagram Posts of our jewellery styled and possible combinations
+    - TikTok Videos following current editing trends
+- Gift Inspiration
+    - Instagram Posts of gift ideas and product combinations
+    - Emails with gift ideas, particularly around Christmas or other holidays
+
+5.	Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?
+
+- Email deals for subscribers
+- Sale Emails and Instagram Posts/Stories
+
+6.	What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
+
+- Make Sales
+- Gather repeat customers
+
+7.	Would your business have a budget to spend on advertising? Or would it need to work with free or low cost options to market itself?
+
+- Free/low cost marketing as the budget would need to go towards materials required to create and deliver high quality products
+
+The below business both sell polymer clay jewellery. As you can see from both of these examples their most successful Social Media platform in terms of following is TikTok, followed by Instagram and lastly Facebook. 
+### Shopmalcreates: 
+FB Page 535 likes, Instagram 32.7k followers, TikTok 1232 followers
+### Indigo Sands: 
+FB Page 4037 likes, Instagram 92.4K followers, TikTok 225.7K followers
+
+Although seemingly a successful tool for building a following, as TikTok is a fast-paced video based platform, I have created Instagram and Facebook accounts to act as the Social Media platform this business uses alongside email marketing. 
 
 # Credit
 ## Content 
