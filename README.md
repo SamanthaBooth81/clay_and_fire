@@ -3,10 +3,10 @@
 <img src="assets/readme_images/responsive-img.png" height="400px">
 
 ### **Live Site**
-[Clay & Fire Repository](https://github.com/SamanthaBooth81/foody-family)
+[Clay & Fire Live Site](https://clay-and-fire.herokuapp.com/)
 
 ### **Repository:**
-[Clay & Fire Live Site](https://foody-family.herokuapp.com/)
+[Clay & Fire Repository](https://github.com/SamanthaBooth81/clay_and_fire)
 
 # About
 
