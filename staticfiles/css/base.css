@@ -1,0 +1,358 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap'); */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url('/media/landing.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* from Bulma */
+i {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* ------------------------------------ Navbar */
+
+.logo {
+    text-transform: uppercase;
+    color: #730C02;
+}
+
+.logo-link {
+    width: fit-content;
+}
+
+.logo-header {
+    color: black;
+    padding: 40px 40px 0 40px;
+}
+
+.icon {
+    color: #730C02;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #D9895B;
+}
+
+.nav-text {
+    color: black;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------ search box */
+
+input[name='q']::placeholder {
+    color: #730C02;
+}
+
+/* ------------------------------------ delivery banner */
+
+#delivery-banner {
+    background-color: #D9A689;
+}
+
+/* ------------------------------------ homepage main heading */
+.landing-msg {
+    background-color: #beb5b17a;
+    border-radius: 2px;
+}
+
+.sub-header {
+    color: black;
+    padding: 20px 20px 0 40px;
+    font-style: italic;
+}
+
+/* ------------------------------------ footer */
+footer {
+    background-color: #D9A689;
+}
+
+.copyright{
+    float: left;
+    width: 95%;
+    padding: 5x;
+}
+
+.copyright p {
+    display: inline-block;
+    margin: 0;
+}
+
+.copyright i {
+    color: #2020207a;
+}
+
+.footer-div {
+    padding: 5px;
+}
+
+.footer-header {
+    padding: 8px;
+}
+
+#mc_embed_signup {
+    /* background: #fff; */
+    clear: left;
+}
+
+/* ------------------------------------ Buttons */
+
+.shop-now {
+    padding-left: 40px;
+}
+
+.shop-now-btn {
+    background-color: #A63F03;
+    color: #D9D4D2;
+}
+
+.shop-now-btn:hover {
+    background-color: #D9D4D2;
+    columns: #A63F03;
+}
+
+.categories {
+    color: rgba(0,0,0,.5);
+    font-size: larger;
+}
+
+.categories:hover {
+    color: #212529;
+}
+
+.shop-btn {
+    color: #730C02;
+    border: 1px solid #730C02;
+    margin-bottom: 20px;
+}
+
+.shop-btn:hover,
+.shop-text:hover {
+    background-color: #730C02;
+    color: white;
+}
+
+.add {
+    float: left;
+    margin-right: 2%;
+    padding-left: 5px;
+}
+
+.bag-add {
+    padding: 2%;
+    color: #730C02;
+}
+
+.bag-add-btn {
+    font-size: 1.25rem;
+}
+
+.bag-add-btn:hover {
+    color: #A63F03;
+}
+
+.bag-btn {
+    cursor: pointer;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.bag-notification {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.free-del {
+    background-color: #D9A689;
+}
+
+/* ------------------------------------ Products Page */
+.overlay {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.item-img {
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
+}
+
+/* ------------------------------------ All Pages */
+.page-title {
+    padding-top: 2%;
+}
+
+/* ------------------------------------ Product Details Pages */
+
+.price {
+    float: left;
+    width: 10%;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.rating-icon {
+    color: #D9895B;
+}
+
+.details-img {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.details-img img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.title {
+    padding-top: 7%;
+}
+
+
+.description {
+    margin-right: 100px;
+}
+
+/* ------------------------------------ Shopping Bag */
+.bag-title {
+    margin-top: 5%;
+}
+
+.shop-text {
+    color: #730C02;
+    text-transform: uppercase;
+}
+
+.bag-table th {
+    font-size: larger;
+    font-weight: bolder;
+}
+.bag-img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.checkout {
+    color: #212529;
+}
+
+.checkout:hover {
+    color: #D9895B;
+}
+
+/* ------------------------------------ FAQ's Accordion */
+.faq-container {
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------ allauth pages */
+.allauth-form-inner-content input {
+    border-radius: 0;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+/* From Boutique Ado/Bootstrap */
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    color: #730C02;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #730C02;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover {
+    background-color: #730C02;
+    color: white;
+}
+
+/* ------------------------------------ Media Queries */
+@media (min-width: 1200px) {
+    /* Larger container for xl screen sizes */
+    .container {
+      max-width: 80%;
+    }
+  }
+
+/* fixed top navbar only on medium and up screen sizes */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+        margin-bottom: 10px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media screen and (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: 100%;
+    
+    }
+}
