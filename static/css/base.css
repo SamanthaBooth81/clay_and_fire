@@ -109,6 +109,10 @@ footer {
     clear: left;
 }
 
+.contact-form {
+    margin: 0 auto;
+}
+
 /* ------------------------------------ Buttons */
 
 .shop-now {

@@ -1,5 +1,7 @@
 """Company Info Views"""
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.contrib import messages
 
 
 def faq_page(request):
@@ -20,3 +22,34 @@ def about_us(request):
 def privacy_policy(request):
     """View to return shipping and returns info page"""
     return render(request, 'company/privacy-policy.html')
+
+
+def contact(request):
+    """View to return contact us page"""
+    if request.method == 'POST':
+        # Send contact form to Gmail Account
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        message_data = {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'message': message,
+        }
+        message = '''
+        From: {}
+        New message: {}
+        '''.format(message_data['message'], message_data['email'])
+
+        send_mail(
+            message_data['subject'], message, '', ['sambooth018@gmail.com'])
+
+        messages.info(request, (
+            'Your message has been sent, we will get in \
+                touch as soon as possible.'))
+        return render(request, 'home/index.html')
+
+    return render(request, 'contact/contact-us.html')
