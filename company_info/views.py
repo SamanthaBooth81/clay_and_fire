@@ -42,14 +42,14 @@ def contact(request):
         message = '''
         From: {}
         New message: {}
-        '''.format(message_data['message'], message_data['email'])
+        '''.format(message_data['email'], message_data['message'])
 
         send_mail(
             message_data['subject'], message, '', ['sambooth018@gmail.com'])
 
         messages.info(request, (
-            'Your message has been sent, we will get in \
-                touch as soon as possible.'))
+            f'Your message has been sent, we will contact you \
+                via { email } as soon as possible.'))
         return render(request, 'home/index.html')
 
     return render(request, 'contact/contact-us.html')
