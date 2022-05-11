@@ -508,6 +508,8 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 
 - [GDPR Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate the Privacy Policy that was added to the footer.
 
+- [Scottish Coder Tutorial](https://www.youtube.com/watch?v=1DcySa35fXw), was used to help with creating a working contact form view.
+
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)

@@ -26,6 +26,7 @@ def privacy_policy(request):
 
 def contact(request):
     """View to return contact us page"""
+    # Help from Scottish Coder YouTube Tutorial - link in README
     if request.method == 'POST':
         # Send contact form to Gmail Account
         name = request.POST.get('name')
