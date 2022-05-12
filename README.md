@@ -253,6 +253,19 @@ The Order total was also compared on the checkout page, the successful checkout 
 # Bugs Found 
 
 I encountered the following issues whilst building this project:
+- The Footer wasn't sticking to bottom on some of the pages. To fix this I added a 'h-100' Bootstrap class to the container divs. 
+
+- The Success Message wasn't working when removing items from cart. To fix this I needed to get the product ID to identify which Item was being deleted in the message
+
+- The Shopping bag was repeating 'Continue Shopping' and 'Add to Bag' buttons after every item in the bag. To fix this I moved the {% endfor %} for the {% if bag_items %} to be before the buttons.
+
+- Incorrect Stripe public key in checkout view. I accidentally wrote the public key in the context in capitals. 
+
+- I was able to add products to categories not on dropdown list. To fix this I had to remove the non-existing categories in the admin panel and remove/change to category of the products added to these categories.
+
+- Deploy not completing - message received: ERROR: Could not find a version that satisfies the requirement python-apt==2.0.0+ubuntu0.20.4.7 (from versions: 0.0.0, 0.7.8). To fix this I removed the un-required installs from requirements.txt file.
+
+- The Webhook for the live site was generating a 301 error. To fix this I had to add a / at the end of the url the webhook was set up to.
 
 # Search Engine Optimisation (SEO)
 In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
