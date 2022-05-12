@@ -239,42 +239,186 @@ For this I project I also used Django's User model to store registration informa
 
 
 ### **Shopper**
-### **View List of Products**
-- 
+### 1. As a Shopper I want to be able to view a list of items so that I can add to me basket.
 
-### **View Product Details**
-- 
+- All products are displayed using Bootstrap Cards and Responsiveness classes to ensure the card layout changes dependant on screen size.
 
-### **Add Items to Shopping Bag**
+- Products can be viewed together or by category and can be further filtered using the sort box on the top right of the products pages. 
+
+- All product images are displayed and where they do not exist there is a placeholder.
+
+- All products have a required title, price and category attached to the product card.
+
+- Edit and Delete buttons are unavailable to non-superusers.
+
+###	2. As a shopper I want to be able to click into an item so that I can view a product description and add to the basket.
+
+- On clicking an item you are taken to the correct item as the product image, title and price matches that product card.
+
+- The user can see a description of the item they are viewing.
+
+### 3. As a shopper I want to be able to add items to my basket so that I can keep track of what I am spending.
+
 The following scenarios were tested by checking the items added to the Shopping Bag:
+
 - Add an item to the bag and check it is in there with the correct quantity.
+
 - Increase the quantity before adding to the shopping bag and checking whether the quantity in the bag matches was was added.
+
+- If the user types 0 or a quantity over 99, an error message by the quantity field notifies the user that the quantity can be between 1-99 only. If the user uses the buttons, they are disabled if attempting to decrement to 0 or increment above 99. 
+
+- Once an item has been added to the shopping bag a success message appears in the top right corning, notifying the user of the specific product and quantity added, how much more to spend to save on delivery and a link to the shopping bag.
+
 All items were added as they should be to the shopping bag and tested through to order completion to ensure it the items added to the shopping bag matched in the completed order. 
 
-### **Amend Shopping Bag**
-The following scenarios were attempted and tested by completing the order and checking what was submitted in the Admin.
+### 4. As a shopper I want to be able to be able to adjust the quantity of products in my basket so that I can make changes to my purchases before checkout.
+
+The following scenarios were tested by completing the order and checking what was submitted in the Admin:
+
 - Increasing the Quantity of an item in the shopping bag.
+
 - Decreasing the Quantity of an item in the shopping bag.
+
 - Removing an item out of the shopping bag.
 
 All of the above actions are reflected correctly in the Order database along with the correct total delivery and grand total prices. 
 
-### **Checkout**
+### 5. As a shopper I want to be able to be able to enter payment information so that I can check out quickly and hassle free.
 
 The checkout function was tested using Stripes test card numbers. 
 
 The following scenarios were tested to ensure the checkout went through securely:
+
 - Submitting an order, completing only the required fields on the checkout form. The order went through both on Stripe and stored in the Database with a success Webhook message.
-- Attempting to submit an order with incorrect card details. An error message appears underneath the card details form confirming the details are incorrect. 
+
+- Attempting to submit an order with incorrect card details. An error message appears underneath the card details form confirming the details are incorrect.
+
 - Attempting to submit an order with an expired card. An error message appears underneath the card details form confirming the card has expired.
+
 - Submitting an order, completing only the required fields on the checkout form, with the form.submit() within the stripe_elements.js file commented out to simulate a user closing the page before the checkout success confirmation page has loaded. The order went through both on Stripe and stored in the Database with a success Webhook message.
+
 - Attempting to submit an order with an incomplete order form. All empty required fields alert the user they must be filled to be completed and the form isn't submitted. 
 
 The Order total was also compared on the checkout page, the successful checkout page, on Stripe and within the Order database to ensure all totals matched.
 
+### 6. As a shopper I want to be able to be able to feel that my personal and payment details are safe and secure so that I can confidently carry out my purchase.
+
+- Address details can be saved if the user has an account and updated/removed if the user wishes. 
+
+- The project uses Stripe to process payments, keeping the users payment information safe and not stored within their user profile. 
+
+- Payment information isn't stored in the projects models.
+
+### 7. As a shopper I want to be able to be able to view an order confirmation so that I can verify my order is correct.
+
+- Users with a profile have a list of orders made on their profile page. Clicking the order number takes the user to view the confirmation page that was displayed directly upon checkout. The confirmation contains the following details of the purchase:
+    - Order Number
+    - Order Date
+    - Product Name and Quantity
+    - Price per item
+    - Delivering to
+    - Phone Number
+    - Address
+    - Order Total
+    - Delivery Cost
+    - Grande Total
+
+- The above details contained within the order confirmation matched the bag items, order total and the order in the database.
+
+### 8. As a shopper I want to be able to receive an email confirmation of my order so that |I have proof of my order for my records.
+
+- Email confirmation was tested by placing an order to an email address that can be checked. An email confirmation matching the template set up in the checkout app was received with the correct order details within and a contact email for if there was an issue with the order.
+
+### 9. As a shopper I want to be able to be able to order without creating an account so that I can make one off orders.
+
+An order was placed without being logged into an account. It was tested by comparing the the order confirmation, email confirmation and the order within the order model to ensure it matched what was placed in the bag and then checked out. Also the order event on Strip matched the total cost of the order. 
+
+### 10. As a shopper I want to be able to be able to sort a specific category of a products so that I can find the best price quickly for the product I am looking for.
+
+- The navigation contains the multiple categories on offer. It was tested by clicking through and ensuring the category tag on each product card matched the category the page was displaying. 
+
+- within the following Nav headings, their particular categories are listed at the top when all of that selected is clicked into allowing for further filtering per section:
+    - Earrings
+    - Necklaces
+    - Special Offers
+
+### 11. As a shopper I want to be able to be able to sort multiple categories and products simultaneously so that I can find the best priced product over a broader range of categories
+
+Testing the sort functionality was done within the all products tab as it contained the majority of products. The sort options tested were:
+
+- Price (Low to High)
+- Price (High to Low)
+
+These were tested by checking the first and last price of the items on the page to check they sorted correctly. 
+
+- Rating (Low to High)
+- Rating (High to Low)
+
+These were tested by checking the first and last rating of the items on the page to check they sorted correctly. 
+
+- Name (A to Z)
+- Name (Z to A)
+
+These were tested by checking the first and last Name of the items on the page where in alphabetical order. 
+
+- Category (A to Z)
+- Category (Z to A)
+
+These were tested by checking the through the list items on the page, checking the categories where in alphabetical order. 
+
+### 12. As a shopper I want to be able to be able to easily see what I’ve searched for and the number of results so that I can quickly see whether the product is available.
+
+This was tested by:
+
+- Searching via the search box
+- Searching through the categories 
+
+The quantity for the search is displayed at the top left of the page, the number displayed matched the number of searches on each page. 
+
+### 13. As a shopper I want to be able to be able to easily register for an account so that I can have a personal account and view my profile and purchase history.
+
+This was tested by registering a couple of user accounts and:
+
+- logging out and back in to ensure they worked
+- Confirming the account via email
+- Checking the Admin panel for confirmed email addresses
+
+The above ensured the user accounts were generated. 
+
+To test profile information I added an address and attempted to checkout an item. This ensured that the address saved in the profile auto filled on the checkout page. To test this further, I made an order ensuring the save details to profile checkbox is ticked, and checked the address saved to the profile. 
+
+To test the order history, I checked whether the orders placed to test the profile information had saved to the profile and the information contained in the order matched what was placed in the bag and checked out.
+
+### 14. As a shopper I want to be able to be able to recover my password so that I can recover my account access.
+
+This was tested by clicking the 'Forgot Password' link at the bottom of the login page. The user then receives a link via email, therefore I tested this with an existing email to ensure the link was received.
+
+There is a wait for the password re-set link to be sent but when it comes through, the user is taken to a page where they reset the password by entering it twice. After the new password has been entered, the user is re-directed to a confirmation page with a bootstrap toast displaying a success message. If the passwords do not match then an error message notifies the user so they can try again.
+
+Once reset, the user must then re-login with the new password, which was tested to confirm the password change and that the correct user is now logged in.
+
+### 15. As a shopper I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
+
+This was tested by registering for an account. In order to complete registration the user must receive an email with a link that confirms their email address. This was tested with an outlook email address that was created for testing. The email was received and the account was confirmed via the link.
+### 16. As a shopper I want to be able to be able to sign up for email so that I can be notified of new releases, deals and upcoming sales.
+
+Contained in the footer, the user can subscribe by entering their email and clicking submit. If there is an error with the email, an error message appears underneath the email box. If successful then there is a success message under the email box. 
+
+The subscription was tested by using a test email to subscribe and logging into mailchimp and checking the contacts. Once confirmed the contact was there I scrolled across to see if they were subscribed. From here I also tested unsubscribing a user to ensure it is possible if a request came in. 
+
+### 17. As a shopper I want to be able to be able to contact the site owner so that I can ask about my order or for further information not contained within the Footer Pages.
+
+The contact form link is placed within the footer and takes the user to the contact page. The form was tested by ensuring:
+
+- the required fields must be completed before submittal.
+- The form fields took the correct information:
+    - the email input took only emails
+- The message box could hold enough text for a message.
+- the form submitted the message to a working email for the site owner to respond.
 
 **Peer Code Review**
 
+My project was shared on Slack with other Code Institute students. The feedback received was: 
 
 # Validator Testing
 
