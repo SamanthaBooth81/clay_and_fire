@@ -244,9 +244,9 @@ The Order total was also compared on the checkout page, the successful checkout 
 
 # Validator Testing
 
-- The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No errors were returned for the html segments.
+- The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the html segments.
 - The CSS style sheet was validated using [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input), no errors were returned.
-- The JavaScript files were run through [JSHint](https://jshint.com/), no errors were found.
+- The JavaScript files were run through [JSHint](https://jshint.com/), errors were found.
 - The code was validated using [PEP8](http://pep8online.com/). No errors were returned.
 - The finished project was also run through [Wave](https://wave.webaim.org/) to check for issues with contrast styling and html structure. 
 
