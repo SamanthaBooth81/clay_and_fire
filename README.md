@@ -161,13 +161,19 @@ The website is made of the following apps:
 6. Company Info
 
 ## Databases
+### Category
+### Products
 
+### Order
+
+### Order Line Items
+
+### User Profile
 ### User
 
-For this I project I used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
+For this I project I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
 
 # Technologies Used
-
 ## Languages Used
 
 [html](https://en.wikipedia.org/wiki/HTML)
@@ -192,28 +198,60 @@ For this I project I used Django's User model to store registration information 
 [Bootstrap](https://getbootstrap.com/) - Used to quickly add design and responsiveness to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices ans screen sizes.
 
 # Testing
-## Manual Testing by User Story
+## **Manual Testing by User Story**
 ### **Superuser / Admin**
-**Add Product**
+### 1. As a Site Owner I want to be able to add a product so that I can add more items to my store.
+- Products can be added both via the project management page found by clicking on 'My Account' or vis the Admin Panel.
+- The required fields are validating correctly and error messages are explicit and related to each required field.
+- All required fields are indicated with an asterisk.
+- Number fields can only contain numbers.
+- Images can be left out and a placeholder image takes its place.
+- Images, when uploaded, are stored in the appropriate Amazon Web Services Bucket and Folder.
+- Buttons are highlighted on hover and take the user to the correct page:
+    - Cancel takes the user back to the Products Page
+    - Add product add the product and returns the user to the Products Page
+- An alert message appears in the top right of the page to notify the user that the product has successfully been added.
+
+### 2.	As a Site Owner I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
+- Edit buttons are located on the product cards on the products page which are only accessible if you are a super user. 
+- Clicking the Edit button takes the user to the product form which is already populated with the current information.
+- The fields are validated the same was as if a new product was being added, all number fields must be numbers and required fields filled in. 
+- The image can also be removed an the placeholder image will replace it upon saving.
+- If the image is replace with a new image it is stored in the correct Amazon Web Services Bucket and Folder.
+- The name of the image uploaded can be the same as an image that exists.
+- An alert message appears in the top right of the page to notify the user which product they are currently editing.
+- Buttons are highlighted on hover and take the user to the correct page:
+    - Cancel takes the user back to the Products Page
+    - Update product saves the updated product information and returns the user to the Products Page. This is confirmed via the admin panel and the details viewed on the Product Details page.
+
+### 3.	As a Site Owner I want to be able to delete a product so that I can remove items that are no longer available.
+- Clicking delete removes the product from the product model.
+- The product is no longer listed with the live products.
+- The user cannot view the product with the url. Using the link for a product that no longer exists takes the user to a 404 error page.
+- Success message at top right of page when product successfully deleted.
+
+### 4.	As a Site Owner I want to be able to send email to customers with a subscription, notifying customers of any deals, sale and new arrivals.
+
+- Customers who sign up for emails are added to the businesses mailchimp contacts list where they can be unsubscribed. Users can contact the owner via the 'contact us' form in the footer to unsubscribe. 
+- Unsubscribed users can re-subscribe by submitting their email again.
+- An error message is displayed underneath the email box if there is an issue with the email provided
+- A success message is displayed underneath the email box to confirm subscription
+
+
+### **Shopper**
+### **View List of Products**
 - 
 
-**Delete Product**
+### **View Product Details**
 - 
 
-### **Buyer**
-**View List of Products**
-- 
-
-**View Product Details**
-- 
-
-**Add Items to Shopping Bag**
+### **Add Items to Shopping Bag**
 The following scenarios were tested by checking the items added to the Shopping Bag:
 - Add an item to the bag and check it is in there with the correct quantity.
 - Increase the quantity before adding to the shopping bag and checking whether the quantity in the bag matches was was added.
 All items were added as they should be to the shopping bag and tested through to order completion to ensure it the items added to the shopping bag matched in the completed order. 
 
-**Amend Shopping Bag**
+### **Amend Shopping Bag**
 The following scenarios were attempted and tested by completing the order and checking what was submitted in the Admin.
 - Increasing the Quantity of an item in the shopping bag.
 - Decreasing the Quantity of an item in the shopping bag.
@@ -221,7 +259,7 @@ The following scenarios were attempted and tested by completing the order and ch
 
 All of the above actions are reflected correctly in the Order database along with the correct total delivery and grand total prices. 
 
-**Checkout**
+### **Checkout**
 
 The checkout function was tested using Stripes test card numbers. 
 
@@ -233,10 +271,6 @@ The following scenarios were tested to ensure the checkout went through securely
 - Attempting to submit an order with an incomplete order form. All empty required fields alert the user they must be filled to be completed and the form isn't submitted. 
 
 The Order total was also compared on the checkout page, the successful checkout page, on Stripe and within the Order database to ensure all totals matched.
-
-## General Manual Testing 
-**User Registration**
-
 
 
 **Peer Code Review**
@@ -266,6 +300,8 @@ I encountered the following issues whilst building this project:
 - Deploy not completing - message received: ERROR: Could not find a version that satisfies the requirement python-apt==2.0.0+ubuntu0.20.4.7 (from versions: 0.0.0, 0.7.8). To fix this I removed the un-required installs from requirements.txt file.
 
 - The Webhook for the live site was generating a 301 error. To fix this I had to add a / at the end of the url the webhook was set up to.
+
+- The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) url to display the image.
 
 # Search Engine Optimisation (SEO)
 In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
