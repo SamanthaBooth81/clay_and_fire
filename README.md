@@ -32,11 +32,11 @@ This website was created to sell handmade clay jewellery to shoppers. It is an E
 
 [Bugs Found](#bugs-found)
 
+[Marketing Strategies](#marketing-strategies)
+
 [Search Engine Optimisation (SEO)](#search-engine-optimisation-seo)
 
 [Deployment](#deployment)
-
-[Marketing Strategies](#marketing-strategies)
 
 [Credit](#credit)
 
@@ -478,195 +478,6 @@ I encountered the following issues whilst building this project:
 
 - The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) url to display the image.
 
-# Search Engine Optimisation (SEO)
-In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
-
--	Clay Jewellery
--	Polymer Clay Jewellery
--	Baked Clay Jewellery
--	Handmade jewellery
--	Handmade clay jewellery
--	Handmade gifts
--	Ladies handmade gifts
--	Gift ideas for woman
-
-Of the above, the top combination of searches  I found were:
-
--	Handmade Polymer Clay Jewellery
--	Handmade Jewellery Gifts 
--	Handmade Women’s Jewellery
--	Handmade Jewellery UK
--	Handmade Jewellery
-
-Of the above searches, Handmade Polymer Clay Jewellery best suited what my project is selling and had the highest search rate of all keywords attempted. With that in mind, I have selected the following to be included in my projects metadata:
-
--	Handmade Jewellery Gifts
--	Handmade Polymer Clay Jewellery
--	Handmade Jewellery
--	Polymer Clay Jewellery
-
-Also, I included ‘Handmade Jewellery’ within the homepage message’ along with a subheading of ‘Find the perfect gift today!’ 
-
-# Deployment 
-
-This project was deployed using Heroku. At the time of deployment Heroku was facing a security issue, therefore this project was deployed via the command line in GitPod and those are the steps detailed below. As this was the case I was unable to allow automatic deployments in Heroku each time a commit was pushed into the repository.
-
-See the following steps to deploy below:
-
-1. Login to Heroku and Create a New App.
-
-2. Give the App a name, it must be unique, and select a region closest to you. 
-
-3. Click on 'Create App'. This will take you to a page where you can deploy your project. 
-
-4. Next, click on the 'Resources' tab and search for 'Heroku Postgres' in the Add-ons section to add the Heroku Postgres database to the project. 
-
-5. Click on the 'Settings' tab at the top of the page. The following steps must be completed before deployment.
-
-6. Within the settings.py file you need to import os and import dj_database_url at the top. Then, in the command line install dj_database_url and psycopg2 so that we can use Postgres. Freeze these installs into the requirements.txt file.
-
-7. Scroll down to Config Vars (also known as Environment Variables) and click 'Reveal Config Vars'. Here the database URL is stored to run my app on Heroku. 
-
-I used an if statement in settings.py (see below), so that when our app is running in Heroku, we connect to Postgres but in our local environment, we connect to sequel light:
-
-development = os.environ.get('DEVELOPMENT', False)
-
-if development:
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-
-else:
-
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-
-
-8. Next I ran the migrations again to set up my Postgres Database by running **Python 3 manage.py migrate** within the command line and then create a Superuser using **python3 manage.py create superuser**.
-
-9. Following setting up the database I generated a new Secret Key, to replace the insecure key that was in settings.py and added: **os.environ.get('SECRET_KEY')**. I then added the new generated key to the Config Vars on Heroku. 
-
-10. We must then need to install gunicorn, which will act as our webserver and freeze that into our requirements file.
-
-11. I then created a Procfile to tell Heroku to create a web dyno which will run gunicorn and serve our django app.
-
-Within this file add the following:
-
-web: gunicorn clay_and_fire.wsgi
-
-Web tells Heroku to allow web traffic, whilst gunicorn is the server installed earlier, a web services gateway interface server (wsgi). This is a standard that allows Python services to integrate with web servers.
-
-12. I then told Heroku temporarily disabled collectstatic by using Heroku config set, disable collectstatic = 1. I added this via Heroku's Config Vars but this can also be added via the command line. This was to prevent Heroku from attempting to deploy the static files, causing an error, until Amazon Web Services was set up. 
-
-13. Then add the hostname of our Heroku app to allowed hosts in settings.py as well as localhost so that GitPod will still work too.
-
-14. I then committed and pushed these changes into my GitHub repository so that I could start my first deployment. Once complete, log into Heroku using the following command in the terminal, **heroku login -i**,  and entering your login details.
-
-15. Once logged in, add a remote to your local repository with heroku git:remote command and your Heroku app’s name: **heroku git:remote -a clay-and-fire**
-
-16. Finally, to deploy use the following command: **git push heroku main**. Once deployed you can open the app from the command line to ensure it was successfully deployed.
-
-17. Once we can confirm the app deployed successfully, we need to set-up Amazon Web Services as this will be where my media and static files are stored. To do this I first created an account with Amazon Web Services. Then, I searched for the service, S3, using the search bar at the top of the page. 
-
-18. Click into it and then click the orange 'Create a Bucket' button. I named this bucked to match my clay-and-fire Heroku app name to keep things simple. Then, I selected my region and changed the 'Object Ownership' setting to **ACLs enabled**. Then, I unchecked block all public access, acknowledged that the bucket will be public and click on the 'Create Bucket' button.
-
-19. Next, on the properties tab, I scrolled to the bottom and turned on static website hosting.
-This gave me a new endpoint that I can use to access it from the internet. For the index and error document, I filled in some default values and then click save.
-
-20. Now on the permissions tab I pasted in the following coors configuration:
-
-[
-    
-    {
-        "AllowedHeaders": [
-        "Authorization"
-        ],
-
-        "AllowedMethods": [
-        "GET"
-        ],
-
-        "AllowedOrigins": [
-        "*"
-        ],
-
-        "ExposeHeaders": []
-    }
-    
-]
-
-which is going to set up the required access between our Heroku app and this s3 bucket.
-
-21. Next I'll go to the bucket policy tab a select, policy generator so we can create a security policy for this bucket. The policy type is going to be s3 bucket policy and then allow all principals by using a '*' and the action will be, get object. Next I'll copied the ARN which stands for Amazon resource name from the other tab pasted it into the ARN box here at the bottom. I then clicked 'Add statement' and then 'Generate Policy'.
-
-22. I then copied this policy into the bucket policy editor. I then added '/*' at the end of the resource key to allow access to all resources in this bucket and then saved it.
-
-23. Finally, to complete configuration, I went to the 'access control list' tab and checked edit and enable List for Everyone (public access) and accepted the warning box..
-
-24. Next I created a group and a user to access the bucket by searching for the service IAM (Identify and Access Management). I clicked on 'User Groups' and then 'Create User Group' giving it the name 'manage-clay-and-fire'. 
-
-25. I then created the Policy used to access our bucket by clicking policies and then create policy. I clicked onto JSON tab and then selected import managed policy in order to
-import one that AWS has pre-built for full access to s3.
-
-26. I searched for s3 and then import the s3 full access policy. I then got the bucket ARN from the bucket policy page in s3 and pasted that into the 'Resource' section on the JSON tab.
-
-I then clicked the next tabs until I reached 'Review Policy' and gave it a name and a description and then clicked 'Create Policy'. This took me back to the policies page.
-
-27. Next I attached the policy to the Group I created by return to the Create User Group page and refreshing the Policies box. I then was able to attach the new policy created by selecting it and finally clicking 'Create Group'.
-
-28. Finally I'll created a user to put in the group by going to the User's page and clicking 'Add User'. I created a user named **clay-and-fire-static-files-user**, gave them Programmatic Access and clicked 'Create User'. 
-
-29. I then downloaded the CSV file which contained this users access key and secret access key which I used to authenticate them from my Django app. It is important to download this file as you cannot be re-downloaded and contains the new users credentials which I next add to the Config Vars on Heroku.
-
-30. Next, I connected Django to the new S3 bucket. To do this I installed two new packages:
-- boto3
-- django-storages 
-
-31. I then pip3 freezed these to the requirements.txt file to ensure they're installed on the next Heroku Deploy and added **storages** to our installed apps in settings.py. 
-
-32. To connect Django to S3 (only on Heroku) I then added the following in if statement settings.py:
-
-    if 'USE_AWS' in os.environ:
-
-        # Bucket Config
-        AWS_STORAGE_BUCKET_NAME = 'clay-and-fire'
-        AWS_S3_REGION_NAME = 'eu-west-2'
-        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-
-        # Static and media files
-        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-        STATICFILES_LOCATION = 'static'
-        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-        MEDIAFILES_LOCATION = 'media'
-
-        # Override static and media URLs in production
-        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-
-
-33. I then added the following to our Config Vars on Heroku:
-- USE_AWS = True
-- AWS_ACCESS_KEY_ID, taken from the new user credentials
-- AWS_SECRET_ACCESS_KEY, taken from the new user credentials
-
-and removed:
-- Remove staticcollect=1 from congifvars within Heroku 
-
-I also set DEBUG Set DEBUG to 'DEVELOPMENT' in os.environ as it cannot be set to True as it is locally on the deployed version. 
-
-34. The next step is to tell django that in production we want to use s3 to store our static files whenever someone runs collectstatic and that we want any uploaded product images to go there also. To do that I created a file called custom_storages.py.
-
-35. Within this file I imported both our settings from django.conf and the s3boto3 storage class from django storages. Then I created custom classes for static storage and media storage which inherited the imported class from django storages to give it all its functionality. Then I set the class to store static and media files in the location specified in the USE_AWS if statement within settings.py.
-
-36. Finally, to complete deployment of AWS setup, I committed the changes and pushed them to GitHub. In the command line I then typed the following command: **git push heroku main**. If you need to login to Heroku again completed steps 14 - 16 to re-deploy. Once Heroku is allowing users to connect to their GitHub accounts you can set up automatic deploys which will remove the need to repeat these steps.
-
 # Marketing Strategies
 
 1.	Who are your users?
@@ -718,7 +529,193 @@ FB Page 535 likes, Instagram 32.7k followers, TikTok 1232 followers
 FB Page 4037 likes, Instagram 92.4K followers, TikTok 225.7K followers
 
 Although seemingly a successful tool for building a following, as TikTok is a fast-paced video based platform, I have created Instagram and Facebook accounts to act as the Social Media platform this business uses alongside email marketing. 
+# Search Engine Optimisation (SEO)
+In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
 
+-	Clay Jewellery
+-	Polymer Clay Jewellery
+-	Baked Clay Jewellery
+-	Handmade jewellery
+-	Handmade clay jewellery
+-	Handmade gifts
+-	Ladies handmade gifts
+-	Gift ideas for woman
+
+Of the above, the top combination of searches  I found were:
+
+-	Handmade Polymer Clay Jewellery
+-	Handmade Jewellery Gifts 
+-	Handmade Women’s Jewellery
+-	Handmade Jewellery UK
+-	Handmade Jewellery
+
+Of the above searches, Handmade Polymer Clay Jewellery best suited what my project is selling and had the highest search rate of all keywords attempted. With that in mind, I have selected the following to be included in my projects metadata:
+
+-	Handmade Jewellery Gifts
+-	Handmade Polymer Clay Jewellery
+-	Handmade Jewellery
+-	Polymer Clay Jewellery
+
+Also, I included ‘Handmade Jewellery’ within the homepage message’ along with a subheading of ‘Find the perfect gift today!’ 
+
+# Deployment 
+
+This project was deployed using Heroku. At the time of deployment Heroku was facing a security issue, therefore this project was deployed via the command line in GitPod and those are the steps detailed below. As this was the case I was unable to allow automatic deployments in Heroku each time a commit was pushed into the repository.
+
+See the following steps to deploy below:
+
+1. Login to Heroku and Create a New App.
+
+2. Give the App a name, it must be unique, and select a region closest to you. 
+
+3. Click on 'Create App'. This will take you to a page where you can deploy your project. 
+
+4. Next, click on the 'Resources' tab and search for 'Heroku Postgres' in the Add-ons section to add the Heroku Postgres database to the project. 
+
+5. Click on the 'Settings' tab at the top of the page. The following steps must be completed before deployment.
+
+6. Within the settings.py file you need to import os and import dj_database_url at the top. Then, in the command line install dj_database_url and psycopg2 so that we can use Postgres. Freeze these installs into the requirements.txt file.
+
+7. Scroll down to Config Vars (also known as Environment Variables) and click 'Reveal Config Vars'. Here the database URL is stored to run my app on Heroku. 
+
+I used an if statement in settings.py (see below), so that when our app is running in Heroku, we connect to Postgres but in our local environment, we connect to sequel light:
+
+    development = os.environ.get('DEVELOPMENT', False)
+
+    if development:
+
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
+
+        else:
+
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+
+
+8. Next I ran the migrations again to set up my Postgres Database by running **Python 3 manage.py migrate** within the command line and then create a Superuser using **python3 manage.py create superuser**.
+
+9. Following setting up the database I generated a new Secret Key, to replace the insecure key that was in settings.py and added: **os.environ.get('SECRET_KEY')**. I then added the new generated key to the Config Vars on Heroku. 
+
+10. We must then need to install gunicorn, which will act as our webserver and freeze that into our requirements file.
+
+11. I then created a Procfile to tell Heroku to create a web dyno which will run gunicorn and serve our django app.
+
+Within this file add the following:
+
+    web: gunicorn clay_and_fire.wsgi
+
+Web tells Heroku to allow web traffic, whilst gunicorn is the server installed earlier, a web services gateway interface server (wsgi). This is a standard that allows Python services to integrate with web servers.
+
+12. I then told Heroku temporarily disabled collectstatic by using Heroku config set, disable collectstatic = 1. I added this via Heroku's Config Vars but this can also be added via the command line. This was to prevent Heroku from attempting to deploy the static files, causing an error, until Amazon Web Services was set up. 
+
+13. Then add the hostname of our Heroku app to allowed hosts in settings.py as well as localhost so that GitPod will still work too.
+
+14. I then committed and pushed these changes into my GitHub repository so that I could start my first deployment. Once complete, log into Heroku using the following command in the terminal, **heroku login -i**,  and entering your login details.
+
+15. Once logged in, add a remote to your local repository with heroku git:remote command and your Heroku app’s name: **heroku git:remote -a clay-and-fire**
+
+16. Finally, to deploy use the following command: **git push heroku main**. Once deployed you can open the app from the command line to ensure it was successfully deployed.
+
+17. Once we can confirm the app deployed successfully, we need to set-up Amazon Web Services as this will be where my media and static files are stored. To do this I first created an account with Amazon Web Services. Then, I searched for the service, S3, using the search bar at the top of the page. 
+
+18. Click into it and then click the orange 'Create a Bucket' button. I named this bucked to match my clay-and-fire Heroku app name to keep things simple. Then, I selected my region and changed the 'Object Ownership' setting to **ACLs enabled**. Then, I unchecked block all public access, acknowledged that the bucket will be public and click on the 'Create Bucket' button.
+
+19. Next, on the properties tab, I scrolled to the bottom and turned on static website hosting.
+This gave me a new endpoint that I can use to access it from the internet. For the index and error document, I filled in some default values and then click save.
+
+20. Now on the permissions tab I pasted in the following coors configuration:
+
+    [
+        
+        {
+            "AllowedHeaders": [
+            "Authorization"
+            ],
+
+            "AllowedMethods": [
+            "GET"
+            ],
+
+            "AllowedOrigins": [
+            "*"
+            ],
+
+            "ExposeHeaders": []
+        }
+        
+    ]
+
+which is going to set up the required access between our Heroku app and this s3 bucket.
+
+21. Next I'll go to the bucket policy tab a select, policy generator so we can create a security policy for this bucket. The policy type is going to be s3 bucket policy and then allow all principals by using a '*' and the action will be, get object. Next I'll copied the ARN which stands for Amazon resource name from the other tab pasted it into the ARN box here at the bottom. I then clicked 'Add statement' and then 'Generate Policy'.
+
+22. I then copied this policy into the bucket policy editor. I then added '/*' at the end of the resource key to allow access to all resources in this bucket and then saved it.
+
+23. Finally, to complete configuration, I went to the 'access control list' tab and checked edit and enable List for Everyone (public access) and accepted the warning box..
+
+24. Next I created a group and a user to access the bucket by searching for the service IAM (Identify and Access Management). I clicked on 'User Groups' and then 'Create User Group' giving it the name 'manage-clay-and-fire'. 
+
+25. I then created the Policy used to access our bucket by clicking policies and then create policy. I clicked onto JSON tab and then selected import managed policy in order to
+import one that AWS has pre-built for full access to s3.
+
+26. I searched for s3 and then import the s3 full access policy. I then got the bucket ARN from the bucket policy page in s3 and pasted that into the 'Resource' section on the JSON tab.
+
+I then clicked the next tabs until I reached 'Review Policy' and gave it a name and a description and then clicked 'Create Policy'. This took me back to the policies page.
+
+27. Next I attached the policy to the Group I created by return to the Create User Group page and refreshing the Policies box. I then was able to attach the new policy created by selecting it and finally clicking 'Create Group'.
+
+28. Finally I'll created a user to put in the group by going to the User's page and clicking 'Add User'. I created a user named **clay-and-fire-static-files-user**, gave them Programmatic Access and clicked 'Create User'. 
+
+29. I then downloaded the CSV file which contained this users access key and secret access key which I used to authenticate them from my Django app. It is important to download this file as you cannot be re-downloaded and contains the new users credentials which I next add to the Config Vars on Heroku.
+
+30. Next, I connected Django to the new S3 bucket. To do this I installed two new packages:
+- boto3
+- django-storages 
+
+31. I then pip3 freezed these to the requirements.txt file to ensure they're installed on the next Heroku Deploy and added **storages** to our installed apps in settings.py. 
+
+32. To connect Django to S3 (only on Heroku) I then added the following in if statement settings.py:
+
+        if 'USE_AWS' in os.environ:
+            # Bucket Config
+            AWS_STORAGE_BUCKET_NAME = 'clay-and-fire'
+            AWS_S3_REGION_NAME = 'eu-west-2'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+            # Static and media files
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+            # Override static and media URLs in production
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+
+33. I then added the following to our Config Vars on Heroku:
+- USE_AWS = True
+- AWS_ACCESS_KEY_ID, taken from the new user credentials
+- AWS_SECRET_ACCESS_KEY, taken from the new user credentials
+
+and removed:
+- Remove staticcollect=1 from congifvars within Heroku 
+
+I also set DEBUG Set DEBUG to 'DEVELOPMENT' in os.environ as it cannot be set to True as it is locally on the deployed version. 
+
+34. The next step is to tell django that in production we want to use s3 to store our static files whenever someone runs collectstatic and that we want any uploaded product images to go there also. To do that I created a file called custom_storages.py.
+
+35. Within this file I imported both our settings from django.conf and the s3boto3 storage class from django storages. Then I created custom classes for static storage and media storage which inherited the imported class from django storages to give it all its functionality. Then I set the class to store static and media files in the location specified in the USE_AWS if statement within settings.py.
+
+36. Finally, to complete deployment of AWS setup, I committed the changes and pushed them to GitHub. In the command line I then typed the following command: **git push heroku main**. If you need to login to Heroku again completed steps 14 - 16 to re-deploy. Once Heroku is allowing users to connect to their GitHub accounts you can set up automatic deploys which will remove the need to repeat these steps.
 # Credit
 ## Content 
 
