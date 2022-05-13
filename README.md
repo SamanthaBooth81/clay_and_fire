@@ -9,7 +9,7 @@
 [Clay & Fire Repository](https://github.com/SamanthaBooth81/clay_and_fire)
 
 # About
-
+This website was created to sell handmade clay jewellery to shoppers. It is an E-commerce shop that provides a platform for the seller to sell their handmade jewellery to those who support small businesses and would like to purchase something different.
  
 
 # Table of Contents
@@ -68,33 +68,20 @@
 15.	As a shopper I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
 16.	As a shopper I want to be able to be able to sign up for email so that I can be notified of new releases, deals and upcoming sales.
 
-
 # Features
-- Landing Image
+- Logo / Shop Name
 
 <img src="assets/readme_images/nav-landing.png" width="50%">
 
-- Navbar 
+- Search Bar 
 
 <img src="assets/readme_images/nav-all.png" width="50%">
 
-- Navbar - Account holders
+- My Profile 
 
-<img src="assets/readme_images/navbar.png" width="50%">
+<img src="assets/readme_images/nav-all.png" width="50%">
 
-- Filters
-
-<img src="assets/readme_images/detail.png" width="50%">
-
-- Products List
-
-<img src="assets/readme_images/home-recipelist.png" width="50%">
-
-- View Full Product Details 
-
-<img src="assets/readme_images/detail.png" width="50%">
-
-- Create an account
+- Account Registration
 
 <img src="assets/readme_images/register.png" width="50%">
 
@@ -106,12 +93,44 @@
 
 <img src="assets/readme_images/change-pw.png" width="50%">
 
+- Shopping Bag
+
+<img src="assets/readme_images/nav-all.png" width="50%">
+
+- Navbar
+
+<img src="assets/readme_images/navbar.png" width="50%">
+
+- Landing Image
+
+<img src="assets/readme_images/nav-landing.png" width="50%">
+
+- Homepage Message
+
+<img src="assets/readme_images/home-recipelist.png" width="50%">
+
+- Products Page 
+
+<img src="assets/readme_images/detail.png" width="50%">
+
+- View Full Product Details 
+
+<img src="assets/readme_images/detail.png" width="50%">
+
 - Footer
 
 <img src="assets/readme_images/footer.png" width="50%">
 
+- Footer Subscription Sign Up
+
+<img src="assets/readme_images/footer.png" width="50%">
+
+- Contact Form
+
+<img src="assets/readme_images/footer.png" width="50%">
+
 ## Admin Features
-- Add products
+- Product Management
 <img src="assets/readme_images/footer.png" width="50%">
 
 - Edit Products
@@ -130,7 +149,7 @@ The colour scheme for the project was put together using [Adobe Color](https://c
 
 I chose the Google Font Raleway to act as the primary font for the website, including for the logo.
 
-<img src="assets/readme_images/ribeye-marrow.png" width="200px"> **ADD FONT IMAGE**
+<img src="assets/readme_images/raleway.png" width="200px"> **ADD FONT IMAGE**
 
 
 ## Favicon 
@@ -140,7 +159,12 @@ I created a basic Favicon for this project using [Canva](https://www.canva.com/)
 
 
 # Features to be Implemented
+The following features can be implemented to enhance the project:
 
+- Feedback Board for Shoppers
+- Save items to favourites
+- Instagram Carousel to show products on shoppers
+- Featured items on homepage
 
 # Wireframes
 All wireframes were created used [Balsamiq](https://balsamiq.com/)
@@ -162,13 +186,20 @@ The website is made of the following apps:
 
 ## Databases
 ### Category
+<img src="assets/readme_images/category-model.png" width="350px">
+
 ### Products
+<img src="assets/readme_images/products-model.png" height="130px">
 
 ### Order
+<img src="assets/readme_images/order-model.png" width="350px">
 
 ### Order Line Items
+<img src="assets/readme_images/order-line-item-model.png" height="100px">
 
 ### User Profile
+<img src="assets/readme_images/user-profile-model.png" width="350px">
+
 ### User
 
 For this I project I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
