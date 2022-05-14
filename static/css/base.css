@@ -81,9 +81,12 @@ input[name='q']::placeholder {
 /* ------------------------------------ error 404 message */
 .error {
     margin: 0 auto;
+    border-radius: 2px;
 }
 
-
+.error-overlay{
+    background-color: #beb5b1a6;
+}
 /* ------------------------------------ footer */
 footer {
     background-color: #D9A689;
