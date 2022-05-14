@@ -186,23 +186,32 @@ The website is made of the following apps:
 
 ## Databases
 ### Category
+
+The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality, so that shoppers can search for items want by type, new arrivals, clearance and deals.
+
 <img src="assets/readme_images/category-model.png" width="350px">
 
 ### Products
-<img src="assets/readme_images/products-model.png" height="130px">
+The Products model is required to add products for sale to the site. The site owner only is able to add, edit and delete products from here and all users can view the full product list on the site.
 
-### Order
+<img src="assets/readme_images/products-model.png" width="350px">
+
+### Order  & Order Line Items
+The Order models holds the order details of an order placed by the shoppers. This is connected to the Order Line Items model which contains the products ordered by the shopper.
+
 <img src="assets/readme_images/order-model.png" width="350px">
 
-### Order Line Items
-<img src="assets/readme_images/order-line-item-model.png" height="100px">
+<img src="assets/readme_images/order-line-item-model.png" width="350px">
 
 ### User Profile
+
+The User Profile contains delivery information for those who created an account and chose to store their delivery details for faster checkout.
+
 <img src="assets/readme_images/user-profile-model.png" width="350px">
 
 ### User
 
-For this I project I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
+For this project I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
 
 # Technologies Used
 ## Languages Used
@@ -225,8 +234,9 @@ For this I project I also used Django's User model to store registration informa
 
 [Django](https://www.djangoproject.com/) - This framework was used to build the foundations of this project, reducing time spent getting the project setup and prevent re-writing existing code.
 
-
 [Bootstrap](https://getbootstrap.com/) - Used to quickly add design and responsiveness to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices ans screen sizes.
+
+[Font Awesome](https://fontawesome.com/) - Used for all of the icons throughout the site.
 
 # Testing
 ## **Manual Testing by User Story**
