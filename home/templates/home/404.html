@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-lg-6 my-auto landing-msg">
+            <h1 class="display-4 logo-header">
+                <strong>Opps! Something went wrong...</strong>
+            </h1>
+            <h4 class="sub-header">
+                This page does not exist... Click below to return to Products.
+            </h4>
+            <div class="my-5 shop-now">
+                <h4>
+                    <a href="{% url 'home' %}" class="shop-now-btn btn btn-lg rounded-0 text-uppercase py-3"><strong>
+                        Return to Homepage
+                    </strong></a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

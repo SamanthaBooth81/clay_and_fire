@@ -28,3 +28,6 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('info/', include('company_info.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler404 = 'home.views.handel_404'
