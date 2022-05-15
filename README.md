@@ -741,6 +741,11 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 
 - [Scottish Coder YouTube Tutorial](https://www.youtube.com/watch?v=1DcySa35fXw) was used to help with creating a working contact form view.
 
+- I used the following YouTube Tutorials to with creating the Error404 page:
+
+    - [Custom 404 Error Page. Python Django Web Framework Course. #16](https://www.youtube.com/watch?v=3SKjPppM_DU)
+    - [Python Django 3 0 7 Create Show Custom 404 Error Page](https://www.youtube.com/watch?v=ZhwkddfqUTY)
+
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
