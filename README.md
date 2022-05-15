@@ -185,29 +185,22 @@ The website is made of the following apps:
 6. Company Info
 
 ## Databases
+
+<img src="assets/readme_images/databases.png">
+
 ### Category
 
 The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality, so that shoppers can search for items want by type, new arrivals, clearance and deals.
 
-<img src="assets/readme_images/category-model.png" width="350px">
-
 ### Products
 The Products model is required to add products for sale to the site. The site owner only is able to add, edit and delete products from here and all users can view the full product list on the site.
-
-<img src="assets/readme_images/products-model.png" width="350px">
 
 ### Order  & Order Line Items
 The Order models holds the order details of an order placed by the shoppers. This is connected to the Order Line Items model which contains the products ordered by the shopper.
 
-<img src="assets/readme_images/order-model.png" width="350px">
-
-<img src="assets/readme_images/order-line-item-model.png" width="350px">
-
 ### User Profile
 
 The User Profile contains delivery information for those who created an account and chose to store their delivery details for faster checkout.
-
-<img src="assets/readme_images/user-profile-model.png" width="350px">
 
 ### User
 
