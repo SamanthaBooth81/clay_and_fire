@@ -214,93 +214,164 @@ FB Page 4037 likes, Instagram 92.4K followers, TikTok 225.7K followers
 
 Although seemingly a successful tool for building a following, as TikTok is a fast-paced video based platform, I have created Instagram and Facebook accounts to act as the Social Media platforms this business uses alongside email marketing. 
 
+### Facebook
+
+<img src="assets/readme_images/fb-page1.png">
+
+<img src="assets/readme_images/fb-page2.png">
+
+### Instagram
+
+<img src="assets/readme_images/instagram.png">
+
+### Subscription
+
+Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter via the MailChimp form found in the footer. Subscription email would contain Upcoming Sale information and current deals. 
+
+<img src="assets/readme_images/subscribe.png" height="250px">
+
 # Features
-- Logo / Shop Name
 
-<img src="assets/readme_images/nav-landing.png" width="50%">
+## Homepage
 
-- Search Bar 
+### Logo / Shop Name
 
-<img src="assets/readme_images/nav-all.png" width="50%">
+<img src="assets/readme_images/logo.png" width="50%">
 
-- My Profile 
+### Search Bar 
 
-<img src="assets/readme_images/nav-all.png" width="50%">
+<img src="assets/readme_images/search.png" width="50%">
 
-- Account Registration
+### My Account 
 
-<img src="assets/readme_images/register.png" width="50%">
+<img src="assets/readme_images/my-account.png" width="50%">
 
-- Login
+### Shopping Bag 
+
+<img src="assets/readme_images/bag-icon.png" width="20%">
+
+### Bootstrap Toast
+
+<img src="assets/readme_images/success-toast.png" width="50%">
+
+<img src="assets/readme_images/alert-toast.png" width="50%">
+
+### Product Navigation
+
+<img src="assets/readme_images/navigation.png" width="100%">
+
+### Delivery Banner
+
+<img src="assets/readme_images/delivery-banner.png" width="100%">
+
+### Homepage Message
+
+<img src="assets/readme_images/homepage.png" width="750%">
+
+## My Account
+
+### Account Registration
+
+<img src="assets/readme_images/registration.png" width="50%">
+
+### Login
 
 <img src="assets/readme_images/login.png" width="50%">
 
-- Change Password
+### My Profile
 
-<img src="assets/readme_images/change-pw.png" width="50%">
+- Delivery Information
 
-- Shopping Bag
+<img src="assets/readme_images/default-delivery.png" width="50%">
 
-<img src="assets/readme_images/nav-all.png" width="50%">
+- Order History
 
-- Navbar
+<img src="assets/readme_images/order-history.png" width="50%">
 
-<img src="assets/readme_images/navbar.png" width="50%">
+- Order Confirmation
 
-- Landing Image
+<img src="assets/readme_images/checkout-success.png" width="50%">
 
-<img src="assets/readme_images/nav-landing.png" width="50%">
 
-- Homepage Message
+### Logout
 
-<img src="assets/readme_images/home-recipelist.png" width="50%">
+<img src="assets/readme_images/logout.png" width="50%">
 
-- Products Page 
+# Products Page 
 
-<img src="assets/readme_images/detail.png" width="50%">
+<img src="assets/readme_images/products.png" width="75%">
 
-- View Full Product Details 
+# Full Product Details 
 
-<img src="assets/readme_images/detail.png" width="50%">
+<img src="assets/readme_images/product-details.png" width="75%">
 
-- Footer
+# Shopping Bag
 
-<img src="assets/readme_images/footer.png" width="50%">
+<img src="assets/readme_images/shopping-bag.png" width="50%">
 
-- Footer Subscription Sign Up
+# Checkout
 
-<img src="assets/readme_images/footer.png" width="50%">
+<img src="assets/readme_images/checkout.png" width="50%">
 
-- Contact Form
+# Checkout Success
 
-<img src="assets/readme_images/footer.png" width="50%">
+<img src="assets/readme_images/checkout-success.png" width="50%">
 
-## Admin Features
-- Product Management
-<img src="assets/readme_images/footer.png" width="50%">
+# Footer
 
-- Edit Products
-<img src="assets/readme_images/footer.png" width="50%">
+<img src="assets/readme_images/footer.png" width="100%">
 
-- Delete Products
-<img src="assets/readme_images/footer.png" width="50%">
+## Help
+
+### FAQ's
+
+<img src="assets/readme_images/faq.png" width="50%">
+
+
+### Shipping and Returns
+
+<img src="assets/readme_images/shipping.png" width="50%">
+
+# Company
+## About Us
+
+<img src="assets/readme_images/about.png" width="50%">
+
+## Privacy Policy
+
+<img src="assets/readme_images/privacy.png" width="50%">
+
+# Contact Form
+
+<img src="assets/readme_images/contact.png" width="50%">
+
+# Admin Features
+
+## Product Management
+<img src="assets/readme_images/add.png" width="50%">
+
+## Edit Products
+<img src="assets/readme_images/edit.png" width="50%">
+
+## Delete Products
+<img src="assets/readme_images/delete.png" width="50%">
 
 ## Colour Scheme 
 
 The colour scheme for the project was put together using [Adobe Color](https://color.adobe.com/create/image) by uploading the landing page image. The colour scheme decided is:
 
-<img src="assets/readme_images/color-choice.png" width="500px">
+<img src="assets/readme_images/colour-theme.png" width="500px">
 
 ## Font Choice
 
 I chose the Google Font Raleway to act as the primary font for the website, including for the logo.
 
-<img src="assets/readme_images/raleway.png" width="200px"> **ADD FONT IMAGE**
+<img src="assets/readme_images/raleway-font.png" width="50%"> 
 
 ## Favicon 
 I created a basic Favicon for this project using [Canva](https://www.canva.com/). 
 
-<img src="assets/readme_images/favicon.png" height="150px"> **ADD FAVICON IMAGE**
+<img src="assets/readme_images/favicon.png" height="150px"> 
 
 # Features to be Implemented
 The following features can be implemented to enhance the project:
