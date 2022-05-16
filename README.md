@@ -9,20 +9,28 @@
 [Clay & Fire Repository](https://github.com/SamanthaBooth81/clay_and_fire)
 
 # About
-This website was created to sell handmade clay jewellery to shoppers. It is an E-commerce shop that provides a platform for the seller to sell their handmade jewellery to those who support small businesses and would like to purchase something different.
- 
+This is a full-stack e-commerce project built using Django, Python, HTML, CSS and JavaScript. I have created this website for 'Clay and Fire Jewellery', a handmade business who creates pieces of jewellery primarily using Polymer Clay, a light weight and highly versatile material which is baked in order to cure it.
 
 # Table of Contents
 
 [User Experience](#user-experience)
 
+- [Strategy](#strategy)
+
+- [User Stories](#user-stories)
+
+- [Scope](#scope)
+
+- [Structure](#structure)
+    - [Databases](#Databases)
+    - [Wireframes](#wireframes)
+
+
+[Marketing Strategies](#marketing-strategies)
+
 [Features](#features)
 
 [Features to be Implemented](#features-to-be-implemented)
-
-[Wireframes](#wireframes)
-
-[Databases](#databases)
 
 [Technologies Used](#technologies-used)
 
@@ -31,8 +39,6 @@ This website was created to sell handmade clay jewellery to shoppers. It is an E
 [Validator Testing](#validator-testing)
 
 [Bugs Found](#bugs-found)
-
-[Marketing Strategies](#marketing-strategies)
 
 [Search Engine Optimisation (SEO)](#search-engine-optimisation-seo)
 
@@ -43,14 +49,36 @@ This website was created to sell handmade clay jewellery to shoppers. It is an E
 [Acknowledgments](#Acknowledgments)
 
 # User Experience
-## User Stories
-### Superuser / Admin
+
+# Strategy
+To begin this project I first identified who my target audience:
+
+- Women who enjoy fashion and accessorising
+- Loved ones looking for gifts
+- Women aged between 15 and 45
+
+Keeping the above in mind, I believe the Users will need a website that is:
+
+- Easy to Navigate and filter/search by categorys.
+
+- Has the ability to view and purchase items.
+
+- Has an email subscription service.
+
+- Has links to Social Media sites Facebook and Instagram.
+
+- User account functionality, to keep track of order history and store delivery information.
+
+# User Stories
+
+Please find my Kanban Board with my user stories [here](https://github.com/SamanthaBooth81/clay_and_fire/projects/1). Below is a detailed list of User Stories per User Type.
+## Superuser / Admin
 1.	As a Site Owner I want to be able to add a product so that I can add more items to my store.
 2.	As a Site Owner I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
 3.	As a Site Owner I want to be able to delete a product so that I can remove items that are no longer available.
 4.	As a Site Owner I want to be able to send email to customers with a. subscription, notifying customers of any deals, sale and new arrivals.
 
-### Shopper
+## Shopper
 1.	As a Shopper I want to be able to view a list of items so that I can add to me basket.
 2.	As a shopper I want to be able to click into an item so that I can view a product description and add to the basket.
 3.	As a shopper I want to be able to add items to my basket so that I can keep track of what I am spending.
@@ -67,6 +95,115 @@ This website was created to sell handmade clay jewellery to shoppers. It is an E
 14.	As a shopper I want to be able to be able to recover my password so that I can recover my account access.
 15.	As a shopper I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
 16.	As a shopper I want to be able to be able to sign up for email so that I can be notified of new releases, deals and upcoming sales.
+
+# Scope
+
+In order to achieve the above user and business goals, this project will be created with the following features:
+
+- Site Navigation containing a Search Bar, My Account Links, Shopping Bag links and Product Categories to view products by.
+
+- A Landing Page that clearly demonstrates with the site is for.
+
+- A Products Page that lists the Products contained within the category/search carried out.
+
+- Products Cards that gives the user an image of the product along with name, price, rating and ability to click into it for more details.
+
+- Registration/login functionality using Django AllAuth so that users can create and manage their account.
+
+- A User Profile Page so that users can save delivery details for faster orders in future and to see their order history.
+
+- Custom 404 Error Page
+# Structure
+
+This project is structured with a homepage that greets the user with a clear navigation at the top of the page to search for the item required or to browse all products. There is the ability to sort items by price, alphabetically and by category as well as the ability to search for a product by typing in keywords into the search bar.
+
+Furthermore, users have the option to checkout as guests or create a profile for themselves which can contain their delivery address and does contain their order history.
+
+The website is made of the following apps:
+1. Home
+2. Products
+3. Profile
+4. Bag
+5. Checkout
+6. Company Info
+## Databases
+
+For the live site I connected Heroku's Postgres Database and for the local environment I chose to remain connected to Sequel Light.
+The Entity-Relationship Diagram below shows how the database models relate to each other:
+
+<img src="assets/readme_images/databases.png">
+
+### Category
+
+The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality, so that shoppers can search for items want by type, new arrivals, clearance and deals.
+
+### Products
+The Products model is required to add products for sale to the site. The site owner only is able to add, edit and delete products from here and all users can view the full product list on the site.
+
+### Order & Order Line Items
+The Order models holds the order details of an order placed by the shoppers. This is connected to the Order Line Items model which contains the products ordered by the shopper.
+
+### User Profile
+
+The User Profile contains delivery information for those who created an account and chose to store their delivery details for faster checkout.
+
+### User
+
+For this project I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
+
+## Wireframes
+
+All wireframes were created using [Balsamiq](https://balsamiq.com/).
+
+Clay & Fire Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed [here](assets/documents/Wireframes.pdf).
+
+# Marketing Strategies
+
+The following questions were asked and answered when trying to decide on the best marketing strategy. 
+
+1.	Which online platforms would you find lots of your users?
+
+- Facebook
+- Instagram
+- Tiktok
+- Etsy
+
+2.	Would your users use social media? If yes, which platforms do you think you would find them on?
+
+- Facebook
+- Instagram
+- Tiktok
+
+3.	What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?
+
+- Style Inspiration: 
+    - Instagram Posts of our jewellery styled and possible combinations
+    - TikTok Videos following current editing trends
+- Gift Inspiration
+    - Instagram Posts of gift ideas and product combinations
+    - Emails with gift ideas, particularly around Christmas or other holidays
+
+4.	Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?
+
+- Email deals for subscribers
+- Sale Emails and Instagram Posts/Stories
+
+5.	What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
+
+- Make Sales
+- Gather repeat customers
+
+6.	Would your business have a budget to spend on advertising? Or would it need to work with free or low cost options to market itself?
+
+- Free/low cost marketing as the budget would need to go towards materials required to create and deliver high quality products
+
+I also looked at the below business who both also sell polymer clay jewellery. As you can see from both of these examples their most successful Social Media platform in terms of following is TikTok, followed by Instagram and lastly Facebook. 
+### Shopmalcreates: 
+FB Page 535 likes, Instagram 32.7k followers, TikTok 1232 followers
+### Indigo Sands: 
+FB Page 4037 likes, Instagram 92.4K followers, TikTok 225.7K followers
+
+Although seemingly a successful tool for building a following, as TikTok is a fast-paced video based platform, I have created Instagram and Facebook accounts to act as the Social Media platforms this business uses alongside email marketing. 
 
 # Features
 - Logo / Shop Name
@@ -151,12 +288,10 @@ I chose the Google Font Raleway to act as the primary font for the website, incl
 
 <img src="assets/readme_images/raleway.png" width="200px"> **ADD FONT IMAGE**
 
-
 ## Favicon 
 I created a basic Favicon for this project using [Canva](https://www.canva.com/). 
 
 <img src="assets/readme_images/favicon.png" height="150px"> **ADD FAVICON IMAGE**
-
 
 # Features to be Implemented
 The following features can be implemented to enhance the project:
@@ -165,46 +300,6 @@ The following features can be implemented to enhance the project:
 - Save items to favourites
 - Instagram Carousel to show products on shoppers
 - Featured items on homepage
-
-# Wireframes
-All wireframes were created used [Balsamiq](https://balsamiq.com/)
-
-Clay & Fire Wireframes for Mobiles, Tablets and Desktop devices can be viewed [here](assets/documents/Wireframes.pdf).
-
-# Structure
-This project is structured with a homepage that greets the user with a clear navigation at the top of the page to search for the item required or to browse all products. There is the ability to sort items by price, alphabetically and by category as well as the ability to search for a product by typing in keywords into the search bar.
-
-Furthermore, users have the option to checkout as guests or create a profile for themselves which can contain their delivery address and does contain their order history.
-
-The website is made of the following apps:
-1. Home
-2. Products
-3. Profile
-4. Bag
-5. Checkout
-6. Company Info
-
-## Databases
-
-<img src="assets/readme_images/databases.png">
-
-### Category
-
-The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality, so that shoppers can search for items want by type, new arrivals, clearance and deals.
-
-### Products
-The Products model is required to add products for sale to the site. The site owner only is able to add, edit and delete products from here and all users can view the full product list on the site.
-
-### Order  & Order Line Items
-The Order models holds the order details of an order placed by the shoppers. This is connected to the Order Line Items model which contains the products ordered by the shopper.
-
-### User Profile
-
-The User Profile contains delivery information for those who created an account and chose to store their delivery details for faster checkout.
-
-### User
-
-For this project I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
 
 # Technologies Used
 ## Languages Used
@@ -481,57 +576,6 @@ I encountered the following issues whilst building this project:
 
 - The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) url to display the image.
 
-# Marketing Strategies
-
-1.	Who are your users?
-
-- Woman who enjoy fashion and accessorising
-- Loved ones looking for gifts
-- Woman ages between 15 and 45 roughly
-
-2.	Which online platforms would you find lots of your users?
-
-- Facebook
-- Instagram
-- Tiktok
-- Etsy
-
-3.	Would your users use social media? If yes, which platforms do you think you would find them on?
-
-- Facebook
-- Instagram
-- Tiktok
-
-4.	What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?
-
-- Style Inspiration: 
-    - Instagram Posts of our jewellery styled and possible combinations
-    - TikTok Videos following current editing trends
-- Gift Inspiration
-    - Instagram Posts of gift ideas and product combinations
-    - Emails with gift ideas, particularly around Christmas or other holidays
-
-5.	Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?
-
-- Email deals for subscribers
-- Sale Emails and Instagram Posts/Stories
-
-6.	What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
-
-- Make Sales
-- Gather repeat customers
-
-7.	Would your business have a budget to spend on advertising? Or would it need to work with free or low cost options to market itself?
-
-- Free/low cost marketing as the budget would need to go towards materials required to create and deliver high quality products
-
-The below business both sell polymer clay jewellery. As you can see from both of these examples their most successful Social Media platform in terms of following is TikTok, followed by Instagram and lastly Facebook. 
-### Shopmalcreates: 
-FB Page 535 likes, Instagram 32.7k followers, TikTok 1232 followers
-### Indigo Sands: 
-FB Page 4037 likes, Instagram 92.4K followers, TikTok 225.7K followers
-
-Although seemingly a successful tool for building a following, as TikTok is a fast-paced video based platform, I have created Instagram and Facebook accounts to act as the Social Media platform this business uses alongside email marketing. 
 # Search Engine Optimisation (SEO)
 In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
 
