@@ -98,6 +98,15 @@ footer {
     background-color: #D9A689;
 }
 
+.footer-links {
+    color: #730C02;
+    cursor: pointer;
+}
+
+.footer-links:hover {
+    color: #2020207a;
+}
+
 .copyright{
     float: left;
     width: 95%;
