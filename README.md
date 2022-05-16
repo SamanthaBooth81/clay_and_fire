@@ -345,6 +345,10 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 
 <img src="assets/readme_images/contact.png" width="50%">
 
+# 404 Error Page
+
+<img src="assets/readme_images/error.png" width="50%">
+
 # Admin Features
 
 ## Product Management
