@@ -2,10 +2,13 @@
 {% load static %}
 {% block extra_title %} - Confirm Delete{% endblock %}
 
+<!-- Additional CSS -->
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'products/css/product.css' %}">
 {% endblock %}
 
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -14,12 +17,14 @@
 </div>
 {% endblock %}
 
-<!-- Delete confirmation page, prevents superuser from accidentally deleting their product. -->
+<!-- Delete confirmation page to prevent superuser from accidentally deleting their product. -->
 
 {% block content %}
+<!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
 <div id="delete" class="h-100">
     <div class="row">
+        <!-- Delete Confirmation Box -->
         <div id="delete-confirm" class="col-md-6 h-100">
             <form method="post">
                 {% csrf_token %}

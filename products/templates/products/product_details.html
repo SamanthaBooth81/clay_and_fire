@@ -2,6 +2,8 @@
 {% load static %}
 {% block extra_title %} - Product Details{% endblock %}
 
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -11,12 +13,15 @@
 {% endblock %}
 
 {% block content %}
+<!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
 <div class="content h-100">
+    <!-- Full Product Details Page -->
     <div class="container-fluid">
         <div class="row">
             <div class="row offset-1">
                 <div class="col-4 details-img">
+                    <!-- Product Image -->
                     {% if product.image %}
                     <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
@@ -25,21 +30,26 @@
                 </div>
                 <div class="col-8">
                     <div class="col text-left mt-3">
+                        <!-- Product Name -->
                         <h2 class="title">
                             <strong>{{ product.name }}</strong>
                         </h2>
                     </div>
                     <div class="col text-left mt-3">
+                        <!-- Product Prce -->
                         <p class="lead mb-0 font-weight-bold price">£{{ product.price }}</p>
                         {% if product.rating %}
+                        <!-- Product Rating -->
                         <small class="text-muted rating"><i
                                 class="fas fa-star mr-1 rating-icon"></i>{{ product.rating }} / 5</small>
                         {% else %}
                         <small class="text-muted rating">No Rating</small>
                         {% endif %}
+                        <!-- Product Description -->
                         <p class="page-title description">
                             <strong>{{ product.description }}</strong>
                         </p>
+                        <!-- Add Product to Shopping Bag Form -->
                         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
                             <div class="form-row">

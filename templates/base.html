@@ -1,3 +1,4 @@
+<!-- Base Template for all other Templates within this project -->
 {% load static %}
 
 <!doctype html>
@@ -15,7 +16,8 @@
   <meta name="keywords"
     content="Handmade jewellery, Handmade Jewellery Gifts, Handmade Clay Jewellery, Clay Jewellery, Polymer Clay Jewellery, Clay and Fire Jewellery, Handmade jewellery uk">
   {% endblock %}
-
+  
+  <!-- Core CSS Links, -->
   {% block corecss %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -29,9 +31,11 @@
   <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
   {% endblock %}
 
+  <!-- Extra CSS Block, required for all CSS not contained within the root static folder -->
   {% block extra_css %}
   {% endblock %}
 
+  <!-- Core JavaScript -->
   {% block corejs %}
   <!-- Font Awesome, jQuery minifield, then Popper.js, then Bootstrap JS ADD TO TECHNOLOGIES USED IN README-->
   <script src="https://kit.fontawesome.com/5f5081d5be.js" crossorigin="anonymous"></script>
@@ -45,6 +49,7 @@
   </script>
   {% endblock %}
 
+    <!-- Extra JavaScript Block, required for all JS not contained within the root static folder/Templates -->
   {% block extra_js %}
   {% endblock %}
 
@@ -57,11 +62,13 @@
     <div class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-left text-md-center">
         <a href="{% url 'home' %}" class="nav-link logo-link ">
+          <!-- Page Logo - Top Left Corner -->
           <h2 class="logo my-0">Clay &#38; Fire</h2>
           <h6 class="logo my-0 text-left">Jewellery</h6>
         </a>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <!-- Products Search Form -->
         <form method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
             <input class="form-control border rounded-0" type="text" name="q" placeholder="Search C&F">
@@ -76,6 +83,7 @@
         </form>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <!-- My Account Navigation and Shopping Bag icon with Grand Total -->
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -120,6 +128,7 @@
       </div>
     </div>
     <div class="row bg-white">
+      <!-- Products Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light w-100">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
           aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -131,6 +140,7 @@
     </div>
     <div id="delivery-banner" class="row text-center">
       <div class="col">
+        <!-- Delivery Banner -->
         <h4 class="logo my-1">
           <strong>
             Free delivery on orders over £{{ free_delivery_threshold }}!
@@ -140,6 +150,7 @@
     </div>
   </header>
 
+  <!-- Messages, linked to Toasts. Code From Boutique Ado -->
   {% if messages %}
   <div class="message-container">
     {% for message in messages %}
@@ -162,16 +173,18 @@
   {% block page_header %}
   {% endblock %}
 
-
+  <!-- Block content for other templates -->
   {% block content %}
   {% endblock %}
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-div">
       <div class="container">
         <div class="row">
           <div class="col-md-4 text-center">
             <div class="footer-header">
+              <!-- Help Section -->
               <h6 class="text-uppercase"><strong>Help</strong></h6>
               <div>
                 <a href="{% url 'faq' %}">FAQ's</a>
@@ -181,6 +194,7 @@
               </div>
             </div>
             <div class="footer-header">
+              <!-- Company Section -->
               <h6 class="text-uppercase">Company</h6>
               <div>
                 <a href="{% url 'about-us' %}">About Us</a>
@@ -192,6 +206,7 @@
             </div>
           </div>
           <div class="col-md-4 text-center">
+            <!-- Subscribe Section -->
             <h6 class="text-uppercase footer-header">Subscribe</h6>
             <p>Subscribe to the Clay & Fire mailing list to get exclusive offers straight to
               your inbox!</p>
@@ -225,6 +240,7 @@
           </div>
           <div class="col-md-4 text-center">
             <div class="footer-header">
+              <!-- Contact Us Section -->
               <h6 class="text-uppercase"><strong>Contact Us</strong></h6>
               <div>
                 <a href="{% url 'contact' %}">Get in Touch</a>
@@ -238,6 +254,7 @@
               <i class="fa-brands fa-facebook-f icon"></i>
             </a>
             <div class="row footer-header">
+              <!-- Copyright -->
               <div class="copyright">
                 <i class="fa-regular fa-copyright"></i>
                 <p>Clay & Fire Jewellery, 2022</p>
@@ -249,11 +266,12 @@
     </div>
   </footer>
 
-  <!-- for javascript to load at end of body, remove if not used! -->
   {% block postloadjs %}
+  <!-- Bootstrap Toasts -->
   <script type="text/javascript">
     $('.toast').toast('show');
   </script>
+  <!-- Subscription Service -->
   <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
   </script>
   <script type='text/javascript'>

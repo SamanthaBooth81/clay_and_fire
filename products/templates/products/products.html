@@ -2,6 +2,8 @@
 {% load static %}
 {% block extra_title %} - Products{% endblock %}
 
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -11,15 +13,18 @@
 {% endblock %}
 
 {% block content %}
+<!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
 <div class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
+                <!-- Page Title -->
                 <h2 class="page-title">
                     <strong>Products</strong>
                 </h2>
                 {% for c in current_categories %}
+                <!-- Display Category User is in -->
                 <a class="categories" href="{% url 'products' %}?category={{ c.name }}">
                     <span class="p-2 mt-2 badge badge-white rounded-0">{{ c.friendly_name }}</span>
                 </a>
@@ -32,7 +37,7 @@
                 <div class="row mt-1 mb-2">
                     <div
                         class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <!-- Code Institute Boutique ADo project used to help with sort functionality -->
+                        <!-- Code Institute Boutique Ado project used to help with sort functionality -->
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector"
                                 class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -65,6 +70,7 @@
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                             <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
+                            <!-- Number of products found -->
                             {{ products|length }} Products{% if search_term %} found for
                             <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -74,6 +80,7 @@
                     {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
+                            <!-- Product Image -->
                             {% if product.image %}
                             <a href="{% url 'product_details' product.id %}">
                                 <img class="img-fluid item-img" src="{{ product.image.url }}"
@@ -85,19 +92,23 @@
                                     alt="{{ product.name }}">
                             </a>
                             {% endif %}
+                            <!-- Product Name -->
                             <div class="card-body pb-0">
                                 <p class="mb-0">{{ product.name }}</p>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
+                                        <!-- Product Price -->
                                         <p class="mb-0 text-left">£{{ product.price }}</p>
                                         {% if product.rating %}
+                                        <!-- Product Rating -->
                                         <small><i class="fas fa-star mr-1 rating-icon"></i>{{ product.rating }} /
                                             5</small>
                                         {% else %}
                                         <small>No Rating</small>
                                         {% endif %}
+                                        <!-- Product Category -->
                                         {% if product.category %}
                                         <p class="small mt-1 mb-0">
                                             <a class="text-muted"
@@ -113,6 +124,7 @@
                             <div class="card-footer bg-white border-0">
                                 <div class="row">
                                     {% if request.user.is_superuser %}
+                                    <!-- Edit and Delete buttons is user is Superuser -->
                                         <div class="col">
                                             <a href="{% url 'edit_product' product.id %}" class="text-dark"><i class="fa-solid fa-pencil"></i>
                                                 Edit</a>
@@ -139,6 +151,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
+    // Scroll to top
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0);
     });

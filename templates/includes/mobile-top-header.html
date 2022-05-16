@@ -1,4 +1,6 @@
+<!-- Mobile Navigation for Search, My Account and Shopping Bag Icon -->
 <li class="list-inline-item">
+    <!-- Search Bar -->
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg icon"></i></div>
@@ -21,6 +23,7 @@
     </div>
 </li>
 <li class="list-inline-item dropdown">
+    <!-- My account with Product Management, My Profile and Sign up/Login/Logout -->
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg icon"></i></div>
@@ -41,6 +44,7 @@
     </div>
 </li>
 <li class="list-inline-item">
+    <!-- Shopping Bag Icon Link to Bag -->
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg icon"></i></div>

@@ -2,8 +2,6 @@
 from django.contrib import admin
 from .models import Products, Category
 
-# Register your models here.
-
 
 class ProductAdmin(admin.ModelAdmin):
     """Admin Panel display for Product Model"""

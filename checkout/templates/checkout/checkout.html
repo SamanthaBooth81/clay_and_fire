@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
-{% block extra_title %} - Checkout{% endblock %}
+{% block extra_title %} | Checkout{% endblock %}
 
+<!-- Additional CSS -->
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -16,10 +19,12 @@
 {% endblock %}
 
 {% block content %}
+<!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
 <div class="container mb-2">
     <div class="row">
         <div class="col">
+            <!-- Page Header -->
             <h2 class="text-center bag-title">
                 <strong>Checkout</strong>
             </h2>
@@ -28,8 +33,10 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 mb-5">
+            <!-- Summary of order -->
             <p class="order-summary">Order Summary ({{ product_count }})</p>
             <div class="row">
+                <!-- Order Summary Headings -->
                 <div class="col-7 offset-2">
                     <p>Item</p>
                 </div>
@@ -39,8 +46,10 @@
             </div>
             <hr>
             {% for item in bag_items %}
+            <!-- Order summary items -->
             <div class="row">
                 <div class="col-2 mb-1">
+                    <!-- Product Image -->
                     <a href="{% url 'product_details' item.product.id %}">
                         {% if item.product.image %}
                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
@@ -50,16 +59,19 @@
                     </a>
                 </div>
                 <div class="col-7">
+                    <!-- Product Name and Quantity -->
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     <p class="my-0 small logo">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3">
+                    <!-- Product Price by Quantity -->
                     <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             <hr>
             {% endfor %}
             <div class="row">
+                <!-- Order Total, Delivery Total and Grand Total Table and Data -->
                 <div class="col-7 offset-2 text-right">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
@@ -76,15 +88,17 @@
         <div class="col-lg-6 col-md-12">
             <div class="col-12 order-lg-last">
                 <p>Please fill out the form below to complete your order.</p>
-
+                <!-- Order Form -->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
+                        <!-- Name and Email -->
                         <legend class="fieldset-label small px-2 w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
+                        <!-- Address -->
                         <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
@@ -95,12 +109,14 @@
                         {{ order_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
+                            <!-- Save to profile if user logged in -->
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my
                                 profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                                 checked>
                             {% else %}
                             <label class="form-check-label" for="id-save-info">
+                                <!-- Offer to create an account if user does not have one -->
                                 <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
                                 <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                             </label>
@@ -120,12 +136,14 @@
                     </fieldset>
                     <div class="submit-button text-right mt-5 mb-2">
                         <a href="{% url 'view_bag' %}" class="btn rounded-0">
+                            <!-- Return to Bag Button-->
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="font-weight-bold text-uppercase">Adjust Bag</span>
                         </a>
                         <button id="submit-button" class="btn rounded-0 icon">
+                            <!-- Complete Checkout Button -->
                             <span class="font-weight-bold text-uppercase">Complete Order</span>
                             <span>
                                 <i class="fas fa-lock"></i>
@@ -133,6 +151,7 @@
                             </span>
                         </button>
                         <p class="small text-danger my-0">
+                            <!-- Card Charge Notification -->
                             <span class="icon">
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
@@ -149,6 +168,7 @@
         https://getbootstrap.com/docs/4.2/components/spinners/ 
     -->
     <div class="loading-spinner">
+        <!-- Spinner to show user that the payment is being processed -->
         <div class="spinner-grow text-light" role="status">
             <span class="sr-only">Loading...</span>
         </div>

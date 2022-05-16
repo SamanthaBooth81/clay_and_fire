@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %} - Checkout Success{% endblock %}
+{% block extra_title %} | Checkout Success{% endblock %}
 
+<!-- Additional CSS -->
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -15,8 +18,10 @@
 {% endblock %}
 
 {% block content %}
+<!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
 <div class="container mb-2 h-100">
+    <!-- Order Success Confirmation -->
     <div class="row">
         <div class="col">
             <h2 class="text-center bag-title">Thank you for ordering from Clay & Fire!</h2>
@@ -27,11 +32,13 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
+            <!-- Delivery Page Image -->
             <img class="delivery-image" src="https://clay-and-fire.s3.eu-west-2.amazonaws.com/media/delivery-image.jpg" alt="delivery image">
         </div>
         <div class="order-confirmation">
             <div class="col-12">
                 <div id="order-confirmation-box">
+                    <!-- Order Summary -->
                     <div class="row">
                         <div class="col">
                             <p class="logo order-conf-headers"><strong>Order Info</strong></p>
@@ -186,6 +193,7 @@
     </div>
     <div class="row">
         <div class="col-12 text-center shop-more-div">
+            <!-- Button to return to User Profile if exists -->
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn rounded-0 my-2 icon shop-more">
                 <span class="mr-2">
@@ -194,6 +202,7 @@
                 <span>Return to Profile</span>
             </a>
             {% else %}
+            <!-- Button to browse more products if not -->
                 <a href="{% url 'products' %}" class="btn rounded-0 my-2 icon shop-more">
                     <span class="mr-2">
                         <i class="fa-solid fa-gem"></i>

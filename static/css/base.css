@@ -50,19 +50,19 @@ i {
     text-transform: uppercase;
 }
 
-/* ------------------------------------ search box */
+/* ------------------------------------ Search Box */
 
 input[name='q']::placeholder {
     color: #730C02;
 }
 
-/* ------------------------------------ delivery banner */
+/* ------------------------------------ Delivery Banner */
 
 #delivery-banner {
     background-color: #D9A689;
 }
 
-/* ------------------------------------ homepage main heading */
+/* ------------------------------------ Homepage Main Heading */
 .landing {
     margin: 50px;
 }
@@ -78,7 +78,7 @@ input[name='q']::placeholder {
     font-style: italic;
 }
 
-/* ------------------------------------ error 404 message */
+/* ------------------------------------ Error 404 Message */
 .error {
     margin: 0 auto;
     border-radius: 2px;
@@ -93,7 +93,7 @@ input[name='q']::placeholder {
     position: fixed;
     z-index: -1;
 }
-/* ------------------------------------ footer */
+/* ------------------------------------ Footer */
 footer {
     background-color: #D9A689;
 }
@@ -122,7 +122,6 @@ footer {
 }
 
 #mc_embed_signup {
-    /* background: #fff; */
     clear: left;
 }
 
@@ -190,7 +189,7 @@ footer {
     cursor: pointer;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- Bootstrap Toasts */
 
 .message-container {
     position: fixed;
@@ -306,7 +305,7 @@ footer {
     margin-bottom: 20px;
 }
 
-/* ------------------------------------ allauth pages */
+/* ------------------------------------ Allauth Pages */
 .allauth-form-inner-content input {
     border-radius: 0;
 }

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}{% block extra_title %} - FAQ's{% endblock %}
 
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -10,11 +12,12 @@
 {% endblock %}
 
 {% block content %}
-
+<!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
 <div class="container h-100 faq-container">
     <div class="row">
         <div class="col">
+            <!-- Page Header -->
             <h2 class="logo-font mb-4 text-center page-title"><strong>
                     FAQ's
                 </strong></h2>
@@ -23,6 +26,7 @@
     </div>
 
     <div class="accordion" id="accordionOne">
+        <!-- Frequently Asked Questions Section -->
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
