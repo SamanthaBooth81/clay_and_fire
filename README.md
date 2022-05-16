@@ -51,13 +51,14 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS an
 # User Experience
 
 # Strategy
-To begin this project I first identified who my target audience:
 
-- Women who enjoy fashion and accessorising
-- Loved ones looking for gifts
-- Women aged between 15 and 45
+This website is for a Business to Consumer (B2C) business that sells handmade polymer clay jewellery. The target market for these products:
 
-Keeping the above in mind, I believe the Users will need a website that is:
+- Women who enjoy fashion and accessorising.
+- Loved ones looking for gifts.
+- Women aged between 15 and 45.
+
+Keeping the above in mind, I believe the Customers will need a website that is:
 
 - Easy to Navigate and filter/search by categorys.
 
@@ -68,6 +69,14 @@ Keeping the above in mind, I believe the Users will need a website that is:
 - Has links to Social Media sites Facebook and Instagram.
 
 - User account functionality, to keep track of order history and store delivery information.
+
+And the Owner will need a website that:
+
+- Displays their products in an appealing way.
+
+- Allows then to add, edit and remove products. Stock wasn't a requirement as products are handmade to order and therefore only become unavailable when the seller wishes to stop the product.
+
+- Allows customers to get in contact if required whilst having some information readily available to reduce the number of contact forms received.
 
 # User Stories
 
@@ -325,6 +334,10 @@ The following features can be implemented to enhance the project:
 [Bootstrap](https://getbootstrap.com/) - Used to quickly add design and responsiveness to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices ans screen sizes.
 
 [Font Awesome](https://fontawesome.com/) - Used for all of the icons throughout the site.
+
+[Canva](https://www.canva.com/) - Used to create the favicon for the project.
+
+[Image Compressor](https://imagecompressor.com/) - Used to compress the website and product images.
 
 # Testing
 ## **Manual Testing by User Story**
@@ -806,6 +819,7 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 ### Website Images
 - [Pexels - Delivery Image](https://www.pexels.com/photo/person-holding-green-and-white-floral-book-5486791/)
 
+- [Favicon Generator](https://favicon.io/favicon-converter/) used to generate a favicon image from a jpg image.
 
 # Acknowledgments
 Thank you to all who encouraged and supported me as I created my first full stack E-Commerce website, especially to my mentor at Code Institute, Antonio, for his guidance, patience, encouragement and constant support. Also a massive thank you to Tutor Support at the Code Institute for never giving up on the difficult issues I found myself facing.  
