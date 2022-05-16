@@ -164,7 +164,7 @@ For this project I also used Django's User model to store registration informati
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
 
-Clay & Fire Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed [here](assets/documents/Wireframes.pdf).
+Clay & Fire Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed [here](assets/documents/wireframes.pdf).
 
 # Marketing Strategies
 
