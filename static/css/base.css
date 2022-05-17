@@ -96,6 +96,7 @@ input[name='q']::placeholder {
 /* ------------------------------------ Footer */
 footer {
     background-color: #D9A689;
+    position: relative;
 }
 
 .footer-links {
