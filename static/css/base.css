@@ -386,3 +386,14 @@ footer {
     
     }
 }
+
+@media screen and (max-width: 900px) {
+    .logo-header {
+        font-size: x-large;
+    }
+
+    .sub-header {
+        font-size: large;
+    
+    }
+}
