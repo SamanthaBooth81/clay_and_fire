@@ -388,6 +388,7 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+    /* Homepage Styling */
     .logo-header {
         font-size: x-large;
     }
@@ -395,5 +396,108 @@ footer {
     .sub-header {
         font-size: large;
     
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* Navigation Styling */
+    nav {
+        font-size: small;
+    }
+
+    /* Delivery Banner Styling */
+    .delivery-banner {
+        font-size: medium;
+    }
+
+    /* Homepage Styling */
+    .logo-header {
+        font-size: large;
+    }
+
+    .sub-header {
+        font-size: medium;
+    
+    }
+
+    .landing {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    /* Navigation Styling */
+    nav {
+        font-size: xx-small;
+    }
+
+    nav li {
+        margin: 0 !important;
+        width: 50px;
+    }
+
+    /* Delivery Banner Styling */
+    .delivery-banner {
+        font-size: x-small;
+    }
+
+    .landing {
+        margin: 20px auto 30px;
+    }
+
+    .logo-header {
+        padding: 20px 20px 10px 20px !important;
+    }
+
+    .sub-header {
+        padding: 10px 20px 10px 20px !important;
+    }
+
+    .shop-now {
+        margin: 20px !important;
+        padding-left: 0;
+    }
+
+    .shop-now-btn {
+        padding: 8px !important;
+        font-size: xx-small;
+    }
+
+    /* Footer Styling */
+    .footer-header {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    /* Navbar Styling */
+    .navbar-toggler-icon {
+        width: 1em;
+        height: 1em;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    /* Delivery Banner Styling */
+    .delivery-banner {
+        font-size: xx-small;
+    }
+}
+
+@media screen and (max-width: 227px){
+    /* Homepage Styling */
+    .landing {
+        margin: 75px auto 30px;
+        padding: 5px;
+    }
+
+    .logo-header {
+        font-size: medium;
+    }
+
+    .sub-header {
+        font-size: small;
     }
 }
