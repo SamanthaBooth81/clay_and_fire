@@ -2,6 +2,11 @@
 {% load static %}
 {% block extra_title %} - Products{% endblock %}
 
+<!-- Additional CSS -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/product.css' %}">
+{% endblock %}
+
 <!-- I've Kept this page header here as it pushing the Shopping Bag title down
     below the navigation and delivery banner -->
 {% block page_header %}

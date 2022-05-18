@@ -2,6 +2,11 @@
 {% load static %}
 {% block extra_title %} - Product Details{% endblock %}
 
+<!-- Additional CSS -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/product.css' %}">
+{% endblock %}
+
 <!-- I've Kept this page header here as it pushing the Shopping Bag title down
     below the navigation and delivery banner -->
 {% block page_header %}
@@ -15,12 +20,12 @@
 {% block content %}
 <!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
-<div class="content h-100">
+<div class="content">
     <!-- Full Product Details Page -->
     <div class="container-fluid">
         <div class="row">
             <div class="row offset-1">
-                <div class="col-4 details-img">
+                <div class="col-sm-12 col-md-4 details-img">
                     <!-- Product Image -->
                     {% if product.image %}
                     <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">

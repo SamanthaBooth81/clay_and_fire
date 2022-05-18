@@ -226,60 +226,9 @@ footer {
     background-color: #D9A689;
 }
 
-/* ------------------------------------ Products Page */
-.overlay {
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    z-index: -1;
-}
-
-.item-img {
-    height: 350px;
-    width: 250px;
-    object-fit: cover;
-}
-
 /* ------------------------------------ All Pages */
 .page-title {
     padding-top: 2%;
-}
-
-/* ------------------------------------ Product Details Pages */
-
-.price {
-    float: left;
-    width: 10%;
-}
-
-.rating {
-    display: inline-block;
-}
-
-.rating-icon {
-    color: #D9895B;
-}
-
-.details-img {
-    padding-top: 4%;
-    padding-bottom: 4%;
-}
-
-.details-img img {
-    height: 500px;
-    object-fit: cover;
-}
-
-.title {
-    padding-top: 7%;
-}
-
-
-.description {
-    margin-right: 100px;
 }
 
 /* ------------------------------------ Shopping Bag */
@@ -433,7 +382,7 @@ footer {
 
     nav li {
         margin: 0 !important;
-        width: 50px;
+        width: 25%;;
     }
 
     .navbar-nav,
