@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block extra_title %} - Product Details{% endblock %}
+{% block extra_title %} | Product Details{%endblock %}
 
 <!-- Additional CSS -->
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'products/css/product.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/product.css' %}">
 {% endblock %}
 
 <!-- I've Kept this page header here as it pushing the Shopping Bag title down
@@ -20,7 +20,7 @@
 {% block content %}
 <!-- White background overlay div to hide the homepage background image -->
 <div class="overlay"></div>
-<div class="content">
+<div class="content product-content">
     <!-- Full Product Details Page -->
     <div class="container-fluid">
         <div class="row">
@@ -33,7 +33,7 @@
                     <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     {% endif %}
                 </div>
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="col text-left mt-3">
                         <!-- Product Name -->
                         <h2 class="title">
