@@ -20,6 +20,16 @@ i {
     width: 1.5rem;
 }
 
+.overlay {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+
 /* ------------------------------------ Navbar */
 
 .logo {
@@ -344,7 +354,10 @@ footer {
 
     .sub-header {
         font-size: large;
-    
+    }
+
+    nav li {
+        width: 25%;;
     }
 }
 
