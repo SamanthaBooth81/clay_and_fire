@@ -436,6 +436,12 @@ footer {
         width: 50px;
     }
 
+    .navbar-nav,
+    .dropdown-item {
+        font-size: small !important;
+        font-weight: bolder;
+    }
+
     /* Delivery Banner Styling */
     .delivery-banner {
         font-size: x-small;
@@ -478,6 +484,10 @@ footer {
 
     .navbar {
         justify-content: center;
+    }
+
+    nav li {
+        font-weight: bolder;
     }
 
     /* Delivery Banner Styling */
