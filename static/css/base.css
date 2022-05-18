@@ -361,6 +361,13 @@ footer {
     }
 }
 
+@media screen and (min-width: 768px) {
+    /* Shopping bag styling */
+    .bag-content {
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 640px) {
     /* Navigation Styling */
     nav {
