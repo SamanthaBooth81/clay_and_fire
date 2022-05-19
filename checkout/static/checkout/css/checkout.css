@@ -99,3 +99,8 @@ select option[value=""] {
 .shop-more {
   font-size: x-large;
 }
+
+/* --------------------------------------------- Media Queries */
+@media screen and (max-width: 467px) {
+
+}
