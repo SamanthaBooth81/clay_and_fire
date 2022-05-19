@@ -42,14 +42,21 @@
                     </div>
                     <div class="col text-left mt-3">
                         <!-- Product Prce -->
-                        <p class="lead mb-0 font-weight-bold price">£{{ product.price }}</p>
-                        {% if product.rating %}
-                        <!-- Product Rating -->
-                        <small class="text-muted rating"><i
-                                class="fas fa-star mr-1 rating-icon"></i>{{ product.rating }} / 5</small>
-                        {% else %}
-                        <small class="text-muted rating">No Rating</small>
-                        {% endif %}
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p class="lead mb-0 font-weight-bold price">£{{ product.price }}</p>
+                            </div>
+                            <div class="col-sm-12">
+                                {% if product.rating %}
+                                <!-- Product Rating -->
+                                <small class="text-muted rating"><i
+                                        class="fas fa-star mr-1 rating-icon"></i>{{ product.rating }} / 5</small>
+                                {% else %}
+                                <small class="text-muted rating">No Rating</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                       
                         <!-- Product Description -->
                         <p class="page-title description">
                             <strong>{{ product.description }}</strong>
