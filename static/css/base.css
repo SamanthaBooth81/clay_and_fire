@@ -241,33 +241,7 @@ footer {
     padding-top: 2%;
 }
 
-/* ------------------------------------ Shopping Bag */
-.bag-title {
-    margin-top: 5%;
-}
 
-.shop-text {
-    color: #730C02;
-    text-transform: uppercase;
-}
-
-.bag-table th {
-    font-size: larger;
-    font-weight: bolder;
-}
-.bag-img {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-}
-
-.checkout {
-    color: #212529;
-}
-
-.checkout:hover {
-    color: #D9895B;
-}
 
 /* ------------------------------------ FAQ's Accordion */
 .faq-container {
@@ -365,6 +339,11 @@ footer {
     /* Shopping bag styling */
     .bag-content {
         height: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        margin-top: 30px;
     }
 }
 

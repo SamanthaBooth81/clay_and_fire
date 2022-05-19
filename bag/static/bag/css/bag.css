@@ -1,0 +1,79 @@
+.bag-title {
+    margin-top: 5%;
+}
+
+.shop-text {
+    color: #730C02;
+    text-transform: uppercase;
+}
+
+.bag-table th {
+    font-size: larger;
+    font-weight: bolder;
+}
+.bag-img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.checkout {
+    color: #212529;
+}
+
+.checkout:hover {
+    color: #D9895B;
+}
+
+.bag-back-btn {
+    color: #730C02;
+    border: 1px solid #730C02;
+}
+
+.bag-back-btn:hover {
+    background-color: #730C02;
+    color: white;
+}
+
+/* ------------------------------------ Media Queries */
+@media screen and (max-width: 768px) {
+    .bag-title {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bag-btn-font {
+        font-size: medium;
+    }
+    
+    .bag-btn {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 467px) {
+    .bag-btn-font {
+        font-size: small;
+    }
+
+    .grand-total {
+        font-size: large;
+    }
+
+    .bag-font {
+        font-size: small !important;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .bag-btn-font {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .bag-btn-font {
+        font-size: xx-small;
+    }
+}
