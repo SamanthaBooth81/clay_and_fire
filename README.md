@@ -1,6 +1,6 @@
 <h1 align="center">Clay & Fire Jewellery</h1>
 
-<img src="assets/readme_images/responsive-img.png" height="400px">
+<img src="assets/readme_images/responsive.png" height="400px">
 
 ### **Live Site**
 [Clay & Fire Live Site](https://clay-and-fire.herokuapp.com/)
