@@ -53,10 +53,6 @@
 }
 
 @media screen and (max-width: 467px) {
-    .bag-btn-font {
-        font-size: small;
-    }
-
     .grand-total {
         font-size: large;
     }
