@@ -369,6 +369,11 @@ footer {
     .landing {
         width: 80%;
     }
+
+    /* Registration Container */
+    .registration {
+        margin-bottom: 100px !important;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -439,6 +444,11 @@ footer {
     /* Delivery Banner Styling */
     .delivery-banner {
         font-size: xx-small;
+    }
+
+    /* Registration Container */
+    .registration {
+        margin-bottom: 150px !important;
     }
 }
 
