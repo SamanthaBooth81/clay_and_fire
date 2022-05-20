@@ -304,7 +304,6 @@ footer {
 
     .header-container {
         padding-top: 164px;
-        margin-bottom: 10px;
     }
 }
 
@@ -316,7 +315,6 @@ footer {
 
     body {
         height: 100%;
-    
     }
 }
 
@@ -457,5 +455,17 @@ footer {
 
     .sub-header {
         font-size: small;
+    }
+
+    .header-container {
+        height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 227px){
+    /* Registration Page Styling */
+
+    .header-container {
+        height: 100% !important;
     }
 }
