@@ -389,7 +389,7 @@ footer {
 
     .navbar-nav,
     .dropdown-item {
-        font-size: small !important;
+        font-size: x-small !important;
         font-weight: bolder;
     }
 
