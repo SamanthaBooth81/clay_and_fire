@@ -65,15 +65,3 @@
         font-size: small !important;
     }
 }
-
-@media screen and (max-width: 388px) {
-    .bag-btn-font {
-        font-size: x-small;
-    }
-}
-
-@media screen and (max-width: 319px) {
-    .bag-btn-font {
-        font-size: xx-small;
-    }
-}
