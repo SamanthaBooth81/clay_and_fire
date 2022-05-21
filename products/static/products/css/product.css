@@ -77,7 +77,7 @@
 }
 
 /* ------------------------------------ Media Queries */
-@media screen and (min-width: 991px and max-width: 9999px) {
+@media screen and (min-width: 991px) and (max-width: 9999px) {
     /* ------------------------------------ Product Details Page */
     .product-content {
         height: 100%;

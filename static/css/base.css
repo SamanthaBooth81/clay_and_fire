@@ -378,10 +378,6 @@ footer {
 
 @media screen and (max-width: 460px) {
     /* Navigation Styling */
-    nav {
-        font-size: xx-small;
-    }
-
     nav li {
         margin: 0 !important;
         width: 25%;;
@@ -439,6 +435,7 @@ footer {
 
     nav li {
         font-weight: bolder;
+        font-size: x-small;
     }
 
     /* Delivery Banner Styling */
