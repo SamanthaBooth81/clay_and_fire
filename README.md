@@ -3,10 +3,10 @@
 <img src="assets/readme_images/responsive.png" height="400px">
 
 ### **Live Site**
-[Clay & Fire Live Site](https://clay-and-fire.herokuapp.com/)
+[Clay & Fire Jewellery Live Site](https://clay-and-fire.herokuapp.com/)
 
 ### **Repository:**
-[Clay & Fire Repository](https://github.com/SamanthaBooth81/clay_and_fire)
+[Clay & Fire Jewellery Repository](https://github.com/SamanthaBooth81/clay_and_fire)
 
 # About
 This is a full-stack e-commerce project built using Django, Python, HTML, CSS and JavaScript. I have created this website for 'Clay and Fire Jewellery', a handmade business who creates pieces of jewellery primarily using Polymer Clay, a light weight and highly versatile material which is baked in order to cure it.
@@ -898,4 +898,4 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 - [Favicon Generator](https://favicon.io/favicon-converter/) used to generate a favicon image from a jpg image.
 
 # Acknowledgments
-Thank you to all who encouraged and supported me as I created my first full stack E-Commerce website, especially to my mentor at Code Institute, Antonio, for his guidance, patience, encouragement and constant support. Also a massive thank you to Tutor Support at the Code Institute for never giving up on the difficult issues I found myself facing.  
+Thank you to all who encouraged and supported me as I created my first full stack E-Commerce website. I'd especially like to thank my mentor at Code Institute, Antonio, for his guidance, patience, encouragement and constant support. 
