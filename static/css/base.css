@@ -209,6 +209,26 @@ footer {
     cursor: pointer;
 }
 
+/* Back to top Button */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    border: 1px solid #730c0261;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
+.btt-link i {
+    padding: 5px;
+}
+
+
 /* ------------------------------- Bootstrap Toasts */
 
 .message-container {
