@@ -40,6 +40,8 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS an
 
 [Bugs Found](#bugs-found)
 
+[User Feedback](#user-feedback)
+
 [Search Engine Optimisation (SEO)](#search-engine-optimisation-seo)
 
 [Deployment](#deployment)
@@ -633,10 +635,18 @@ The contact form link is placed within the footer and takes the user to the cont
 - The message box could hold enough text for a message.
 - the form submitted the message to a working email for the site owner to respond.
 
-**Peer Code Review**
+**Responsive Testing**
 
-My project was shared on Slack with other Code Institute students. The feedback received was: 
+I also tested this project's responsiveness across multiple devices including:
 
+- iPhone X
+- iPhone 8
+- Samsung S10+
+- Samsung Galaxy Z Flip3
+- ipad Pro 9.7"
+- Macbook Pro 13"
+
+I also used Google developer tools to check responsiveness across multiple other devices and screen sizes. 
 # Validator Testing
 
 - The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the html segments.
@@ -664,6 +674,15 @@ I encountered the following issues whilst building this project:
 
 - The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) url to display the image.
 
+# User Feedback 
+
+- Make the Price on the product card bolder
+- Change 'Quantity' to 'Qty' on Product Details page.
+- Add a slight margin to the bottom of the product cards
+
+**Peer Code Review Feedback**
+
+My project was shared on Slack with other Code Institute students. The feedback received was: 
 # Search Engine Optimisation (SEO)
 In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
 
