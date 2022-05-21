@@ -32,11 +32,10 @@
     font-size: large;
 }
 
-.item-img {
-    height: 350px;
-    width: 250px;
-    object-fit: cover;
-}
+.btn-del,
+    .btn-cancel {
+        margin: 5px;
+    }
 
 /* ------------------------------------ Product Details Pages */
 
@@ -69,6 +68,12 @@
 
 .description {
     margin-right: 100px;
+}
+
+.item-img {
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
 }
 
 /* ------------------------------------ Media Queries */
@@ -112,6 +117,12 @@
         margin-left: 0 !important;
     }
 
+    /* Confirm Delete Page */
+   
+    #delete-confirm {
+        width: 90% !important;
+    }
+
     /* ------------------------------------ Shopping Bag Page */
 
     .bag-content {
@@ -137,5 +148,25 @@
     .shop-btn,
     .bag-add-btn {
         font-size: medium;
+    }
+}
+
+@media screen and (max-width: 397px) {
+    #delete {
+        margin: 30px;
+    }
+
+    #delete-confirm {
+        padding: 20px;
+    }
+
+    .delete-msg {
+        font-size: small;
+    }
+
+    .btn-del,
+    .btn-cancel {
+        font-size: small;
+        padding: 5px;
     }
 }
