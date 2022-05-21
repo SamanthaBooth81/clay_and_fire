@@ -679,6 +679,7 @@ I encountered the following issues whilst building this project:
 - Make the Price on the product card bolder
 - Change 'Quantity' to 'Qty' on Product Details page.
 - Add a slight margin to the bottom of the product cards
+- Center the Product Cards on the Products Page
 
 **Peer Code Review Feedback**
 
