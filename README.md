@@ -9,7 +9,7 @@
 [Clay & Fire Jewellery Repository](https://github.com/SamanthaBooth81/clay_and_fire)
 
 # About
-This is a full-stack e-commerce project built using Django, Python, HTML, CSS and JavaScript. I have created this website for 'Clay and Fire Jewellery', a handmade business who creates pieces of jewellery primarily using Polymer Clay, a light weight and highly versatile material which is baked in order to cure it.
+This is a full-stack e-commerce project built using Django, Python, HTML, CSS and JavaScript. I have created this website for 'Clay and Fire Jewellery', a business who creates handmade pieces of jewellery primarily using Polymer Clay, a light weight and highly versatile material which is baked in order to cure it.
 
 # Table of Contents
 
@@ -684,6 +684,11 @@ I encountered the following issues whilst building this project:
 **Peer Code Review Feedback**
 
 My project was shared on Slack with other Code Institute students. The feedback received was: 
+
+- Add some weight to the font or make it larger as it is difficult to read on some of the pages, particularly the FAQ's and About Us pages.
+
+All feedback received was implemented through out the project.
+ 
 # Search Engine Optimisation (SEO)
 In order to find the relevant keywords for my project I made the following searches on [Google](www.google.co.uk) and [Word Tracker](www.wordtracker.com)  along with a few combinations:
 
