@@ -900,7 +900,17 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
     - [Custom 404 Error Page. Python Django Web Framework Course. #16](https://www.youtube.com/watch?v=3SKjPppM_DU)
     - [Python Django 3 0 7 Create Show Custom 404 Error Page](https://www.youtube.com/watch?v=ZhwkddfqUTY)
 
+<br>
+
 - [XML Sitemap Generator](https://www.xml-sitemaps.com/) was used this to generate the sitemap for my project.
+
+- The following videos were used to help create the review functionality:
+    - [Rathan Kumar - Review and Rating System in Django Python Part 1](https://www.youtube.com/watch?v=3KCBN7WJXMY)
+    - [Rathan Kumar - Review and Rating System in Django Python Part 2](https://www.youtube.com/watch?v=Zkmu93lMLPs)
+    - [Rathan Kumar - Review and Rating System in Django Python Part 3](https://www.youtube.com/watch?v=gDtsAWMA3Jo)
+    - [Rathan Kumar - Review and Rating System in Django Python Part 4](https://www.youtube.com/watch?v=eIN1nZCt7Ww)
+
+- [Stack Overflow](https://stackoverflow.com/questions/16244821/how-to-stop-sticky-footer-from-covering-content) was used to fix the footer covering the review form.
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
