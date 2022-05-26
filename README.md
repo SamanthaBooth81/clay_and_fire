@@ -548,7 +548,7 @@ The Order total was also compared on the checkout page, the successful checkout 
 
 - The above details contained within the order confirmation matched the bag items, order total, and the order in the database.
 
-### 8. As a shopper, I want to be able to receive an email confirmation of my order so that |I have proof of my order for my records.
+### 8. As a shopper, I want to be able to receive an email confirmation of my order so that I have proof of my order for my records.
 
 - Email confirmation was tested by placing an order to an email address that can be checked. An email confirmation matching the template set up in the checkout app was received with the correct order details within and a contact email for if there was an issue with the order.
 
@@ -605,6 +605,7 @@ This was tested by registering a couple of user accounts and:
 - logging out and back in to ensure they worked
 - Confirming the account via email
 - Checking the Admin panel for confirmed email addresses
+- Attempting to create an account with an email address that already exists
 
 The above ensured the user accounts were generated. 
 
@@ -612,6 +613,7 @@ To test profile information I added an address and attempted to checkout an item
 
 To test the order history, I checked whether the orders placed to test the profile information had been saved to the profile, and the information contained in the order matched what was placed in the bag and checked out.
 
+To test that accounts cannot be created with the same email address I attempted to create an account for an email that already exists. An error message occurred after I clicked submit, ensuring I was unable to create the duplicate account.
 ### 14. As a shopper, I want to be able to be able to recover my password so that I can recover my account access.
 
 This was tested by clicking the 'Forgot Password' link at the bottom of the login page. The user then receives a link via email, therefore I tested this with an existing email to ensure the link was received.
