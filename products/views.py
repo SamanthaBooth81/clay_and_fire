@@ -67,8 +67,11 @@ def product_details(request, product_id):
 
     product = get_object_or_404(Products, pk=product_id)
 
+    reviews = Review.objects.filter(product_id=product.id, status=True)
+
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_details.html', context)
@@ -165,7 +168,8 @@ def submit_review(request, product_id):
             data.product = product
             data.user_id = request.user.id
             data.save()
-            messages.success(request, 'Thank you! Your review has been submitted.')
+            messages.success(
+                request, 'Thank you! Your review has been submitted.')
             return redirect(reverse('product_details', args=[product.id]))
         else:
             messages.error(
