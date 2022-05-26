@@ -45,7 +45,7 @@ class Products(models.Model):
         return self.name
 
 
-class RatingReview(models.Model):
+class Review(models.Model):
     """Rating and Review Model"""
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
