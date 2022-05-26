@@ -113,6 +113,8 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
+ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Clay & Fire Jewellery'
+
 WSGI_APPLICATION = 'clay_and_fire.wsgi.application'
 
 
