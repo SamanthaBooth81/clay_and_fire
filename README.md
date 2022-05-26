@@ -764,6 +764,7 @@ I used an if statement in settings.py (see below) so that when our app is runnin
                 'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
             }
 
+Development is set in gitpod's environment variables as True.
 
 8. Next I ran the migrations again to set up my Postgres Database by running **Python 3 manage.py migrate** within the command line and then create a Superuser using **python3 manage.py create superuser**.
 
