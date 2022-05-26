@@ -155,7 +155,6 @@ def delete_product(request, product_id):
     return render(request, 'products/confirm_delete.html')
 
 
-@login_required
 def submit_review(request, product_id):
     """Sumbit a product review"""
     product = get_object_or_404(Products, pk=product_id)
