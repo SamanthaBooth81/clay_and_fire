@@ -33,9 +33,9 @@
 }
 
 .btn-del,
-    .btn-cancel {
-        margin: 5px;
-    }
+.btn-cancel {
+    margin: 5px;
+}
 
 /* ------------------------------------ Product Details Pages */
 
@@ -76,8 +76,89 @@
     object-fit: cover;
 }
 
+/* ------------------------------------ Product Details - Customer Reviews */
+/* Star Rating CSS from Rathan Kumar's YouTube Tutorial and amended slightly to suit my project.
+Link in README */
+/* Hide Radio button */
+.rate > input {
+    display: none;
+}
+
+.rate {
+    display: inline-block;
+    ;
+    border: 0;
+}
+
+.rate > label {
+    float: right;
+}
+
+/* Showing the stars */
+.rate > label:before {
+    display: inline-block;
+    font-size: 20px;
+    font-family: FontAwesome;
+    content: "\f005";
+    margin: 0;
+    padding: 0.3rem .2rem;
+    cursor: pointer;
+}
+
+/* Half star */
+.rate .half:before {
+    content: "\f089";
+    position: absolute;
+    padding-right: 0;
+}
+
+/* Click and hover */
+input:checked~label,
+label:hover~label {
+    color: #D9895B;
+}
+
+/* hover highlight */
+input:checked+label:hover,
+input:checked~label:hover,
+input:checked~label:hover~label,
+label:hover~input:checked~label {
+    color: #730C02;
+}
+
+.rating-star i {
+    color: #D9895B !important;
+}
+
+ul.thumb {
+    margin: 0 auto;
+    padding: 0;
+    float: left;
+}
+
+ul.thumb li {
+    list-style: none;
+    margin: 10px;
+}
+
+ul.thumb li img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid grey;
+}
+
+.product-content {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.review-box {
+    width: 83%;
+}
+
 /* ------------------------------------ Media Queries */
 @media screen and (min-width: 991px) and (max-width: 9999px) {
+
     /* ------------------------------------ Product Details Page */
     .product-content {
         height: 100%;
@@ -85,6 +166,7 @@
 }
 
 @media screen and (max-width: 991px) {
+
     /* ------------------------------------ Add Product Page */
     .add-product-form {
         width: 100%;
@@ -92,14 +174,17 @@
 }
 
 @media screen and (max-width: 767px) {
+
     /* ------------------------------------ Product Details Page */
     .details-row {
         margin-right: 0 !important;
     }
+
     .details-img {
         width: 90%;
         margin: 0 auto;
     }
+
     .details-img img {
         height: 300px !important;
         width: 100%;
@@ -118,7 +203,7 @@
     }
 
     /* Confirm Delete Page */
-   
+
     #delete-confirm {
         width: 90% !important;
     }
@@ -131,6 +216,7 @@
 }
 
 @media screen and (max-width: 576px) {
+
     /* ------------------------------------ Product Details Page */
     .title {
         font-size: x-large;
@@ -177,12 +263,13 @@
 }
 
 @media screen and (max-width: 267px) {
+
     /* ------------------------------------ Product Card */
-    .edit-product{
+    .edit-product {
         padding-left: 5px;
     }
 
-    .del-product{
+    .del-product {
         padding-right: 5px;
     }
 }
