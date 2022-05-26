@@ -40,6 +40,8 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 
 [Validator Testing](#validator-testing)
 
+[Responsive Testing](#responsive-testing)
+
 [Bugs Found](#bugs-found)
 
 [User Feedback](#user-feedback)
@@ -108,6 +110,7 @@ Please find my Kanban Board with my user stories [here](https://github.com/Saman
 14.	As a shopper I want to be able to recover my password so that I can recover my account access.
 15.	As a shopper I want to be able to receive a registration confirmation email so that I can confirm registration.
 16.	As a shopper I want to be able to sign up for email so that I can be notified of new releases, deals, and upcoming sales.
+17. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
 
 # Scope
 
@@ -641,7 +644,26 @@ The contact form link is placed within the footer and takes the user to the cont
 - The message box could hold enough text for a message.
 - the form submitted the message to a working email for the site owner to respond.
 
-**Responsive Testing**
+### 17. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+
+The review section was tested by:
+
+- Attempting to submit a review without being logged in
+
+This worked correctly as you must have an account to submit a review. Without an account the form isn't visable on the Product Details page.
+
+- Logging into an account and submitting a review
+
+This worked as the review was linked to the product in the backend and was also displayed on the Product Details page.
+# Validator Testing
+
+- The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the HTML segments.
+- The CSS style sheet was validated using [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and no errors were returned.
+- The JavaScript files were run through [JSHint](https://jshint.com/) and no errors were found apart from a few missing semi-colons which were added.
+- The code was validated using [PEP8](http://pep8online.com/). No errors were returned.
+- The finished project was also run through [Wave](https://wave.webaim.org/) to check for issues with contrast styling and HTML structure. 
+
+# Responsive Testing
 
 I also tested this project's responsiveness across multiple devices including:
 
@@ -654,13 +676,6 @@ I also tested this project's responsiveness across multiple devices including:
 - MacBook Pro 13"
 
 I also used Google developer tools to check responsiveness across multiple other devices and screen sizes. 
-# Validator Testing
-
-- The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the HTML segments.
-- The CSS style sheet was validated using [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and no errors were returned.
-- The JavaScript files were run through [JSHint](https://jshint.com/) and no errors were found apart from a few missing semi-colons which were added.
-- The code was validated using [PEP8](http://pep8online.com/). No errors were returned.
-- The finished project was also run through [Wave](https://wave.webaim.org/) to check for issues with contrast styling and HTML structure. 
 
 # Bugs Found 
 
@@ -914,6 +929,9 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
     - [Rathan Kumar - Review and Rating System in Django Python Part 4](https://www.youtube.com/watch?v=eIN1nZCt7Ww)
 
 - [Stack Overflow](https://stackoverflow.com/questions/16244821/how-to-stop-sticky-footer-from-covering-content) was used to fix the footer covering the review form.
+
+- [GitHub Django Allauth Issues](https://github.com/pennersr/django-allauth/issues/3037) was used to help fix email subject by adding ACCOUNT_EMAIL_SUBJECT_PREFIX to my settings.
+
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)
 - [Logo Font - Google Fonts](https://fonts.google.com/specimen/Raleway?query=raleway)
