@@ -197,6 +197,10 @@ ul.thumb li img {
         margin-left: 0 !important;
     }
 
+    .customer-reviews {
+        margin-top: 2rem !important;
+    }
+
     /* Confirm Delete Page */
 
     #delete-confirm {

@@ -117,7 +117,7 @@
     </div>
     <hr class="w-50 mb-5">
     <div class="row offset-1 review-section">
-        <div class="col-md-6">
+        <div class="col-md-6 mt-2">
             <h4>Leave a Review</h4>
             {% if user.is_authenticated %}
             <form action="{% url 'submit_review' product.id %}" method="POST">
@@ -152,7 +152,8 @@
             </div>
             {% endif %}
         </div>
-        <div class="col-md-6">
+
+        <div class="col-md-6 mt-2 customer-reviews">
             <h4>Customer Reviews</h4>
             {% for review in reviews %}
             <article class="box mb-3">
