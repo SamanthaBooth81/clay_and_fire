@@ -389,7 +389,6 @@ I created a basic Favicon for this project using [Canva](https://www.canva.com/)
 # Features to be Implemented
 The following features can be implemented to enhance the project:
 
-- Feedback Board for Shoppers.
 - Save items to favourites.
 - Instagram Carousel to show products bought by the shoppers.
 - Featured items on the homepage.
