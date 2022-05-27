@@ -1,7 +1,6 @@
 """Product models"""
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Avg
 
 # Category and Product Models from Code Institutes
 # Boutique Ado follow along project.
@@ -43,20 +42,13 @@ class Products(models.Model):
     def __str__(self):
         return self.name
 
-    def get_rating(self):
-        """Calculate the overall rating"""
-
-        total = sum(int(review['rating']) for review in self.reviews.values())
-
-        return total / self.reviews.count()
-
 
 class Review(models.Model):
     """Rating and Review Model"""
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
+        max_digits=6, decimal_places=2, null=True, blank=False)
     review = models.TextField(max_length=500, blank=True)
     status = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)

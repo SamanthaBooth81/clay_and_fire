@@ -66,12 +66,14 @@ def product_details(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Products, pk=product_id)
-
-    reviews = Review.objects.filter(product_id=product.id, status=True)
+    reviews = Review.objects.filter(
+        product_id=product.id, status=True).order_by('-created_on')
+    total_reviews = reviews.count()
 
     context = {
         'product': product,
         'reviews': reviews,
+        'total_reviews': total_reviews,
     }
 
     return render(request, 'products/product_details.html', context)
