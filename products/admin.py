@@ -10,7 +10,6 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        'rating',
         'image',
     )
 
@@ -25,6 +24,17 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    """Admin Panel display for Product Model"""
+    list_display = (
+        'product',
+        'user',
+        'rating',
+        'review',
+        'status',
+    )
+
+
 admin.site.register(Products, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Review)
+admin.site.register(Review, ReviewAdmin)
