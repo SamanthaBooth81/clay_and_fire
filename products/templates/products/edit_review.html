@@ -23,7 +23,7 @@
     <div class="row offset-1 review-section">
         <div class="col-md-6 mt-4">
             <h4>Edit Review</h4>
-            <form action="{% url 'submit_review' product.id %}" method="POST">
+            <form action="{% url 'edit_review' review.id %}" method="POST">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <input type="submit" value="Update Review" class="btn submit-review">
