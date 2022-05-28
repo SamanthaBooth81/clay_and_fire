@@ -48,7 +48,7 @@ class Review(models.Model):
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=False)
+        max_digits=5, decimal_places=2, null=True, blank=False)
     review = models.TextField(max_length=500, blank=True)
     status = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
