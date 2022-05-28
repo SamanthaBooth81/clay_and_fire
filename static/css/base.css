@@ -180,16 +180,26 @@ footer {
 }
 
 
-.bag-add-btn {
-    color: #730C02;;
+.bag-add-btn-div {
     padding-left: 10px;
+    margin-bottom: 10px;
 }
 
-.bag-add-btn:hover,
-.bag-add-btn-text:hover {
+.bag-add-btn {
     background-color: #730C02;
     color: white;
+    padding: 15px;
 }
+
+.bag-add-btn:hover {
+    color: #730C02;
+    background-color: white;
+}
+
+.bag-btn-color {
+    color: white;
+}
+
 
 .shop-btn {
     font-size: 1.25rem;

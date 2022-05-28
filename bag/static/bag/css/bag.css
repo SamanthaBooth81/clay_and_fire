@@ -22,21 +22,21 @@
 }
 
 .checkout {
-    color: #212529;
-}
-
-.checkout:hover {
-    color: #D9895B;
-}
-
-.bag-back-btn {
     color: #730C02;
     border: 1px solid #730C02;
 }
 
-.bag-back-btn:hover {
+.checkout:hover {
     background-color: #730C02;
     color: white;
+}
+
+.bag-back-btn {
+    color: #212529;
+}
+
+.bag-back-btn:hover {
+    color: #D9895B;
 }
 
 /* ------------------------------------ Media Queries */
