@@ -1,3 +1,7 @@
+.bag-content {
+    min-height: 600px;
+}
+
 .bag-title {
     margin-top: 5%;
 }
@@ -36,6 +40,13 @@
 }
 
 /* ------------------------------------ Media Queries */
+@media screen and (max-width: 900px) {
+    .bag-content {
+        min-height: 800px;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
     .bag-title {
         margin-top: 30px;

@@ -4,7 +4,6 @@ html {
 
 body {
     height: 100%;
-    /* min-height: 400px; */
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -180,34 +179,24 @@ footer {
     color: #212529;
 }
 
-.shop-btn {
-    color: #730C02;
-    border: 1px solid #730C02;
-    margin-bottom: 20px;
+
+.bag-add-btn {
+    color: #730C02;;
+    padding-left: 10px;
 }
 
-.shop-btn:hover,
-.shop-text:hover {
+.bag-add-btn:hover,
+.bag-add-btn-text:hover {
     background-color: #730C02;
     color: white;
 }
 
-.add {
-    float: left;
-    margin-right: 2%;
-    padding-left: 5px;
-}
-
-.bag-add {
-    padding: 2%;
-    color: #730C02;
-}
-
-.bag-add-btn {
+.shop-btn {
     font-size: 1.25rem;
+    padding-left: 10px;
 }
 
-.bag-add-btn:hover {
+.shop-btn :hover {
     color: #A63F03;
 }
 
@@ -273,6 +262,10 @@ footer {
     background-color: #D9A689;
 }
 
+.shopping-bag-icon {
+    margin-left: 8px;
+}
+
 /* ------------------------------------ All Pages */
 .page-title {
     padding-top: 2%;
@@ -296,6 +289,14 @@ footer {
 
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
+}
+
+.logout {
+    min-height: 400px;
+}
+
+.allauth-container{
+    width: 80%;
 }
 
 /* From Boutique Ado/Bootstrap */
@@ -352,6 +353,10 @@ footer {
     .header-container {
         padding-top: 164px;
     }
+
+    .allauth-container{
+        width: 60%;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -382,6 +387,11 @@ footer {
         height: 100%;
         min-height: 400px;
     }
+
+    .logout {
+        min-height: 750px;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -510,17 +520,5 @@ footer {
 
     .sub-header {
         font-size: small;
-    }
-
-    .header-container {
-        height: 100% !important;
-    }
-}
-
-@media screen and (min-width: 227px){
-    /* Registration Page Styling */
-
-    .header-container {
-        height: 100% !important;
     }
 }
