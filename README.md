@@ -949,6 +949,8 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 
 - [Stack Overflow](https://stackoverflow.com/questions/16244821/how-to-stop-sticky-footer-from-covering-content) was used to fix the footer covering the review form.
 
+- [Stack Overflow](https://stackoverflow.com/a/666407) was used to help with the cancel button for the confirm delete review template.
+
 - [GitHub Django Allauth Issues](https://github.com/pennersr/django-allauth/issues/3037) was used to help fix email subject by adding ACCOUNT_EMAIL_SUBJECT_PREFIX to my settings.
 
 ### Styling
