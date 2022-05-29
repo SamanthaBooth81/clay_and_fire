@@ -1,7 +1,7 @@
 <!-- Products Navigation -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
+        <li class="nav-item d-block d-lg-none">
             <a href="{% url 'home' %}" id="home-link" class="nav-link nav-link-drop mr-5 dropdown-item">Home</a>
         </li>
         <li class="nav-item dropdown">
@@ -10,7 +10,6 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
