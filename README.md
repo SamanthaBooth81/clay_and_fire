@@ -493,6 +493,11 @@ The following features can be implemented to enhance the project:
 - An error message is displayed underneath the email box if there is an issue with the email provided
 - A success message is displayed underneath the email box to confirm the subscription.
 
+### 4.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that can still be available if required.
+
+- Status Field in Admin Panel
+
+Within the Admin panel, the Superuser is able to remove a review from the site without deleting it by un-ticking the status checkbox within the review. This was tested by un-checking the status box on one of the submitted reviews. I then went to the product the review was for to check the review was removed from the site. The review was removed without being deleted.
 
 ### **Shopper**
 ### 1. As a Shopper, I want to be able to view a list of items so that I can add them to my basket.
@@ -689,6 +694,10 @@ This worked as the review was linked to the product in the backend and was also 
 - Clicking submit without adding a review
 
 Both the rating and the review sections are required fields so the form cannot be submitted without them both being filled in. The rating is checked at 5 stars so if the user doesn't pick a star rating it will automatically submit with 5 stars. The user is able to edit their review if they wish to change this.
+
+- Deleting the Product removed the reviews from the model
+
+This was tested by adding a new product to the shop. I then added a review, followed by deleting the product. The review was deleted from the database along with the product. I checked this by signing into the admin panel and checking the list of reviews. The review added to the product what was deleted from the Review model as was the product from the Products model.
 
 ### 19. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
 
