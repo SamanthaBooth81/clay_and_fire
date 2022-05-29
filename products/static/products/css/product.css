@@ -38,7 +38,6 @@
 }
 
 /* ------------------------------------ Product Details Pages */
-
 .price {
     float: left;
     width: 10%;
@@ -74,6 +73,10 @@
     height: 350px;
     width: 250px;
     object-fit: cover;
+}
+
+.review-section {
+    margin-right: 8.333333%;
 }
 
 /* ------------------------------------ Product Details - Customer Reviews */
@@ -233,10 +236,6 @@ ul.thumb li img {
     .shop-btn,
     .bag-add-btn {
         font-size: medium;
-    }
-
-    .review-section {
-        margin-right: 20px;
     }
 }
 
