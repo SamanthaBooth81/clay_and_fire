@@ -160,7 +160,7 @@ footer {
 }
 
 /* ------------------------------------ Buttons */
-
+/* Homepage Button */
 .shop-now {
     padding-left: 40px;
 }
@@ -184,6 +184,15 @@ footer {
     color: #212529;
 }
 
+/* Product Details Buttons */
+.shop-btn {
+    font-size: 1.25rem;
+    padding-left: 10px;
+}
+
+.shop-btn :hover {
+    color: #A63F03;
+}
 
 .bag-add-btn-div {
     padding-left: 10px;
@@ -205,19 +214,11 @@ footer {
     color: white;
 }
 
-
-.shop-btn {
-    font-size: 1.25rem;
-    padding-left: 10px;
-}
-
-.shop-btn :hover {
-    color: #A63F03;
-}
-
+/* Shopping Bag Buttons */
 .bag-btn {
     cursor: pointer;
 }
+
 
 /* shopping & checkout bag buttons  */
 .checkout {
