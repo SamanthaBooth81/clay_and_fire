@@ -24,7 +24,7 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 - [Scope](#scope)
 
 - [Structure](#structure)
-    - [Databases](#Databases)
+    - [Databases](#databases)
     - [Wireframes](#wireframes)
 
 
