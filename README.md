@@ -324,6 +324,13 @@ Not logged in and without reviews:
 
 <img src="assets/readme_images/review-section-2.png" width="75%">
 
+# Edit Review Form
+
+<img src="assets/readme_images/edit-review.png" width="75%">
+
+# Delete Review Confirmation
+
+<img src="assets/readme_images/delete-review.png" width="50%">
 
 # Shopping Bag
 
