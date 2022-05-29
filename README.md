@@ -658,7 +658,7 @@ This worked as the review was linked to the product in the backend and was also 
 
 - The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the HTML segments.
 - The CSS style sheet was validated using [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and no errors were returned.
-- The JavaScript files were run through [JSHint](https://jshint.com/) and no errors were found apart from a few missing semi-colons which were added.
+- The JavaScript files were run through [JSHint](https://jshint.com/) and no errors were found apart from a few missing semi-colons which were added. Also, the project was run through whilst checking for any issues in the console. No errors were found.
 - The code was validated using [PEP8](http://pep8online.com/). No errors were returned.
 - The finished project was also run through [Wave](https://wave.webaim.org/) to check for issues with contrast styling and HTML structure. 
 
