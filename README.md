@@ -314,6 +314,17 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 
 <img src="assets/readme_images/product-details.png" width="75%">
 
+# Product Review
+
+Logged in as Superuser and with reviews:
+
+<img src="assets/readme_images/review-section-1.png" width="75%">
+
+Not logged in and without reviews:
+
+<img src="assets/readme_images/review-section-2.png" width="75%">
+
+
 # Shopping Bag
 
 <img src="assets/readme_images/shopping-bag.png" width="50%">
@@ -325,6 +336,10 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 # Checkout Success
 
 <img src="assets/readme_images/checkout-success.png" width="50%">
+
+# Order Confirmation Email
+
+<img src="assets/readme_images/email-confirm.png" width="50%">
 
 # Footer
 
@@ -353,6 +368,11 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 # Contact Form
 
 <img src="assets/readme_images/contact.png" width="50%">
+
+The following email is sent via the contact form:
+
+<img src="assets/readme_images/contact-form-email.png" width="50%">
+
 
 # 404 Error Page
 
@@ -950,6 +970,8 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 - [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/YbA4hHxkSrg)
 - [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/O7l3PmbGxF0)
 - [Unsplash - Gabrielle Henderson](https://unsplash.com/photos/fR3PIa-WtBg)
+
+The images used in this project were also compressed using (OptimiZilla)[https://imagecompressor.com/].
 
 ### Website Images
 - [Pexels - Delivery Image](https://www.pexels.com/photo/person-holding-green-and-white-floral-book-5486791/)

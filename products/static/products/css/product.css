@@ -79,6 +79,12 @@
     margin-right: 8.333333%;
 }
 
+/* ------------------------------------ Edit Review */
+.edit-review {
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* ------------------------------------ Product Details - Customer Reviews */
 /* Star Rating CSS from Rathan Kumar's YouTube Tutorial and amended slightly to suit my project.
 Link in README */
