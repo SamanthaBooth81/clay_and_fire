@@ -163,6 +163,10 @@ The Order model holds the order details of an order placed by the shoppers. This
 
 The User Profile contains delivery information for those who created an account and chose to store their delivery details for faster checkout.
 
+### Review 
+
+The reviews database holds all of the review submitted by users with an account. They can submit, edit and delete reviews posted. This is accessible via the Product Details page for the products they have reviewed.
+
 ### User
 
 For this project, I also used Django's User model to store registration information allowing the users to create an account. Once an account has been created the user is able to create, update and delete their own recipes on the site. 
