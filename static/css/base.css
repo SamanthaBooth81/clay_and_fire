@@ -203,6 +203,8 @@ footer {
     background-color: #730C02;
     color: white;
     padding: 15px;
+    width: 100%;
+    border-radius: 0;
 }
 
 .bag-add-btn:hover {
@@ -212,6 +214,10 @@ footer {
 
 .bag-btn-color {
     color: white;
+}
+
+.keep-shopping {
+    padding: 15px;
 }
 
 /* Shopping Bag Buttons */
@@ -503,6 +509,13 @@ footer {
     /* Policy styling */
     .policy-container {
         width: 85% !important;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .btn-group-lg > .btn, .btn-lg {
+        padding: 5px !important;
+        font-size: 1rem !important;
     }
 }
 

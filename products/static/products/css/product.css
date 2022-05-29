@@ -235,11 +235,15 @@ ul.thumb li img {
         font-size: medium;
     }
 
+    .review-section {
+        margin-right: 20px;
+    }
+}
+
     /* ------------------------------------ Product Card */
     .product-container {
         padding: 0;
     }
-}
 
 @media screen and (max-width: 397px) {
     #delete {

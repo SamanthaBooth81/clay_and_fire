@@ -85,19 +85,21 @@
                             </div>
                         </div>
 
-                        <div class="col-8">
+                        <div>
                             <div class="bag-add-btn-div">
                                 <span class="bag-add-btn">
                                     <i class="fas fa-shopping-bag fa-lg"></i>
-                                    <input type="submit" class="btn btn-lg rounded-0 text-uppercase bag-btn-color"
+                                    <input type="submit" class="btn btn-lg rounded-0 text-uppercase bag-btn-color details-button-font"
                                         value="Add to Bag">
                                 </span>
                             </div>
                             <div class="shop-btn text-uppercase">
-                                <i class="fas fa-chevron-left"></i>
-                                <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
-                                    Keep Shopping
-                                </a>                               
+                                <span class="keep-shopping">
+                                    <i class="fas fa-chevron-left"></i>
+                                    <a href="{% url 'products' %}" class="btn rounded-0 btn-lg details-button-font">
+                                        Keep Shopping
+                                    </a>     
+                                </span>                          
                             </div>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
