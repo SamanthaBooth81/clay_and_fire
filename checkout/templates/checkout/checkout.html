@@ -135,22 +135,21 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
                     <div class="submit-button text-right mt-5 mb-2">
-                        <a href="{% url 'view_bag' %}" class="btn rounded-0">
+                        <a href="{% url 'view_bag' %}" class="btn btn-lg rounded-0 bag-back-btn">
                             <!-- Return to Bag Button-->
-                            <span class="icon">
+                            <span class="font-weight-bold text-uppercase">
                                 <i class="fas fa-chevron-left"></i>
+                                Adjust Bag
                             </span>
-                            <span class="font-weight-bold text-uppercase">Adjust Bag</span>
                         </a>
-                        <button id="submit-button" class="btn rounded-0 icon">
+                        <button id="submit-button" class="btn rounded-0 btn-lg checkout">
                             <!-- Complete Checkout Button -->
-                            <span class="font-weight-bold text-uppercase">Complete Order</span>
-                            <span>
+                            <span class="font-weight-bold text-uppercase">Complete Order
                                 <i class="fas fa-lock"></i>
                                 <i class="fas fa-chevron-right"></i>
                             </span>
                         </button>
-                        <p class="small text-danger my-0">
+                        <p class="small text-danger my-0 mt-2">
                             <!-- Card Charge Notification -->
                             <span class="icon">
                                 <i class="fas fa-exclamation-circle"></i>

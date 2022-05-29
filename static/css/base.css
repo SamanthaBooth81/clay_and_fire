@@ -4,13 +4,17 @@ html {
 
 body {
     height: 100%;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     display: flex;
     flex-direction: column;
     background: url('/media/landing.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Raleway', sans-serif;
 }
+
+.content {
+    flex: 1 0 auto;
+  }
 
 /* from Bulma */
 i {
@@ -108,6 +112,7 @@ input[name='q']::placeholder {
 footer {
     background-color: #D9A689;
     position: relative;
+    flex-shrink: 0;
 }
 
 .footer {
@@ -212,6 +217,25 @@ footer {
 
 .bag-btn {
     cursor: pointer;
+}
+
+/* shopping & checkout bag buttons  */
+.checkout {
+    background-color: #730C02;
+    color: white;
+}
+
+.checkout:hover {
+    color: #730C02;
+    background-color: white;
+}
+
+.bag-back-btn {
+    color: #212529;
+}
+
+.bag-back-btn:hover {
+    color: #D9895B;
 }
 
 .submit-review {
@@ -344,12 +368,6 @@ footer {
     }
   }
 
-@media screen and (min-width: 1000px) {
-    .bag-content {
-        min-height: 1000px;
-    }
-}
-
 /* fixed top navbar only on medium and up screen sizes */
 @media screen and (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -391,17 +409,18 @@ footer {
     }
 }
 
-@media screen and (min-width: 768px) {
-    /* Shopping bag styling */
-    .bag-content {
-        height: 100%;
-        min-height: 400px;
-    }
-
+@media screen and (min-height: 880px) {
+    /* Logout styling */
     .logout {
-        min-height: 750px;
+        min-height: 800px;
     }
+}
 
+@media screen and (min-height: 1200px) {
+    /* Logout styling */
+    .logout {
+        min-height: 1000px;
+    }
 }
 
 @media screen and (max-width: 640px) {
