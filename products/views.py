@@ -1,8 +1,6 @@
 """Products app views"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.views.generic import UpdateView
 from django.urls import reverse_lazy
-from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -227,11 +225,9 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
 
-    try:
+    if request.method == 'POST':
         review.delete()
         messages.success(request, 'Your review has been deleted!')
+        return redirect(reverse_lazy('product_details', args=[product.id]))
 
-    except Exception as e:
-        messages.error(request, 'Unable to delete review.')
-
-    return redirect(reverse_lazy('product_details', args=[product.id]))
+    return render(request, 'products/delete_review.html')
