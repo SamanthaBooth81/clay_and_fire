@@ -674,17 +674,40 @@ The contact form link is placed within the footer and takes the user to the cont
 - The message box could hold enough text for a message.
 - the form submitted the message to a working email for the site owner to respond.
 
-### 17. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+### 18. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
 
 The review section was tested by:
 
 - Attempting to submit a review without being logged in
 
-This worked correctly as you must have an account to submit a review. Without an account the form isn't visable on the Product Details page.
+This worked correctly as you must have an account to submit a review. Without an account the form isn't visable on the Product Details page, only a message asking the user to login if they want to review.
 
 - Logging into an account and submitting a review
 
 This worked as the review was linked to the product in the backend and was also displayed on the Product Details page.
+
+- Clicking submit without adding a review
+
+Both the rating and the review sections are required fields so the form cannot be submitted without them both being filled in. The rating is checked at 5 stars so if the user doesn't pick a star rating it will automatically submit with 5 stars. The user is able to edit their review if they wish to change this.
+
+### 19. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
+
+- Edit and Delete Review Buttons
+
+All reviews can be edited by the superuser, otherwise the user can only edit their own reviews. This was tested as the edit button is only visable if you are signed in as a superuser or the signed in user id matches the review's user id. To test this I added a review whilst signed in as admin. I then signed in under a separate generic user. When viewing the review I added, I could not see the edit or delete buttons but when I signed in as admin again they were visable. I also added a review as a generic user and then signed in as the Superuser. I was able to then edit and delete the review added by the generic user. 
+
+- Edit the Review 
+
+Editing the review takes the user to a new page to edit the review. The form is filled in with the current review information. This was tested by changing the rating and the review comment and checking the review was altered on the product details page. After submitting you could see the review had changed both on the details page and in the Review model. 
+
+- Editing the review as a Superuser
+
+Editing a review left by a general user doesn't change who the review was left by on the details page. This was tested by adding a review as a generic user and re-signing in as the Superuser to edit it. Upon editing the review, the amendment is made but the user it was originally left by stays the same. 
+
+- Deleting the review
+
+Clicking on delete takes the user to the delete confirmation page to prevent the user from accidentally deleting their review. On this page they have the option to confirm deletion of the review or go back to the product details. When the Delete button is clicked the review it removed from the model and is no longer displayed on the product details page. The review count also decreases. When clicking cancel, the user is taken back to the product details of the product they were previously in. You can also see that the count remains the same and the review is still visable on the details page and in the model. 
+
 # Validator Testing
 
 - The HTML templates were validated using [W3 Validator](https://validator.w3.org/nu/#textarea). No major errors were returned for the HTML segments.
