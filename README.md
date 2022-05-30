@@ -314,15 +314,15 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 
 <img src="assets/readme_images/logout.png" width="50%">
 
-# Products Page 
+## Products Page 
 
 <img src="assets/readme_images/products.png" width="75%">
 
-# Product Details 
+## Product Details 
 
 <img src="assets/readme_images/product-details.png" width="75%">
 
-# Product Review
+## Product Review
 
 Visable on the bottom of the Product Details Page
 
@@ -334,31 +334,31 @@ Not logged in and without reviews:
 
 <img src="assets/readme_images/review-section-2.png" width="75%">
 
-# Edit Review Form
+## Edit Review Form
 
 <img src="assets/readme_images/edit-review.png" width="75%">
 
-# Delete Review Confirmation
+## Delete Review Confirmation
 
 <img src="assets/readme_images/delete-review.png" width="50%">
 
-# Shopping Bag
+## Shopping Bag
 
 <img src="assets/readme_images/shopping-bag.png" width="50%">
 
-# Checkout
+## Checkout
 
 <img src="assets/readme_images/checkout.png" width="50%">
 
-# Checkout Success
+## Checkout Success
 
 <img src="assets/readme_images/checkout-success.png" width="50%">
 
-# Order Confirmation Email
+## Order Confirmation Email
 
 <img src="assets/readme_images/email-confirm.png" width="50%">
 
-# Footer
+## Footer
 
 <img src="assets/readme_images/footer.png" width="100%">
 
@@ -373,16 +373,16 @@ Not logged in and without reviews:
 
 <img src="assets/readme_images/shipping.png" width="50%">
 
-# Company
-## About Us
+## Company
+### About Us
 
 <img src="assets/readme_images/about.png" width="50%">
 
-## Privacy Policy
+### Privacy Policy
 
 <img src="assets/readme_images/privacy.png" width="50%">
 
-# Contact Form
+## Contact Form
 
 <img src="assets/readme_images/contact.png" width="50%">
 
@@ -391,19 +391,19 @@ The following email is sent via the contact form:
 <img src="assets/readme_images/contact-form-email.png" width="50%">
 
 
-# 404 Error Page
+## 404 Error Page
 
 <img src="assets/readme_images/error.png" width="50%">
 
-# Admin Features
+## Admin Features
 
-## Product Management
+### Product Management
 <img src="assets/readme_images/add.png" width="50%">
 
-## Edit Products
+### Edit Products
 <img src="assets/readme_images/edit.png" width="50%">
 
-## Delete Products
+### Delete Products
 <img src="assets/readme_images/delete.png" width="50%">
 
 ## Colour Scheme 
@@ -451,6 +451,8 @@ The following features can be implemented to enhance the project:
 
 [Django](https://www.djangoproject.com/) - This framework was used to build the foundations of this project, reducing time spent getting the project setup and preventing re-writing existing code.
 
+[Bulma](https://bulma.io/) - To style the icons throughout the project.
+
 [Bootstrap](https://getbootstrap.com/) - Used to quickly add design and responsiveness to my website, Bootstrap focuses on mobile first design meaning this website is responsive across multiple devices and screen sizes.
 
 [Font Awesome](https://fontawesome.com/) - Used for all of the icons throughout the site.
@@ -463,7 +465,10 @@ The following features can be implemented to enhance the project:
 ## **Manual Testing by User Story**
 ### **Superuser / Admin**
 ### 1. As a Site Owner, I want to be able to add a product so that I can add more items to my store.
-- Products can be added both via the project management page found by clicking on 'My Account' or vis the Admin Panel.
+- Products can be added both via the project management page found by clicking on 'My Account' or vis the Admin Panel. Both types of product adding were tested and the products were both visbale in the model and on the Products Page.
+
+The following was also checked and found to be working as expected when the product was added:
+
 - The required fields are validating correctly and error messages are explicit and related to each required field.
 - All required fields are indicated with an asterisk.
 - Number fields can only contain numbers.
@@ -474,69 +479,80 @@ The following features can be implemented to enhance the project:
     - Add product add the product and returns the user to the Products Page
 - An alert message appears in the top right of the page to notify the user that the product has successfully been added.
 
-### 2.	As a Site Owner,I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
-- Edit buttons are located on the product cards on the products page which are only accessible if you are a super user. 
-- Clicking the Edit button takes the user to the product form which is already populated with the current information.
-- The fields are validated the same was as if a new product was being added, all number fields must be numbers and required fields filled in. 
-- The image can also be removed and the placeholder image will replace it upon saving.
+### 2.	As a Site Owner, I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
+
+The below was tested by editing an existing product:
+
+- Edit buttons are located on the product cards on the products page which are only accessible if you are a Superuser. 
+
+I also attempted to edit products whilst signed in as a generic user. The edit button on the Product Cards weren't available and I was unable to sign into the Admin Panel.
+
+- Clicking the Edit button takes the user to the product form which is already populated with the current information. I double checked this information matched the product I intended to edit, which it did. 
+- The fields are validated the same way as if a new product was being added, all number fields must be numbers and required fields filled in. Error messages appeared as I attempted to input incorrect information and the form would not submit.
+- Removing the image was tested and the placeholder image will replaced it upon saving as expected.
 - If the image is replaced with a new image it is stored in the correct Amazon Web Services Bucket and Folder.
 - The name of the image uploaded can be the same as an image that exists.
-- An alert message appears in the top right of the page to notify the user which product they are currently editing.
+- An alert message appears in the top right of the page to notify the user which product they are currently editing. This matched the product name that was populated within the edit form.
 - Buttons are highlighted on hover and take the user to the correct page:
-    - Cancel takes the user back to the Products Page
+    - Cancel takes the user back to the Products Page.
     - Update product saves the updated product information and returns the user to the Products Page. This is confirmed via the admin panel and the details on the Product Details page.
 
 ### 3.	As a Site Owner, I want to be able to delete a product so that I can remove items that are no longer available.
-- Clicking delete removes the product from the product model.
-- The product is no longer listed with the live products.
-- The user cannot view the product with the URL. Using the link for a product that no longer exists takes the user to a 404 error page.
-- Success message at the top right of the page when the product is successfully deleted.
 
-### 4.	As a Site Owner, I want to be able to send email to customers with a subscription, notifying customers of any deals, sale and new arrivals.
+The following was tested by deleting a Product via the delete button on the Product Card:
+- Clicking delete took the user to a Delete Confirmation Page. 
+- Confirming delete removes the product from the product model and is no longer available to buy via the Products Page.
+- The user cannot view the product with the URL. Using the link for a product that no longer exists takes the user to a 404 error page.
+- A success message at the top right of the page confirms the product is successfully deleted.
+
+### 4.	As a Site Owner, I want to be able to send emails to customers with a subscription, notifying customers of any deals, sale and new arrivals.
 
 - Customers who sign up for emails are added to the business's Mailchimp contacts list where they can be unsubscribed. Users can contact the owner via the 'contact us' form in the footer to unsubscribe. 
-- Unsubscribed users can re-subscribe by submitting their email again.
-- An error message is displayed underneath the email box if there is an issue with the email provided
-- A success message is displayed underneath the email box to confirm the subscription.
 
-### 5.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that can still be available if required.
+This was tested by subscribing with an email and checking the email list on Mailchimp to ensure it was submitted. I also check the unsubscribe functionality to ensure it was easy to remove an email from the email list.
+
+- Unsubscribed users can re-subscribe by submitting their email again. This was tested by unsubscribing an email and then re-subscribing. The re-subscribed email is back in the email list as subscribed.
+
+- An error message is displayed underneath the email box if there is an issue with the email provided. I attempted to subscribe with test@test.com, a message appeared underneath stating that I could not subscribe with this email.
+- A success message is displayed underneath the email box to confirm the subscription. I tested this by submitting a valid email that exists. A success message appeared underneath, thanking the user for subscribing.
+
+### 5.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that they can still be available if required.
 
 - Status Field in Admin Panel
 
-Within the Admin panel, the Superuser is able to remove a review from the site without deleting it by un-ticking the status checkbox within the review. This was tested by un-checking the status box on one of the submitted reviews. I then went to the product the review was for to check the review was removed from the site. The review was removed without being deleted.
+Within the Admin panel, the Superuser is able to remove a review from the site without deleting it by un-ticking the status checkbox within the review. This was tested by un-checking the status box on one of the submitted reviews. I then went to the product the review was for to check whether the review was still posted on the Product Details page. The review was removed without being deleted and the total count of review decreased.
 
 ### **Shopper**
 ### 1. As a Shopper, I want to be able to view a list of items so that I can add them to my basket.
 
-- All products are displayed using Bootstrap Cards and Responsiveness classes to ensure the card layout changes dependant on screen size.
+- All products are displayed using Bootstrap Cards and Responsiveness classes to ensure the card layout changes dependant on screen size. I tested this by comparing the model with the products displayed on the site. The number of products matched along with the details of the products listed. 
 
-- Products can be viewed together or by category and can be further filtered using the sort box on the top right of the products pages. 
+- Products can be viewed together or by category and can be further filtered using the sort box on the top right of the products pages. This was tested by clicking through each category and sort to check the products listed match the filter that was in place. Categories matched categories without missing items, and the sort filtered the products in the order specified by the user.
 
-- All product images are displayed and where they do not exist there is a placeholder.
+- All product images are displayed and where they do not exist there is a placeholder. This was tested by adding a product without an image to see what happens when submitted. The placeholder image was in place as expected and when edited the image was replaced with a product image.
 
-- All products have a required title, price and category attached to the product card.
+- All products have a required title, price and category attached to the product card. This was tested by trying to submit a new product without this information included individually. When either of these fields are missing, the form validation prevents the form from submitting until the fields are completed.
 
-- Edit and Delete buttons are unavailable to non-superusers.
+- Edit and Delete buttons are unavailable to non-superusers. This was tested by signing in as a generic user. When navigating to the products the edit and delete buttons are unavailable and the user was unable to access the Admin Panel to edit/delete the product from there.
 
 ###	2. As a shopper, I want to be able to click into an item so that I can view a product description and add to the basket.
 
-- On clicking an item you are taken to the correct item as the product image, title, and price match that product card.
-
-- The user can see a description of the item they are viewing.
+I tested this by: 
+- Clicking a Product Card. I was taken to the correct item as the product image, title, and price matched the Product Card clicked on. The user can also see the description of the item they are viewing which matched the description in the model for that product. 
 
 ### 3. As a shopper, I want to be able to add items to my basket so that I can keep track of what I am spending.
 
 The following scenarios were tested by checking the items added to the Shopping Bag:
 
-- Add an item to the bag and check it is in there with the correct quantity.
+- I added an item to the bag and checked the correct product was added.
 
-- Increase the quantity before adding to the shopping bag and checking whether the quantity in the bag matches was was added.
+- I increased the quantity before adding to the shopping bag and checked whether the quantity in the bag matched what was was added.
 
-- If the user types 0 or a quantity over 99, an error message by the quantity field notifies the user that the quantity can be between 1-99 only. If the user uses the buttons, they are disabled if attempting to decrement to 0 or increment above 99. 
+- I tried to add 0 or a quantity over 99, an error message by the quantity field notifies the user that the quantity can only be between 1-99. If the user uses the buttons rather than typing the quantity, the buttons are disabled if attempting to decrement to 0 or increment above 99. I was unable to add a quantity that wasn't within the specified quantity allowance.
 
-- Once an item has been added to the shopping bag a success message appears in the top right corning, notifying the user of the specific product and quantity added, how much more to spend to save on delivery and a link to the shopping bag.
+- Once an item has been added to the shopping bag a success message appears in the top right corning, notifying the user of the specific product and quantity added, how much more to spend to save on delivery and a link to the shopping bag. The product in the toast matched the Product Details I was in and the item that was in the shopping bag.
 
-All items were added as they should be to the shopping bag and tested through to order completion to ensure the items added to the shopping bag matched the completed order. 
+All items were added as they should be to the shopping bag and tested through to order completion to ensure the items added to the shopping bag matched the completed order.
 
 ### 4. As a shopper, I want to be able to be able to adjust the quantity of products in my basket so that I can make changes to my purchases before checkout.
 
@@ -552,7 +568,7 @@ All of the above actions are reflected correctly in the Order database along wit
 
 ### 5. As a shopper, I want to be able to be able to enter payment information so that I can check out quickly and hassle free.
 
-The checkout function was tested using Stripes test card numbers. 
+The checkout function was tested using Stripe's test card number. 
 
 The following scenarios were tested to ensure the checkout went through securely:
 
@@ -570,11 +586,11 @@ The Order total was also compared on the checkout page, the successful checkout 
 
 ### 6. As a shopper, I want to be able to be able to feel that my personal and payment details are safe and secure so that I can confidently carry out my purchase.
 
-- Address details can be saved if the user has an account and updated/removed if the user wishes. 
+- Address details can be saved if the user has an account and updated/removed if the user wishes. This was tested by adding and removing an address via the profile page. An address was also added and saved to the profile upon checkout to test that it saved within the User's Profile page.
 
 - The project uses Stripe to process payments, keeping the user's payment information safe and not stored within their user profile. 
 
-- Payment information isn't stored in any of the project's models.
+- Payment information isn't stored in any of the project's models or reflected in any confirmation emails.
 
 ### 7. As a shopper, I want to be able to be able to view an order confirmation so that I can verify my order is correct.
 
@@ -590,7 +606,7 @@ The Order total was also compared on the checkout page, the successful checkout 
     - Delivery Cost
     - Grande Total
 
-- The above details contained within the order confirmation matched the bag items, order total, and the order in the database.
+- The above details contained within the order confirmation matched the items initially added to the shopping bag, the checkout form page Order Summary, and the order in the database.
 
 ### 8. As a shopper, I want to be able to receive an email confirmation of my order so that I have proof of my order for my records.
 
@@ -605,9 +621,24 @@ An order was placed without being logged into an account. It was tested by compa
 - The navigation contains the multiple categories on offer. It was tested by clicking through and ensuring the category tag on each product card matched the category the page was displaying. 
 
 - within the following Nav headings, their particular categories are listed when clicked, allowing for further filtering per section:
+    - All Products
+        - By Price
+        - By Category
+        - All Products
     - Earrings
+        - Studs
+        - Drops
+        - Clay Earrings
+        - All Earrings
     - Necklaces
+        - Pendants
+        - Statement
+        - All Necklaces
     - Special Offers
+        - New Arrivals
+        - Deals
+        - Clearance 
+        - All Specials
 
 ### 11. As a shopper, I want to be able to be able to sort multiple categories and products simultaneously so that I can find the best priced product over a broader range of categories
 
@@ -617,11 +648,6 @@ Testing the sort functionality was done within the all products tab as it contai
 - Price (High to Low)
 
 These were tested by checking the first and last price of the items on the page to check they sorted correctly. 
-
-- Rating (Low to High)
-- Rating (High to Low)
-
-These were tested by checking the first and last rating of the items on the page to check they sorted correctly. 
 
 - Name (A to Z)
 - Name (Z to A)
@@ -633,6 +659,8 @@ These were tested by checking the first and last Name of the items on the page w
 
 These were tested by checking through the of list items on the page and checking the categories were in alphabetical order. 
 
+All sort options work as expected.
+
 ### 12. As a shopper, I want to be able to be able to easily see what I’ve searched for and the number of results so that I can quickly see whether the product is available.
 
 This was tested by:
@@ -640,7 +668,7 @@ This was tested by:
 - Searching via the search box
 - Searching through the categories 
 
-The quantity for the search is displayed at the top left of the page, the number displayed matched the number of searches on each page. 
+The quantity for the search is displayed at the top left of the page, along with the search term and the number displayed matched the number of searches on each page.
 
 ### 13. As a shopper, I want to be able to be able to easily register for an account so that I can have a personal account and view my profile and purchase history.
 
@@ -655,9 +683,10 @@ The above ensured the user accounts were generated.
 
 To test profile information I added an address and attempted to checkout an item. This ensured that the address saved in the profile was auto-filled on the checkout page. To test this further I made an order, ensuring the save details to profile checkbox is ticked and checked the address saved to the user's profile. 
 
-To test the order history, I checked whether the orders placed to test the profile information had been saved to the profile, and the information contained in the order matched what was placed in the bag and checked out.
+To test the order history, I checked whether the orders that were placed to test the profile information had been saved to the profile, and the information contained in the order matched what was placed in the bag and checked out. All orders made were listed with a link to the Order Confirmation page.
 
 To test that accounts cannot be created with the same email address I attempted to create an account for an email that already exists. An error message occurred after I clicked submit, ensuring I was unable to create the duplicate account.
+
 ### 14. As a shopper, I want to be able to be able to recover my password so that I can recover my account access.
 
 This was tested by clicking the 'Forgot Password' link at the bottom of the login page. The user then receives a link via email, therefore I tested this with an existing email to ensure the link was received.
@@ -669,9 +698,10 @@ Once reset, the user must then re-login with the new password, which was tested 
 ### 15. As a shopper, I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
 
 This was tested by registering for an account. To complete registration, the user must receive an email with a link that confirms their email address. This was tested with an outlook email address that was created for testing. The email was received and the account was confirmed via the link.
+
 ### 16. As a shopper, I want to be able to be able to sign up for emails so that I can be notified of new releases, deals, and upcoming sales.
 
-Contained in the footer, the user can subscribe by entering their email and clicking submit. If there is an error with the email, an error message appears underneath the email box. If successful then there is a success message under the email box. 
+Contained in the footer, the user can subscribe by entering their email and clicking submit. If there is an error with the email, an error message appears underneath the email box. If successful then there is a success message instead. 
 
 The subscription was tested by using a test email to subscribe and logging into Mailchimp and checking the contacts. Once confirmed the contact was there I scrolled across to see if they were subscribed. From here I also tested unsubscribing a user to ensure it is possible if a request came in. 
 
@@ -748,7 +778,7 @@ I also used Google developer tools to check responsiveness across multiple other
 # Bugs Found 
 
 I encountered the following issues whilst building this project:
-- The Footer wasn't sticking to the bottom on some of the pages. To fix this I added an 'h-100' Bootstrap class to the container divs. 
+- The Footer wasn't sticking to the bottom on some of the pages. To fix this I added an 'h-100' Bootstrap class to the container divs or set the minimum height within media queries. 
 
 - The Success Message wasn't working when removing items from the cart. To fix this I needed to get the product ID to identify which Item was being deleted in the message
 
@@ -770,6 +800,7 @@ I encountered the following issues whilst building this project:
 - Change 'Quantity' to 'Qty' on the Product Details page and Shopping Bag page.
 - Add a slight margin to the bottom of the Product Cards.
 - Center the Product Cards on the Products page.
+- Change the button styling so that the call to action is toward purchasing items.
 
 **Peer Code Review Feedback**
 
@@ -1030,4 +1061,4 @@ The images used in this project were also compressed using (OptimiZilla)[https:/
 - [Favicon Generator](https://favicon.io/favicon-converter/) used to generate a favicon image from a jpg image.
 
 # Acknowledgments
-Thank you to all who encouraged and supported me as I created my first full-stack E-Commerce website. I'd especially like to thank my mentor at Code Institute, Antonio, for his guidance, patience, encouragement, and constant support. 
+Thank you to all who encouraged and supported me as I created my first full-stack E-Commerce website. Thank you to the Tutors at Code Institute for always helping to figure out issues I encountered that I was unable to solve myself. I'd especially like to thank my mentor at Code Institute, Antonio, for his guidance, patience, encouragement, and constant support.
