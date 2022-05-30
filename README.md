@@ -1,8 +1,6 @@
 <h1 align="center">Clay & Fire Jewellery</h1>
 
-<p align="center">
-    <img src="assets/readme_images/responsive.png" height="400px">
-</p>
+<img src="assets/readme_images/responsive.png">
 
 ### **Live Site**
 [Clay & Fire Jewellery Live Site](https://clay-and-fire.herokuapp.com/)
@@ -58,10 +56,10 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 
 # Strategy
 
-This website is for a Business to Consumer (B2C) business that sells handmade polymer clay jewellery. The target market for these products:
+This website is for a Business to Consumer (B2C) business that sells handmade polymer clay jewellery. The target market for these products are:
 
 - Women who enjoy fashion and accessorising.
-- Loved ones looking for gifts.
+- Those looking for gifts for people who enjoy wearing jewellery.
 - Women aged between 15 and 45.
 
 Keeping the above in mind, I believe the Customers will need a website that is:
@@ -74,15 +72,17 @@ Keeping the above in mind, I believe the Customers will need a website that is:
 
 - Has links to Social Media sites Facebook and Instagram.
 
-- User account functionality, to keep track of order history and store delivery information.
+- User Account functionality, to keep track of order history and store delivery information.
 
 And the Owner will need a website that:
 
 - Appealingly displays their products.
 
-- Allows them to add, edit and remove products. Stock Quantities wasn't a requirement as products are handmade to order and therefore only become unavailable when the seller wishes to stop the product.
+- Allows them to add, edit and remove products. Stock Quantities wasn't a requirement as products are handmade to order and therefore only become unavailable when the seller wishes to stop selling the product.
 
 - Allows customers to get in contact if required whilst having some information readily available to reduce the number of contact forms received.
+
+- Allows user to share feedback on products in order to improve products/service.
 
 # User Stories
 
@@ -92,6 +92,7 @@ Please find my Kanban Board with my user stories [here](https://github.com/Saman
 2.	As a Site Owner I want to be able to Edit/Update a product so that I can change the price, description, and other product criteria.
 3.	As a Site Owner I want to be able to delete a product so that I can remove items that are no longer available.
 4.	As a Site Owner I want to be able to send emails to customers with a subscription, notifying customers of any deals, sales, and new arrivals.
+5.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that can still be available if required.
 
 ## Shopper
 1.	As a Shopper I want to be able to view a list of items so that I can add them to my basket.
@@ -101,7 +102,7 @@ Please find my Kanban Board with my user stories [here](https://github.com/Saman
 5.	As a shopper I want to be able to enter payment information so that I can check out quickly and hassle-free.
 6.	As a shopper I want to be able to feel that my personal and payment details are safe and secure so that I can confidently carry out my purchase.
 7.	As a shopper I want to be able to view an order confirmation so that I can verify my order is correct.
-8.	As a shopper I want to be able to receive an email confirmation of my order so that |I have proof of my order for my records.
+8.	As a shopper I want to be able to receive an email confirmation of my order so that I have proof of my order for my records.
 9.	As a shopper I want to be able to order without creating an account so that I can make one-off orders.
 10.	As a shopper I want to be able to sort a specific category of products so that I can find the best price quickly for the product I am looking for.
 11.	As a shopper I want to be able to sort multiple categories and products simultaneously so that I can find the best-priced product over a broader range of categories
@@ -109,8 +110,10 @@ Please find my Kanban Board with my user stories [here](https://github.com/Saman
 13.	As a shopper I want to be able to easily register for an account so that I can have a personal account and view my profile and purchase history.
 14.	As a shopper I want to be able to recover my password so that I can recover my account access.
 15.	As a shopper I want to be able to receive a registration confirmation email so that I can confirm registration.
-16.	As a shopper I want to be able to sign up for email so that I can be notified of new releases, deals, and upcoming sales.
-17. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+16.	As a shopper I want to be able to sign up for emails so that I can be notified of new releases, deals, and upcoming sales.
+17. As a shopper, I want to be able to be able to contact the site owner so that I can ask about my order or for further information not contained within the Footer Pages.
+18. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
+19. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
 
 # Scope
 
@@ -118,11 +121,11 @@ To achieve the above user and business goals, this project will be created with 
 
 - Site Navigation containing a Search Bar, My Account Links, Shopping Bag links, and Product Categories sections.
 
-- A Landing Page that clearly demonstrates with the site is for.
+- A Landing Page that clearly demonstrates what the site is for.
 
 - A Products Page that lists the Products contained within the category/search carried out.
 
-- Products Cards that gives the user an image of the product along with name, price, rating and ability to click into it for more details.
+- Products Cards that gives the user an image of the product along with name, price, and ability to click into it for more details.
 
 - Registration/login functionality using Django AllAuth so that users can create and manage their account.
 
@@ -133,7 +136,7 @@ To achieve the above user and business goals, this project will be created with 
 
 This project is structured with a homepage that greets the user with a clear navigation bar at the top of the page to search for the item required or to browse all products. There is the ability to sort items by price, alphabetically, and by category as well as the ability to search for a product by typing keywords into the search bar.
 
-Furthermore, users have the option to checkout as guests or create a profile for themselves which can contain their delivery address and does contain their order history.
+Furthermore, users have the option to checkout as a guest or create a profile for themselves which can contain their delivery address and does contain their order history.
 
 The website is made of the following apps:
 1. Home
@@ -142,6 +145,7 @@ The website is made of the following apps:
 4. Bag
 5. Checkout
 6. Company Info
+
 ## Databases
 
 For the live site, I connected Heroku's Postgres Database and for the local environment, I chose to remain connected to Sequel Light.
@@ -151,7 +155,7 @@ The Entity-Relationship Diagram below shows how the database models relate to ea
 
 ### Category
 
-The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality so that shoppers can search for items wanted by type, new arrivals, clearance, and deals.
+The Category model is required so that the site owner can assign products to a Category. This model allows for filtering functionality so that shoppers can search for items wanted by item type, new arrivals, clearance, and deals.
 
 ### Products
 The Products model is required to add products for sale to the site. The site owner only can add, edit, and delete products from here and all users can view the full product list on the site.
@@ -165,7 +169,7 @@ The User Profile contains delivery information for those who created an account 
 
 ### Review 
 
-The reviews database holds all of the review submitted by users with an account. They can submit, edit and delete reviews posted. This is accessible via the Product Details page for the products they have reviewed.
+The reviews database holds all of the reviews submitted by users with an account. Users can submit, edit and delete reviews posted by themselves whilst logged in to their accounts. This is accessible via the Product Details page for the products they have reviewed.
 
 ### User
 
@@ -493,7 +497,7 @@ The following features can be implemented to enhance the project:
 - An error message is displayed underneath the email box if there is an issue with the email provided
 - A success message is displayed underneath the email box to confirm the subscription.
 
-### 4.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that can still be available if required.
+### 5.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that can still be available if required.
 
 - Status Field in Admin Panel
 
@@ -663,7 +667,7 @@ Once reset, the user must then re-login with the new password, which was tested 
 ### 15. As a shopper, I want to be able to be able to receive a registration confirmation email so that I can confirm registration.
 
 This was tested by registering for an account. To complete registration, the user must receive an email with a link that confirms their email address. This was tested with an outlook email address that was created for testing. The email was received and the account was confirmed via the link.
-### 16. As a shopper, I want to be able to be able to sign up for email so that I can be notified of new releases, deals, and upcoming sales.
+### 16. As a shopper, I want to be able to be able to sign up for emails so that I can be notified of new releases, deals, and upcoming sales.
 
 Contained in the footer, the user can subscribe by entering their email and clicking submit. If there is an error with the email, an error message appears underneath the email box. If successful then there is a success message under the email box. 
 

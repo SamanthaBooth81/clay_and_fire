@@ -113,7 +113,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-# Used https://github.com/pennersr/django-allauth/issues/3037 
+# Used https://github.com/pennersr/django-allauth/issues/3037
 # article to help fix email subject with below.
 ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Clay & Fire Jewellery | '
 
