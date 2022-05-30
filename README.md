@@ -318,11 +318,13 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 
 <img src="assets/readme_images/products.png" width="75%">
 
-# Full Product Details 
+# Product Details 
 
 <img src="assets/readme_images/product-details.png" width="75%">
 
 # Product Review
+
+Visable on the bottom of the Product Details Page
 
 Logged in as Superuser and with reviews:
 
