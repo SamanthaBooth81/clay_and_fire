@@ -86,6 +86,8 @@ def product_details(request, product_id):
     else:
         is_in_favourites = bool(product in favourites.products.all())
 
+    template = 'products/product_details.html'
+
     context = {
         'is_in_favourites': is_in_favourites,
         'product': product,
@@ -93,7 +95,7 @@ def product_details(request, product_id):
         'total_reviews': total_reviews,
     }
 
-    return render(request, 'products/product_details.html', context)
+    return render(request, template, context)
 
 
 @login_required
