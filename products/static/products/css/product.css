@@ -65,6 +65,15 @@
     padding-top: 7%;
 }
 
+.favourites {
+    display: flex;
+}
+
+.favourites:hover {
+    text-decoration: none;
+}
+
+
 .description {
     margin-right: 100px;
 }
