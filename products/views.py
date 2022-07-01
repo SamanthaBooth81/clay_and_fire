@@ -1,12 +1,19 @@
 """Products app views"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import Http404
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
+from favourites.models import Favourites
 from .models import Products, Category, Review
 from .forms import AddProductForm, ReviewForm
+
+
+def error_404_view(request, exception):
+    '''404 error view'''
+    return render(request, '404.html', status=404)
 
 
 def all_products(request):
@@ -71,7 +78,16 @@ def product_details(request, product_id):
         product_id=product.id, status=True).order_by('-created_on')
     total_reviews = reviews.count()
 
+    # add items to favourites
+    try:
+        favourites = get_object_or_404(Favourites, username=request.user.id)
+    except Http404:
+        is_in_favourites = False
+    else:
+        is_in_favourites = bool(product in favourites.products.all())
+
     context = {
+        'is_in_favourites': is_in_favourites,
         'product': product,
         'reviews': reviews,
         'total_reviews': total_reviews,
