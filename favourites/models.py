@@ -10,6 +10,10 @@ class Favourites(models.Model):
     products = models.ManyToManyField(Products, blank=True)
     username = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    class Meta:
+        """Removes extra 's' from Model name"""
+        verbose_name_plural = 'Favourites'
+
     def __str__(self):
         """Return object string"""
         return f"{self.username}'s Favourites"
