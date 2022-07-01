@@ -93,6 +93,7 @@ Please find my Kanban Board with my user stories [here](https://github.com/Saman
 3.	As a Site Owner I want to be able to delete a product so that I can remove items that are no longer available.
 4.	As a Site Owner I want to be able to send emails to customers with a subscription, notifying customers of any deals, sales, and new arrivals.
 5.	As a Site Owner, I want to be able to remove reviews from the site without deleting them so that can still be available if required.
+6. As a site owner I would like to set up discount codes to share with loyal customers. 
 
 ## Shopper
 1.	As a Shopper I want to be able to view a list of items so that I can add them to my basket.
@@ -114,6 +115,7 @@ Please find my Kanban Board with my user stories [here](https://github.com/Saman
 17. As a shopper, I want to be able to be able to contact the site owner so that I can ask about my order or for further information not contained within the Footer Pages.
 18. As a shopper, I want to be able to be able to review products purchased on the site so I can share my thoughts with other shoppers and the business.
 19. As a shopper, I want to be able to be able to edit and remove my reviews of products purchased so I can share or remove my reviews if my opinions change.
+20. As a shopper I would like to save items so that I can return to them to purchase later.
 
 # Scope
 
@@ -320,7 +322,11 @@ Users are also able to subscribe to receive the Clay & Fire Jewellery Newsletter
 
 ## Product Details 
 
-<img src="assets/readme_images/product-details.png" width="75%">
+<img src="assets/readme_images/add-favourites.png" width="75%">
+
+## Product Favourited 
+
+<img src="assets/readme_images/added-favourites.png" width="50%">
 
 ## Product Review
 
@@ -341,6 +347,10 @@ Not logged in and without reviews:
 ## Delete Review Confirmation
 
 <img src="assets/readme_images/delete-review.png" width="50%">
+
+## Favourited Products (Wishlist)
+
+<img src="assets/readme_images/my-favourites.png" width="75%">
 
 ## Shopping Bag
 
@@ -426,7 +436,6 @@ I created a basic Favicon for this project using [Canva](https://www.canva.com/)
 # Features to be Implemented
 The following features can be implemented to enhance the project:
 
-- Save items to favourites.
 - Instagram Carousel to show products bought by the shoppers.
 - Featured items on the homepage.
 
