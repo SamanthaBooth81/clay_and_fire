@@ -11,6 +11,15 @@ from products.models import Products
 from profiles.models import UserProfile
 
 
+class Coupon(models.Model):
+    """Voucher Code Model"""
+    code = models.CharField(max_length=10)
+    amount = models.FloatField()
+
+    def __str__(self):
+        return self.code
+
+
 class Order(models.Model):
     """Order Model"""
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -36,6 +45,8 @@ class Order(models.Model):
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(
         max_length=254, null=False, blank=False, default='')
+    coupon = models.ForeignKey(
+        'Coupon', on_delete=models.SET_NULL, blank=True, null=True)
 
     def _generate_order_number(self):
         """Use UUID to randomly generate an order number"""

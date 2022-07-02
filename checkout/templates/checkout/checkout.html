@@ -71,24 +71,63 @@
             <hr>
             {% endfor %}
             <div class="row">
-                <!-- Order Total, Delivery Total and Grand Total Table and Data -->
-                <div class="col-7 offset-2 text-right">
-                    <p class="my-0">Order Total:</p>
-                    <p class="my-0">Delivery:</p>
-                    <p class="my-0 logo">Grand Total:</p>
-                </div>
-                <div class="col-3">
-                    <p class="my-0">£{{ total | floatformat:2 }}</p>
-                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0 logo">£{{ grand_total | floatformat:2 }}</p>
+                <div class="col">
+                    {% if coupon %}
+                        <!-- displays coupon -->
+                        <div class="col-7 offset-5 p-2">
+                            <div class="input-group justify-content-center">Coupon Applied: {{ coupon.code }} </div>
+                            <div><a class="btn btn-danger btn-md m-0" href="{% url 'remove_coupon' %}">Remove</a></div>
+                        </div>
+                        <div class="row">
+                            <!-- Order Total, Delivery Total and Grand Total Table and Data -->
+                            <div class="col-7 offset-2 text-right">
+                                <p class="my-0">Order Total:</p>
+                                <p class="my-0">Delivery:</p>
+                                <p class="my-0">Discount Applied:</p>
+                                <p class="my-0 logo">Discounted Grand Total:</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="my-0">£{{ total | floatformat:2 }}</p>
+                                <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                                <p class="my-0">£{{ coupon.discount }}</p>
+                                <p class="my-0 logo">£{{ grand_total | floatformat:2 }}</p>
+                            </div>
+                        </div>
+
+                    {% else %}
+                        <div class="offset-4 mb-3">
+                            <form action="{% url 'add_coupon' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <div class="coupon-input">
+                                        <input id="coupon" type="text" name="coupon" class="form-control form-input" Placeholder="Coupon Code">
+                                    </div>
+                                    <button class="btn checkout m-0" type="submit">Redeem</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <!-- Order Total, Delivery Total and Grand Total Table and Data -->
+                            <div class="col-7 offset-2 text-right">
+                                <p class="my-0">Order Total:</p>
+                                <p class="my-0">Delivery:</p>
+                                <p class="my-0 logo">Grand Total:</p>
+                            </div>
+                            <div class="col-3">
+                                <p class="my-0">£{{ total | floatformat:2 }}</p>
+                                <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                                <p class="my-0 logo">£{{ grand_total | floatformat:2 }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
 
+         <!-- Order Form -->
         <div class="col-lg-6 col-md-12">
             <div class="col-12 order-lg-last">
                 <p>Please fill out the form below to complete your order.</p>
-                <!-- Order Form -->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">

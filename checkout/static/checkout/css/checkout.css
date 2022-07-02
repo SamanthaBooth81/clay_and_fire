@@ -100,25 +100,11 @@ select option[value=""] {
   font-size: x-large;
 }
 
+.coupon-input {
+  margin-right: 10px;
+}
+
 /* ------------------------------------ Media Queries */
-@media (min-width: 1301px) {
-  /* Larger container for xl screen sizes */
-  .success-container {
-    height: 100% !important;
-  }
-
-  .checkout-container {
-    height: 100% !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* Larger container for xl screen sizes */
-  .checkout-container {
-    height: 100% !important;
-  }
-}
-
 @media (max-width: 380px) {
   .checkout-order {
     margin-right: 15px;

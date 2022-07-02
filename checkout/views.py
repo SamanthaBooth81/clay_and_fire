@@ -2,7 +2,8 @@
 import json
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_http_methods
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
 from django.conf import settings
 
@@ -13,8 +14,8 @@ from profiles.forms import UserProfileForm
 
 from products.models import Products
 from bag.contexts import bag_contents
-from .models import Order, OrderLineItem
-from .forms import OrderForm
+from .models import Order, OrderLineItem, Coupon
+from .forms import OrderForm, CouponForm
 
 
 @require_POST
@@ -179,3 +180,34 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def get_coupon(request, code):
+    """Get the coupon code"""
+    try:
+        coupon = Coupon.objects.get(code=code)
+        return coupon
+    except ObjectDoesNotExist:
+        messages.error(request, "This coupon does not exist")
+        return redirect('checkout')
+
+
+@require_http_methods(["GET", "POST"])
+def add_coupon(request):
+    """Add Coupon Code to shopping bag"""
+    code = request.POST.get('code')
+
+    if not code:
+        messages.error(request, "You didn't enter a coupon code!")
+        return redirect(reverse('checkout'))
+
+    try:
+        coupon = Coupon.objects.get(code=code)
+        request.session['coupon_id'] = coupon.id
+        messages.success(request, f'Coupon code: { code } applied')
+    except Coupon.DoesNotExist:
+        request.session['coupon_id'] = None
+        messages.error(request, f'Coupon code: { code } not accepted')
+        return redirect('checkout')
+    else:
+        return redirect('checkout')
