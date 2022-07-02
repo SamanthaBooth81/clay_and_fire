@@ -59,6 +59,11 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
+            coupon = request.session.get('coupon_id')
+            if coupon is not None:
+                code = Coupon.objects.get(pk=coupon)
+                order.coupon = code
+                request.session['coupon_id'] = None
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
@@ -133,6 +138,7 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'couponform': CouponForm(),
     }
 
     return render(request, template, context)
@@ -204,7 +210,7 @@ def add_coupon(request):
     try:
         coupon = Coupon.objects.get(code=code)
         request.session['coupon_id'] = coupon.id
-        messages.success(request, f'Coupon code: { code } applied')
+        messages.info(request, f'Coupon code: { code } applied')
     except Coupon.DoesNotExist:
         request.session['coupon_id'] = None
         messages.error(request, f'Coupon code: { code } not accepted')

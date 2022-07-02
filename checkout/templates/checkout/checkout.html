@@ -71,6 +71,7 @@
             <hr>
             {% endfor %}
             <div class="row">
+                <!-- Price breakdown of order -->
                 <div class="col">
                     {% if coupon %}
                         <!-- displays coupon -->
@@ -89,18 +90,18 @@
                             <div class="col-3">
                                 <p class="my-0">£{{ total | floatformat:2 }}</p>
                                 <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                                <p class="my-0">£{{ coupon.discount }}</p>
+                                <p class="my-0">£{{ coupon.amount }}</p>
                                 <p class="my-0 logo">£{{ grand_total | floatformat:2 }}</p>
                             </div>
                         </div>
-
                     {% else %}
                         <div class="offset-4 mb-3">
+                            <!-- Coupon Form -->
                             <form action="{% url 'add_coupon' %}" method="POST">
                                 {% csrf_token %}
                                 <div class="input-group">
                                     <div class="coupon-input">
-                                        <input id="coupon" type="text" name="coupon" class="form-control form-input" Placeholder="Coupon Code">
+                                        {{ couponform.code }}
                                     </div>
                                     <button class="btn checkout m-0" type="submit">Redeem</button>
                                 </div>

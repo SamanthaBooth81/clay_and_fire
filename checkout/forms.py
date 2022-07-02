@@ -49,6 +49,7 @@ class OrderForm(forms.ModelForm):
 
 
 class CouponForm(forms.Form):
+    """Coupon Form"""
     code = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Promo code',
