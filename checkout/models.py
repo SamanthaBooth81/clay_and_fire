@@ -14,7 +14,8 @@ from profiles.models import UserProfile
 class Coupon(models.Model):
     """Voucher Code Model"""
     code = models.CharField(max_length=10)
-    amount = models.FloatField()
+    amount = models.DecimalField(max_digits=6, decimal_places=2,
+                                 null=False, default=20)
 
     def __str__(self):
         return self.code

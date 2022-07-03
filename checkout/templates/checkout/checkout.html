@@ -73,7 +73,7 @@
             <div class="row">
                 <!-- Price breakdown of order -->
                 <div class="col">
-                    {% if coupon %}
+                    {% if order.coupon %}
                         <!-- displays coupon -->
                         <div class="col-7 offset-5 p-2">
                             <div class="input-group justify-content-center">Coupon Applied: {{ coupon.code }} </div>
