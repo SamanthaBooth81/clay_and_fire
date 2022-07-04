@@ -60,12 +60,10 @@ def checkout(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             coupon = request.session.get('coupon_id')
-            print(coupon)
             if coupon is not None:
                 code = Coupon.objects.get(pk=coupon)
                 order.coupon = code
                 request.session['coupon_id'] = None
-                print(code)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
