@@ -73,11 +73,11 @@
             <div class="row">
                 <!-- Price breakdown of order -->
                 <div class="col">
-                    {% if order.coupon %}
+                    {% if coupon %}
                         <!-- displays coupon -->
                         <div class="col-7 offset-5 p-2">
                             <div class="input-group justify-content-center">Coupon Applied: {{ coupon.code }} </div>
-                            <div><a class="btn btn-danger btn-md m-0" href="{% url 'remove_coupon' %}">Remove</a></div>
+                            <div><a class="btn btn-danger btn-md m-0" href="">Remove</a></div>
                         </div>
                         <div class="row">
                             <!-- Order Total, Delivery Total and Grand Total Table and Data -->
