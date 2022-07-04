@@ -28,8 +28,8 @@ class OrderAdmin(admin.ModelAdmin):
     fields = ('order_number', 'user_profile', 'date', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
-              'street_address2', 'county', 'delivery_cost',
-              'order_total', 'coupon', 'grand_total', 'original_bag',
+              'street_address2', 'county', 'coupon', 'order_total',
+              'delivery_cost', 'grand_total', 'original_bag',
               'stripe_pid')
 
     # Show only key items
