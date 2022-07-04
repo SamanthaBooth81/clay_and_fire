@@ -76,8 +76,12 @@
                     {% if coupon %}
                         <!-- displays coupon -->
                         <div class="col-7 offset-5 p-2">
-                            <div class="input-group justify-content-center">Coupon Applied: {{ coupon.code }} </div>
-                            <div><a class="btn btn-danger btn-md m-0" href="">Remove</a></div>
+                            <div class="input-group justify-content-center">
+                                <p class="coupon-applied">
+                                    Coupon Applied: {{ coupon.code }}
+                                </p>
+                                <a class="btn m-0 remove-coupon" href="{% url 'delete_coupon' %}" title="Remove Coupon"><i class="fa-solid fa-xmark"></i></a>
+                            </div>
                         </div>
                         <div class="row">
                             <!-- Order Total, Delivery Total and Grand Total Table and Data -->
@@ -95,17 +99,19 @@
                             </div>
                         </div>
                     {% else %}
-                        <div class="offset-4 mb-3">
+                        <div class="row">
+                            <div class="col-7 offset-5 p-2">
                             <!-- Coupon Form -->
-                            <form action="{% url 'add_coupon' %}" method="POST">
-                                {% csrf_token %}
-                                <div class="input-group">
-                                    <div class="coupon-input">
-                                        {{ couponform.code }}
+                                <form action="{% url 'add_coupon' %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="input-group">
+                                        <div class="coupon-input">
+                                            {{ couponform.code }}
+                                        </div>
+                                        <button class="btn checkout m-0" type="submit">Redeem</button>
                                     </div>
-                                    <button class="btn checkout m-0" type="submit">Redeem</button>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                         <div class="row">
                             <!-- Order Total, Delivery Total and Grand Total Table and Data -->

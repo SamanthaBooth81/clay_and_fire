@@ -104,6 +104,20 @@ select option[value=""] {
   margin-right: 10px;
 }
 
+.coupon-input input,
+.checkout,
+.remove-coupon {
+  border-radius: 0;
+}
+
+.remove-coupon {
+  padding: 6px;
+  color: red;
+}
+.coupon-applied {
+  padding-top: 6px;
+}
+
 /* ------------------------------------ Media Queries */
 @media (max-width: 380px) {
   .checkout-order {
