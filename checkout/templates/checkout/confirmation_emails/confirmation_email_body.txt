@@ -7,6 +7,10 @@ Details of your order are confirmed below:
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
+{% if order.coupon %}
+Coupon added: {{ order.coupon }}
+Coupon Discount: {{ order.coupon.amount }}
+{% endif %}
 Order Total: £{{ order.order_total }}
 Delivery: £{{ order.delivery_cost }}
 Grand Total: £{{ order.grand_total }}
@@ -14,7 +18,8 @@ Grand Total: £{{ order.grand_total }}
 Your order will be shipped to:
 {{ order.street_address1 }},
 {{ order.town_or_city }},
-{{ order.country }}.
+{{ order.country }}
+{{ order.postcode }}.
 
 If you have any questions, feel free to contact us at {{ contact_email }}.
 
