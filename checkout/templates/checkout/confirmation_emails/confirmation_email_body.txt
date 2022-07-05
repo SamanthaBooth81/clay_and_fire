@@ -1,5 +1,7 @@
 Hello {{ order.full_name }},
 
+HELLOOOOOOOOOOOOOOOOO
+
 Thank you for your recent purchase with Clay & Fire!
 
 Details of your order are confirmed below:
@@ -7,10 +9,8 @@ Details of your order are confirmed below:
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
-{% if order.coupon %}
-Coupon added: {{ order.coupon }}
-Coupon Discount: {{ order.coupon.amount }}
-{% endif %}
+Coupon added: {{ coupon.code }}
+Coupon Discount: {{ coupon.amount }}
 Order Total: £{{ order.order_total }}
 Delivery: £{{ order.delivery_cost }}
 Grand Total: £{{ order.grand_total }}
@@ -27,4 +27,4 @@ Thank you again for your order!
 
 Sincerely,
 
-Clay & Fire
+Clay & Fire Jewellery

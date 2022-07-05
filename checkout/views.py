@@ -222,5 +222,5 @@ def add_coupon(request):
 def delete_coupon(request):
     """View to remove coupon from shopping bag"""
     del request.session['coupon_id']
-    messages.info(request, f'Coupon removed from shopping bag.')
+    messages.info(request, 'Coupon removed from shopping bag.')
     return redirect('checkout')
