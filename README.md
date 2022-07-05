@@ -360,6 +360,16 @@ Not logged in and without reviews:
 
 <img src="assets/readme_images/checkout.png" width="50%">
 
+## Add Coupon Form
+
+<img src="assets/readme_images/add-coupon.png" width="50%">
+
+
+## Coupon Added / Remove Coupon
+
+<img src="assets/readme_images/added-coupon.png" width="50%">
+
+
 ## Checkout Success
 
 <img src="assets/readme_images/checkout-success.png" width="50%">
@@ -474,7 +484,7 @@ The following features can be implemented to enhance the project:
 ## **Manual Testing by User Story**
 ### **Superuser / Admin**
 ### 1. As a Site Owner, I want to be able to add a product so that I can add more items to my store.
-- Products can be added both via the project management page found by clicking on 'My Account' or vis the Admin Panel. Both types of product adding were tested and the products were both visbale in the model and on the Products Page.
+- Products can be added both via the project management page found by clicking on 'My Account' or vis the Admin Panel. Both types of product adding were tested and the products were both visable in the model and on the Products Page.
 
 The following was also checked and found to be working as expected when the product was added:
 
@@ -913,7 +923,7 @@ Development is set in gitpod's environment variables as True.
 
 10. We must then install Gunicorn, which will act as our webserver and freeze that into our requirements file.
 
-11. Nextm I created a Procfile to tell Heroku to create a web dyno that will run Gunicorn and serve our Django app.
+11. Next, I created a Procfile to tell Heroku to create a web dyno that will run Gunicorn and serve our Django app.
 
 Within this file add the following:
 
