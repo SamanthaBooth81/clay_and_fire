@@ -1,7 +1,5 @@
 Hello {{ order.full_name }},
 
-HELLOOOOOOOOOOOOOOOOO
-
 Thank you for your recent purchase with Clay & Fire!
 
 Details of your order are confirmed below:
