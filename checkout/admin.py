@@ -33,7 +33,7 @@ class OrderAdmin(admin.ModelAdmin):
               'stripe_pid')
 
     # Show only key items
-    list_display = ('order_number', 'date', 'full_name',
+    list_display = ('order_number', 'date', 'full_name', 'coupon',
                     'order_total', 'delivery_cost',
                     'grand_total',)
 
