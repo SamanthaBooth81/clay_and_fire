@@ -392,6 +392,10 @@ footer {
     .allauth-container{
         width: 60%;
     }
+
+    body {
+        height: auto;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */

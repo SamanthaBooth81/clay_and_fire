@@ -68,12 +68,12 @@ Boutique Ado Project */
 /* Boutique Ado CSS */
 select,
 select option {
-    color: #000000;
+  color: #000000;
 }
 
 select:invalid,
 select option[value=""] {
-    color: #8e9ba8 !important;
+  color: #8e9ba8 !important;
 }
 
 /* --------------------------------------------- Order Success Page */
@@ -114,6 +114,7 @@ select option[value=""] {
   padding: 6px;
   color: red;
 }
+
 .coupon-applied {
   padding-top: 6px;
 }
