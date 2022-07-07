@@ -837,6 +837,8 @@ I encountered the following issues whilst building this project:
 
 - The delivery confirmation page image wasn't Loading on the deployed site. To fix this I changed the image source to the images [AWS](https://aws.amazon.com/?nc2=h_lg) URL to display the image.
 
+- Stripe was sending a Server 500 error in the Webhooks, this was an error on Stripes part which I could not control. I believe this is fixed now. All Webhooks are currently sending as expected. 
+
 # User Feedback 
 
 - Make the price on the Product Card bolder.
