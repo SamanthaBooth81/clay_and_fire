@@ -9,182 +9,182 @@
 
 <url>
   <loc>https://clay-and-fire.herokuapp.com/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/accounts/login/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/bag/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=studs</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=drops</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=clay</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=studs,drops,clay</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=pendants</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=statement</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=pendants,statement</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=new_arrivals</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=deals</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=clearance</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/?category=new_arrivals,deals,clearance</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/info/faq/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/info/shipping-returns/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/info/about-us/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/info/privacy-policy/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/info/contact-us/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/2/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/6/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/1/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/12/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/13/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/5/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/4/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/11/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/9/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/8/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/10/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://clay-and-fire.herokuapp.com/products/7/</loc>
-  <lastmod>2022-05-29T20:44:07+00:00</lastmod>
+  <lastmod>2022-07-07T10:44:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
