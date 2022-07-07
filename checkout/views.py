@@ -198,6 +198,8 @@ def get_coupon(request, code):
         return redirect('checkout')
 
 
+# Coupon functionality created with help from
+# freeCodeCamp.org YouTube video, link in README
 @require_http_methods(["GET", "POST"])
 def add_coupon(request):
     """Add Coupon Code to shopping bag"""

@@ -181,7 +181,7 @@ For this project, I also used Django's User model to store registration informat
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
 
-Clay & Fire Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed [here](assets/documents/wireframes.pdf).
+Clay & Fire Jewellery Wireframes for Mobile, Tablet and Desktop devices can be viewed [here](assets/documents/wireframes.pdf). I didn't add wireframes for the favourites page as it was based on the same template at the products page. 
 
 # Marketing Strategies
 
@@ -448,6 +448,8 @@ The following features can be implemented to enhance the project:
 
 - Instagram Carousel to show products bought by the shoppers.
 - Featured items on the homepage.
+- Additional logic to create discounted coupons and coupons that are displayed on the site and are available to all shoppers and not just those who have subscribed.
+- Returns Functionality
 
 # Technologies Used
 ## Languages Used
@@ -540,6 +542,10 @@ This was tested by subscribing with an email and checking the email list on Mail
 - Status Field in Admin Panel
 
 Within the Admin panel, the Superuser is able to remove a review from the site without deleting it by un-ticking the status checkbox within the review. This was tested by un-checking the status box on one of the submitted reviews. I then went to the product the review was for to check whether the review was still posted on the Product Details page. The review was removed without being deleted and the total count of review decreased.
+
+### 6. As a Business Owner I want to Create discount codes for customers so that I can reward loyal customers.
+
+This was tested by creating the coupon code ‘FIVER’ in the Coupon database with a discount of £5. This was then applied to a shopping bag on the checkout page. The discount was applied as expected and the new Grand Total charged to the customer was reflected in the order confirmation, on the Stripe payment and in the order confirmation emails. Deleting the coupon from the database doesn’t change the price of previous orders and is no longer available when input at checkout. It sends an error message to the user that the coupon has not been accepted. 
 
 ### **Shopper**
 ### 1. As a Shopper, I want to be able to view a list of items so that I can add them to my basket.
@@ -1069,6 +1075,14 @@ I used the Code Institutes Boutique Ado Follow Along project to help with buildi
 - [Stack Overflow](https://stackoverflow.com/a/666407) was used to help with the cancel button for the confirm delete review template.
 
 - [GitHub Django Allauth Issues](https://github.com/pennersr/django-allauth/issues/3037) was used to help fix email subject by adding ACCOUNT_EMAIL_SUBJECT_PREFIX to my settings.
+
+- The following video was used to help create the coupon functionality:
+    - [freeCodeCamp.org - How to Build an E-commerce Website with Django and Python](https://www.youtube.com/watch?v=YZvRrldjf1Y&t=10194s)
+
+- The following helped with putting together the favourites functionality:
+    - [Stackoverflow](https://stackoverflow.com/questions/64720982/modeling-favorites-in-django-from-two-different-models)
+    - [Very Academy Python Django Ecommerce Customer Wish List](https://github.com/veryacademy/django-ecommerce-project/blob/main/Part-07%20Wish%20List/account/views.py)
+    - [American Ale House](https://github.com/Steven-Dawson18/american-ale-house/tree/main/favourites)
 
 ### Styling
 - [Unsplash - Landing Image](https://unsplash.com/photos/uRuF9ABj0NY)

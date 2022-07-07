@@ -11,6 +11,8 @@ from products.models import Products
 from profiles.models import UserProfile
 
 
+# Coupon functionality created with help from
+# freeCodeCamp.org YouTube video, link in README
 class Coupon(models.Model):
     """Voucher Code Model"""
     code = models.CharField(max_length=10)
