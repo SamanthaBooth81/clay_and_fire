@@ -8,6 +8,9 @@ from products.models import Products
 from .models import Favourites
 
 
+# Favourites views crated with help from American Ale House
+# project and Very Academy. Links in README.
+
 @login_required
 def favourites_view(request):
     """View to display the users favourited items"""
