@@ -3,7 +3,7 @@
 <img src="assets/readme_images/responsive.png">
 
 ### **Live Site**
-[Clay & Fire Jewellery Live Site](https://clay-and-fire.herokuapp.com/)
+[Clay & Fire Jewellery Live Site](https://clay-and-fire.onrender.com)
 
 ### **Repository:**
 [Clay & Fire Jewellery Repository](https://github.com/SamanthaBooth81/clay_and_fire)
@@ -885,6 +885,8 @@ Of the above searches, Handmade Polymer Clay Jewellery best suited what my proje
 Also, I included ‘Handmade Jewellery’ within the homepage message’ along with a subheading of ‘Find the perfect gift today!’ 
 
 # Deployment 
+
+This project was re-deployed on [Render](https://render.com/) following steps provided by Code Institute, as Heroku's free plan was discontinued. The below steps are to deploy onto Heroku not Render. 
 
 This project was deployed using Heroku. At the time of deployment, Heroku was facing a security issue, therefore this project was deployed via the command line in GitPod and those are the steps detailed below. As this was the case I was unable to allow automatic deployments in Heroku each time a commit was pushed into the repository.
 
